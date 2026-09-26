@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "negative_test_count": 17,
+  "all_deliberately_invalid_inputs_rejected": true,
+  "tests": [
+    {
+      "test": "forged_smaller_count_upper_bound",
+      "rejected": true,
+      "mechanism": "exact_input_or_domain_reconstruction"
+    },
+    {
+      "test": "removed_admissible_n_k_pair",
+      "rejected": true,
+      "mechanism": "exact_input_or_domain_reconstruction"
+    },
+    {
+      "test": "altered_target_rank_minimum",
+      "rejected": true,
+      "mechanism": "exact_input_or_domain_reconstruction"
+    },
+    {
+      "test": "altered_target_rank_maximum",
+      "rejected": true,
+      "mechanism": "exact_input_or_domain_reconstruction"
+    },
+    {
+      "test": "reused_count_certificate_at_smaller_N",
+      "rejected": true,
+      "mechanism": "exact_input_or_domain_reconstruction"
+    },
+    {
+      "test": "false_empty_rectangle",
+      "rejected": true,
+      "mechanism": "exact_input_or_domain_reconstruction"
+    },
+    {
+      "test": "unproved_larger_finite_state_cap",
+      "rejected": true,
+      "mechanism": "exact_input_or_domain_reconstruction"
+    },
+    {
+      "test": "forged_state_count",
+      "rejected": true,
+      "mechanism": "exact_input_or_domain_reconstruction"
+    },
+    {
+      "test": "negative_kernel_weight",
+      "rejected": true,
+      "mechanism": "exact_input_or_domain_reconstruction"
+    },
+    {
+      "test": "negative_count_penalty",
+      "rejected": true,
+      "mechanism": "exact_input_or_domain_reconstruction"
+    },
+    {
+      "test": "stale_variance_intercept",
+      "rejected": true,
+      "mechanism": "exact_input_or_domain_reconstruction"
+    },
+    {
+      "test": "false_pointwise_minorant",
+      "rejected": true,
+      "mechanism": "pointwise"
+    },
+    {
+      "test": "negative_expected_budget",
+      "rejected": true,
+      "mechanism": "payoff"
+    },
+    {
+      "test": "missing_parent10_new_bridge",
+      "rejected": true,
+      "mechanism": "continuous_cover_gap"
+    },
+    {
+      "test": "source_probability_cover_gap",
+      "rejected": true,
+      "mechanism": "independent_scalar_checker"
+    },
+    {
+      "test": "corrupted_frozen_archive",
+      "rejected": true,
+      "mechanism": "SHA256 mismatch"
+    },
+    {
+      "test": "disabled_assertions",
+      "rejected": true,
+      "mechanism": "explicit -O refusal"
+    }
+  ]
+}

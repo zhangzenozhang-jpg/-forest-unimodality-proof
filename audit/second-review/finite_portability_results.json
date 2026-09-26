@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "max_order": 10,
+  "verifier": {
+    "kind": "package_zip",
+    "source": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-09-26\\latex-x20\\work\\second_review\\portable_finite_check\\inputs\\forest_n60_extension_and_n100_gap.zip",
+    "member": "forest_n60_extension_and_n100_gap/verify.py",
+    "sha256": "d0adcb32c67d49c88ee0c4154ec355f03037669f79eca81697eab34d0eb035d0"
+  },
+  "tree_counts": {
+    "1": [
+      1,
+      1
+    ],
+    "2": [
+      1,
+      1
+    ],
+    "3": [
+      2,
+      1
+    ],
+    "4": [
+      4,
+      2
+    ],
+    "5": [
+      9,
+      3
+    ],
+    "6": [
+      20,
+      6
+    ],
+    "7": [
+      48,
+      11
+    ],
+    "8": [
+      115,
+      23
+    ],
+    "9": [
+      286,
+      47
+    ],
+    "10": [
+      719,
+      106
+    ]
+  },
+  "forest_counts": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 6,
+    "5": 10,
+    "6": 20,
+    "7": 37,
+    "8": 76,
+    "9": 153,
+    "10": 329
+  },
+  "row_checks": 45529,
+  "total_forests": 637,
+  "seconds": 0.608
+}

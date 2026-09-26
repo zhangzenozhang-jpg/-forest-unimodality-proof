@@ -1,0 +1,51 @@
+[
+  {
+    "local_file": "docs_award-process_md",
+    "official_path": "docs/award-process.md",
+    "source_url": "https://github.com/TheJustinSunPrize/awards/blob/1d1db84a39201357236183f0bbd620e2b220747e/docs/award-process.md",
+    "retrieved_date": "2026-09-26",
+    "sha256": "8e2cf839a809ac1d613f225d59f1c7b5498a5bb73aa5434f17bce7e8199afa0f"
+  },
+  {
+    "local_file": "_github_PULL_REQUEST_TEMPLATE_md",
+    "official_path": ".github/PULL_REQUEST_TEMPLATE.md",
+    "source_url": "https://github.com/TheJustinSunPrize/awards/blob/1d1db84a39201357236183f0bbd620e2b220747e/.github/PULL_REQUEST_TEMPLATE.md",
+    "retrieved_date": "2026-09-26",
+    "sha256": "2729a10a4485fa02de9db5064f23b5ca884782472caf91027b06866250eab6d4"
+  },
+  {
+    "local_file": "_github_ISSUE_TEMPLATE_feedback_yml",
+    "official_path": ".github/ISSUE_TEMPLATE/feedback.yml",
+    "source_url": "https://github.com/TheJustinSunPrize/awards/blob/1d1db84a39201357236183f0bbd620e2b220747e/.github/ISSUE_TEMPLATE/feedback.yml",
+    "retrieved_date": "2026-09-26",
+    "sha256": "b064c79a817b91a5e3c28373e49071bb04a56f5b46aa325f31867756361562de"
+  },
+  {
+    "local_file": "docs_attribution_md",
+    "official_path": "docs/attribution.md",
+    "source_url": "https://github.com/TheJustinSunPrize/awards/blob/1d1db84a39201357236183f0bbd620e2b220747e/docs/attribution.md",
+    "retrieved_date": "2026-09-26",
+    "sha256": "685540326df511107c67fa753fc725fcf056363b3cf97d0172d4e4cc139f7c23"
+  },
+  {
+    "local_file": "CONTRIBUTING.md",
+    "official_path": "CONTRIBUTING.md",
+    "source_url": "https://github.com/TheJustinSunPrize/awards/blob/1d1db84a39201357236183f0bbd620e2b220747e/CONTRIBUTING.md",
+    "retrieved_date": "2026-09-26",
+    "sha256": "4b8c5c7092ba99ed0a6f8d66181c859fb68cbdce7a522d5c5a8bc799a482e551"
+  },
+  {
+    "local_file": "docs_verification_md",
+    "official_path": "docs/verification.md",
+    "source_url": "https://github.com/TheJustinSunPrize/awards/blob/1d1db84a39201357236183f0bbd620e2b220747e/docs/verification.md",
+    "retrieved_date": "2026-09-26",
+    "sha256": "a0d7294fedd10337bb7d39cb734562494c986efd05149f4f5f38c4c914b11a2c"
+  },
+  {
+    "local_file": "catalog-0801-0900.md",
+    "official_path": "problems/catalog-0801-0900.md",
+    "source_url": "https://github.com/TheJustinSunPrize/awards/blob/1d1db84a39201357236183f0bbd620e2b220747e/problems/catalog-0801-0900.md",
+    "retrieved_date": "2026-09-26",
+    "sha256": "37dc3a1cc6cabe06e35fddb212bf5e13a879edfad6da84536616b50c0904ec6b"
+  }
+]

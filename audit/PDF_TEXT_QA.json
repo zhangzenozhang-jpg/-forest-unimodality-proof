@@ -1,0 +1,39 @@
+{
+  "main": {
+    "pages": 21,
+    "text_characters": 51146,
+    "literal_qquad": 0,
+    "unresolved_refs": 0,
+    "metadata": {
+      "/Producer": "pdfTeX-1.40.27",
+      "/Author": "Tong Zhang",
+      "/Title": "Exact Certificates for Unimodality of Forest Independence Polynomials",
+      "/Subject": "",
+      "/Creator": "LaTeX with hyperref",
+      "/Keywords": "",
+      "/CreationDate": "D:20260926100619+08'00'",
+      "/ModDate": "D:20260926100619+08'00'",
+      "/Trapped": "/False",
+      "/PTEX.Fullbanner": "This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) kpathsea version 6.4.1"
+    },
+    "all_pages_visually_reviewed": true,
+    "visual_review_method": "Initial 21-page rendering inspected; revision 1.1 pages 1, 20, 21 rerendered and inspected; unchanged mathematical pages retain their previous layout.",
+    "overfull_boxes": 0
+  },
+  "audit_zh": {
+    "pages": 3,
+    "text_characters": 3607,
+    "literal_qquad": 0,
+    "unresolved_refs": 0,
+    "metadata": {
+      "/Creator": "LaTeX with hyperref",
+      "/Title": "Forest Independence Sequence Unimodality: Audit and Submission Report",
+      "/Author": "Tong Zhang",
+      "/Producer": "xdvipdfmx (20250205)",
+      "/CreationDate": "D:20260926100640+08'00'"
+    },
+    "all_pages_visually_reviewed": true,
+    "visual_review_method": "All three revision 1.1 pages rerendered and visually inspected.",
+    "overfull_boxes": 0
+  }
+}

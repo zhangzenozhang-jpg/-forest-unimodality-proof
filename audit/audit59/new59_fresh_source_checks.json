@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "new_combined_source_count": 4,
+  "probability_cells": 1363,
+  "retention_cells": 8435,
+  "parent_cases": 37026,
+  "real_response_region_checks": 111078,
+  "all_source_polynomials_independently_reconstructed": true,
+  "checks": [
+    {
+      "passed": true,
+      "file": "combo_24_25_49_50_regularized.json.gz",
+      "activity": [
+        "24/25",
+        "49/50"
+      ],
+      "kind": "signed_log",
+      "CW": "2855126222401/1000000000000",
+      "probability_cells": 414,
+      "retention_cells": 2634,
+      "parent_cases": 11675,
+      "response_regions": 35025,
+      "independent_polynomial_reconstruction": true,
+      "complete_continuous_domains": true
+    },
+    {
+      "passed": true,
+      "file": "combo_26_25_53_50.json.gz",
+      "activity": [
+        "26/25",
+        "53/50"
+      ],
+      "kind": "signed_log",
+      "CW": "3097796212567/1000000000000",
+      "probability_cells": 233,
+      "retention_cells": 1389,
+      "parent_cases": 6109,
+      "response_regions": 18327,
+      "independent_polynomial_reconstruction": true,
+      "complete_continuous_domains": true
+    },
+    {
+      "passed": true,
+      "file": "combo_28_25_113_100.json.gz",
+      "activity": [
+        "28/25",
+        "113/100"
+      ],
+      "kind": "signed_log",
+      "CW": "11074271287/4000000000",
+      "probability_cells": 384,
+      "retention_cells": 2329,
+      "parent_cases": 10124,
+      "response_regions": 30372,
+      "independent_polynomial_reconstruction": true,
+      "complete_continuous_domains": true
+    },
+    {
+      "passed": true,
+      "file": "combo_29_25_59_50.json.gz",
+      "activity": [
+        "29/25",
+        "59/50"
+      ],
+      "kind": "signed_log",
+      "CW": "2833452461773/1000000000000",
+      "probability_cells": 332,
+      "retention_cells": 2083,
+      "parent_cases": 9118,
+      "response_regions": 27354,
+      "independent_polynomial_reconstruction": true,
+      "complete_continuous_domains": true
+    }
+  ],
+  "seconds": 106.32799999997951
+}

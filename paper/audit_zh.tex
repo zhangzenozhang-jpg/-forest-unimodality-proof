@@ -1,0 +1,106 @@
+\documentclass[UTF8,10pt,a4paper]{ctexart}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,longtable,enumitem}
+\usepackage[colorlinks=true,linkcolor=blue!40!black,urlcolor=blue!40!black]{hyperref}
+\usepackage{xcolor}
+\hypersetup{pdftitle={Forest Independence Sequence Unimodality: Audit and Submission Report},pdfauthor={Tong Zhang}}
+\setlist{nosep}
+\ctexset{section={beforeskip=1.5ex,afterskip=0.8ex},subsection={beforeskip=1.2ex,afterskip=0.6ex}}
+\setlength{\emergencystretch}{2em}
+\title{森林独立序列单峰猜想\\附件审查与投稿准备报告}
+\author{作者署名：Tong Zhang\\联系邮箱：\texttt{ZhangZenoZhang@gmail.com}}
+\date{2026年9月26日}
+\begin{document}
+\maketitle
+\section{结论与适用边界}
+两个压缩包的数学范围可以拼接覆盖全部有限森林：第一个包声称证明所有 $n\ge59$ 的森林单峰，第二个证明所有 $n\le60$ 的森林单峰。这里 $n$ 都是顶点数。二者在59、60处重叠，没有遗漏61至100或更大的阶数。
+
+本次对关键结构证明、依赖关系和精确算术进行了审查，目前没有发现明确的数学反例或推导错误。审查意见是：这些材料可以整理为一份\textbf{覆盖整个猜想的完整证明候选稿，提交数学审查}。这不等于主办方已经认可，也不等于同行评议或 Lean 形式化已经完成。论文的全称结论依赖完整的书面证明和证书链，不能只凭程序输出或范围重叠认定成立。
+
+单独的60点包不足以解决整个猜想；单独的59门槛包也没有覆盖 $n<59$。附带的100点反见证针对一个非负实变量放松，不是任何森林的反例。它与使用另一套概率约束得到的大规模结论不矛盾。不能因此把60点正文中的上限直接改成100；也无须这样修改才能完成两段拼接。
+
+\section{本次实际检查}
+\subsection{输入身份}
+用户一共提供两个 ZIP 和一个 Markdown 文件。独立 Markdown 与60点包内同名证明字节完全相同，SHA-256 为
+\begin{quote}\small\ttfamily
+2ff7ffecb93263d4f9730b2f128021a570\\
+51229490b343198a27e1f4a932ac89
+\end{quote}
+完整64位哈希见包内 \texttt{inputs/SHA256SUMS.json}。这不是第三份独立证据。原始 ZIP 保持不变，复算在复制件中完成。
+
+\subsection{60点部分}
+审查最大独立集分解、稀疏补集选择引理、私人邻点删除计数、匹配扩展界、实际补集边数绑定及尾部单调性。尤其核对了：同一个最大独立集及同一个补集边数同时用于所有行；conditional 证书保留 $\Delta_k\le0$ 假设；空森林、孤立点及全无边森林由直接公式覆盖。
+
+\begin{center}\begin{tabular}{lr}\toprule
+检查项 & 结果\\\midrule
+完整标量参数域 & 17,100组通过\\
+一维有理分离证书 & 670份\\
+非负有理线性证书 & 1,907份通过\\
+线性证书非零乘数 & 142,017项\\
+第二实现（有向整数舍入） & 1,907份通过\\
+55点／100点模型反见证行数 & 1,198／8,356行通过\\
+关键 $(60,33,19)$ 仿射式 & 193项精确核对通过\\\bottomrule
+\end{tabular}\end{center}
+首份完整核验约25.8秒，第二实现约27.4秒，反见证核验约4.6秒；时间只说明本次运行，不是跨机器性能保证。正式证明的数据文件哈希为
+\begin{quote}\small\ttfamily
+a77f4fc43aec1b8eecab91c4418b6990f72d\\
+ee69d802129c78efd67d2e1bcc5a
+\end{quote}
+
+\subsection{59门槛及旧链}
+外层新增范围是 $59\le n\le79$。继承链依次为
+\[
+59\longleftarrow80\longleftarrow99\longleftarrow130
+\longleftarrow170\longleftarrow350\longleftarrow500\longleftarrow900.
+\]
+900阶段有无界规模论证，而不是只枚举到900。审查追到了基础阶段中的组合首尾窗口、活动度2规模修正均值及短腿和两型末端归约，并检查新匹配计数、条件概率消去、连续活动度插值、实数自由均值区间、异质活动度倾斜和旧核复用条件。未把“尚未形式化”误当作实际数学漏洞，也未把历史材料中的“已审计”标签当作证明。
+
+外层新59重跑全部通过：231份证书、1,185,408个整数端点状态、154个活动度子区间、43个父区间，耗时约370.5秒。最小归一化期望预算为
+\[
+\frac{424830401847072141613691}{10^{28}}>0.
+\]
+该份证书尺度为23；这个数不是原始独立序列的统一曲率下界。
+
+\input{audit_status}
+
+第二轮重新检查了关键结构归纳、无界参数与旧核适用域，未发现具体阻断性缺口。另用独立生成器检验1至10点全部637个无标号森林，真实计数满足45,529条结构约束。该小图检验只用于找错；全部阶数仍由完整证明及证书链覆盖。三份二审报告和新脚本已收入审查目录。
+
+原始默认旧链执行曾因 Windows 嵌套路径过长出现 WinError 267。随包提供的外部启动器使子进程先在短目录启动，再由 Python 切换到原目标目录执行未修改脚本。它保留全部断言、源文件及算术检查；这项执行适配与数学证明修正不同，报告和日志分别记录了首次失败与后续复算。检查器在标准库下运行，不依赖浮点优化器。
+
+\section{论文与补充材料的组织}
+英文论文给出全体森林的主定理、两段拼接、60点结构证明与证书接口、新59匹配计数和混合核论证，以及基础分析链的接口。完整大规模技术证明仍作为论文的必要补充材料提供，不能在投稿时删掉后声称正文独立覆盖所有细节。
+
+\begin{itemize}
+\item \texttt{paper/}：英文PDF、LaTeX源文件、编译说明及本报告。
+\item \texttt{inputs/}：两份未修改ZIP、独立Markdown和完整哈希。
+\item \texttt{math-sources/}：展开整理的原始数学文稿，按59、80等阶段定位。
+\item \texttt{verification/}：统一复算入口及Windows启动适配。
+\item \texttt{audit/}：本次日志、独立检查结果及审查范围说明。
+\item \texttt{submission/}：solver-only英文PR模板、目录补丁生成器、中文提交指南。
+\end{itemize}
+作者为 Tong Zhang，GitHub登录接口识别账号为 \texttt{zhangzenozhang-jpg}。AI帮助用于审查、计算、检索和编辑，不被称为独立人类审稿人。论文1.1版移除了操作记录式措辞，保留准确的AI披露。论文可送审，不承诺期刊接收或奖金资格。
+
+\section{准确题号、最新文献及官方提交方式}
+对应题目是\textbf{孙宇晨奖 JSP-000826／Erd\H{o}s Problem 993}，不是 Erd\H{o}s 826。原题讨论所有有限树或森林的顶点独立集序列，既没有60点上限，也不要求全序列对数凹。
+
+Fang、Lu、Nevo、Yao、Zheng 于2026年9月17日发布 arXiv:2609.20961v1，Theorem 1.1证明存在一个绝对门槛，使充分大的森林单峰。这个新结果已列入参考文献；它没有给出59这个具体门槛，不能替代附件的定量证明链。已有26点树反例针对对数凹性，不是单峰性反例。
+
+官方规则核查版本为
+\begin{quote}\small\ttfamily
+1d1db84a39201357236183f0bbd620e2b220747e
+\end{quote}
+完整数学解答可以先按 solver-only 路线提交，无须先交Lean。但官方不接受仅有限点数或依赖未证附加假设的部分解答。完整Lean是后续获奖公示和支付的前置条件。当前核查到的题目状态仍为Open。
+
+\textbf{ZIP是材料包，不能直接提交进awards仓库。}官方只收英文目录记录与外部公开证明链接。纯数学解答需要公开证明、版本或日期、定理位置及贡献证据；并不强制GitHub或40位SHA，后者是Lean的明确要求。本次按作者要求使用GitHub固定版本，目标仓库为 \nolinkurl{zhangzenozhang-jpg/-forest-unimodality-proof}。实际上传与PR状态以提交目录内的发布回执为准，不以本报告推定已完成提交。
+
+\section{核查来源}
+\begin{enumerate}
+\item \url{https://www.erdosproblems.com/993}
+\item \url{https://www.renyi.hu/~p_erdos/1987-33.pdf}，Problem 3。
+\item \url{https://arxiv.org/abs/2609.20961v1}
+\item \href{https://github.com/TheJustinSunPrize/awards/blob/main/CONTRIBUTING.md}{孙宇晨奖官方贡献指南（CONTRIBUTING.md）}。
+\item \href{https://github.com/TheJustinSunPrize/awards/blob/main/.github/PULL_REQUEST_TEMPLATE.md}{孙宇晨奖官方 Pull Request 模板}。
+\item \href{https://github.com/TheJustinSunPrize/awards/blob/main/docs/award-process.md}{孙宇晨奖官方审查与领奖流程}。
+\end{enumerate}
+官方原文快照、固定版本链接及相关公开提交的区别详见包内来源报告。没有查到本题专属截止日或已锁定奖金金额。
+\end{document}

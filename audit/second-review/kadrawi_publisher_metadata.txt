@@ -1,0 +1,8 @@
+<meta name="citation_author" content="Ohr Kadrawi"/>
+<meta name="citation_author" content="Vadim Levit"/>
+<meta name="citation_title" content="The independence polynomial of trees is not always log-concave starting from order 26"/>
+<meta name="citation_date" content="2025/07/30"/>
+<meta name="citation_volume" content="25"/>
+<meta name="citation_issue" content="4"/>
+<meta name="citation_firstpage" content="#P4.03"/>
+<meta name="citation_doi" content="10.26493/1855-3974.3207.2ad"/>

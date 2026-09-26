@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "N": 59,
+  "hashed_files": 43,
+  "stored_certificates": 231,
+  "frozen80_zip_sha256": "d1eb9f2903b554475634a3f0fac59d625ae196fdbe0525e6cfc6a97071742f03",
+  "scope": "File integrity and stored counts only, not mathematical recomputation."
+}

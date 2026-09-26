@@ -1,0 +1,59 @@
+{
+  "all_exact_checks_passed": true,
+  "scope": "Countermodels ONLY to the explicitly enumerated real-valued structural relaxations. Neither is a forest counterexample.",
+  "uses_optimizer": false,
+  "uses_floating_point_feasibility": false,
+  "results": [
+    {
+      "n": 55,
+      "alpha": 30,
+      "k": 18,
+      "model": "original",
+      "all_exact_checks_passed": true,
+      "nonzero_count_variables": 193,
+      "rows_checked": 1198,
+      "row_type_counts": {
+        "count": 24,
+        "path": 29,
+        "private": 720,
+        "hall": 425
+      },
+      "saturated_rows": 318,
+      "denominator_digits": 135,
+      "strict_valley": true,
+      "delta_k_strict_upper": -69000000,
+      "delta_next_strict_lower": 74000,
+      "sha256": "3960ce05b0de0200373ed95a9bb02321c5b65d2803ec3bf334b01cd4bb151de1"
+    },
+    {
+      "n": 100,
+      "alpha": 55,
+      "k": 31,
+      "model": "extended",
+      "all_exact_checks_passed": true,
+      "nonzero_count_variables": 693,
+      "rows_checked": 8356,
+      "row_type_counts": {
+        "count": 44,
+        "path": 54,
+        "private": 2420,
+        "hall": 1484,
+        "cover": 44,
+        "edge_lower": 44,
+        "edge_upper": 44,
+        "mean": 44,
+        "union": 44,
+        "tail": 1474,
+        "release_upper": 1330,
+        "tail_upper": 1330
+      },
+      "saturated_rows": 1132,
+      "denominator_digits": 612,
+      "strict_valley": true,
+      "delta_k_strict_upper": -2000000000000000000,
+      "delta_next_strict_lower": 300000000000000000,
+      "sha256": "bd9b2515ed80b3baea123a6cb8bf507bd22abc8c242b2f165e29803a33041b18"
+    }
+  ],
+  "seconds": 4.643
+}

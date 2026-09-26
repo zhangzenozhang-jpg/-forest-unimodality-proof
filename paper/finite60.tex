@@ -1,0 +1,980 @@
+\section{A finite certificate theorem for all forests of order at most sixty}
+\label{f60:sec-main}
+
+For a finite simple graph $F$, let $c_r(F)$ denote the number of independent
+sets of size $r$, and let
+\[
+ I_F(z)=\sum_{r=0}^{\alpha(F)}c_r(F)z^r
+\]
+be its independence polynomial.  We use the non-strict convention for
+unimodality: a sequence is unimodal if it is nondecreasing up to some index
+and nonincreasing thereafter.  Thus a plateau at the maximum is allowed.
+The result in this section concerns arbitrary forests, including disconnected
+forests and forests with isolated vertices.
+
+\begin{theorem}[Finite-order forest unimodality]
+\label{f60:thm-main}
+If $F$ is a forest with at most $60$ vertices, then the coefficient sequence
+of $I_F(z)$ is unimodal.
+\end{theorem}
+
+The proof has two parts.  Structural inequalities place the independent-set
+counts of every forest in an explicitly defined real polyhedron.  A finite
+collection of rational certificates then establishes the required signs of
+successive coefficient differences throughout the relevant parameter
+domain.  The certificate stage does not enumerate forests.  It is,
+however, an essential part of the proof: the result is not asserted to have
+a certificate-free closed-form proof.  Neither Theorem~\ref{f60:thm-main}
+nor the argument below asserts log-concavity of the entire coefficient
+sequence, unimodality for all orders, or a corresponding theorem up to
+order $100$.
+
+Throughout this section, binomial coefficients are defined by
+\[
+ \binom{b}{r}=0\qquad\text{unless }b,r\text{ are integers with }0\le r\le b.
+\]
+For polynomials with real coefficients, $P\le_{\mathrm{coeff}}Q$ means
+that every coefficient of $Q-P$ is nonnegative.  We write
+$x_+=\max(x,0)$ and use $\mathbf{1}_{A}$ for the indicator of a condition
+$A$.
+
+\subsection{A decomposition relative to a maximum independent set}
+\label{f60:subsec-decomposition}
+
+Let $F$ be a forest on $n$ vertices.  Write $a=\alpha(F)$ and let $v$ be
+its matching number.  Leaf deletion gives
+\begin{equation}
+ a+v=n,\qquad \delta:=a-v\ge0.
+ \label{f60:eq-matching}
+\end{equation}
+For completeness, if $u$ is a leaf with neighbour $w$, a maximum
+independent set may be chosen to contain $u$: replace $w$ by $u$ if
+necessary.  Consequently
+$\alpha(F)=1+\alpha(F-\{u,w\})$.  A maximum matching may likewise be
+chosen to contain $uw$, by replacing an edge incident with $w$ by $uw$
+when necessary.  Its size is therefore $1+\nu(F-\{u,w\})$.  An isolated
+vertex increases the independence number by one and leaves the matching
+number unchanged.  These observations prove the first identity in
+\eqref{f60:eq-matching} by induction.  The inequality follows from
+$2v\le n$.
+
+Fix a maximum independent set $I$ and put $Y=V(F)\setminus I$, so that
+$|I|=a$ and $|Y|=v$.  For any fixed maximum matching, an independent set
+contains at most one endpoint of each matched edge, and there are
+$\delta=n-2v$ unmatched vertices.  Since $|I|=v+\delta$, equality holds
+in all of these restrictions.  Hence $I$ contains every unmatched vertex
+and exactly one endpoint of every matched edge.  In particular, the
+matching saturates $Y$ and matches it into $I$.
+
+For an independent set $J\subseteq Y$, define
+\[
+ j=|J|,\qquad m(J)=|I\setminus N_I(J)|.
+\]
+Let $t_{j,m}$ count the independent subsets $J$ of $Y$ for which these
+parameters equal $j,m$.  The set $J\cup(I\setminus N_I(J))$ is independent,
+so $j+m\le a$.  By convention $t_{0,a}=1$, and all other $t_{0,m}$ vanish.
+Every independent set of $F$ is uniquely obtained by first choosing its
+intersection $J$ with $Y$ and then choosing an arbitrary subset of
+$I\setminus N_I(J)$.  Thus
+\begin{equation}
+ I_F(z)=(1+z)^a+
+ \sum_{j=1}^{v}\sum_{m=0}^{a-j}t_{j,m}z^j(1+z)^m.
+ \label{f60:eq-decomposition}
+\end{equation}
+In particular,
+\begin{equation}
+ c_r=\binom ar+
+ \sum_{j=1}^{v}\sum_{m=0}^{a-j}\binom m{r-j}t_{j,m}.
+ \label{f60:eq-coefficients}
+\end{equation}
+No maximality requirement is placed on $J$; all independent sets are
+included in this identity.
+
+Define
+\begin{equation}
+ T_j=\sum_m t_{j,m},\qquad M_j=\sum_m mt_{j,m},\qquad
+ W_j=\binom vj.
+ \label{f60:eq-layer-notation}
+\end{equation}
+The basic constraints are
+\begin{equation}
+ t_{j,m}\ge0,\qquad T_1=v,\qquad T_j\le W_j\quad(2\le j\le v).
+ \label{f60:eq-basic-counts}
+\end{equation}
+All certificate arguments below remain valid when the $t_{j,m}$ are
+arbitrary nonnegative real numbers satisfying the displayed constraints.
+Integrality is used in deriving some structural inequalities for actual
+forests, but is not imposed in the subsequent linear relaxation.
+
+\subsection{Coefficient bounds and the first cross-layer inequalities}
+\label{f60:subsec-old-rows}
+
+\begin{lemma}[Path lower bound and matching upper bound]
+\label{f60:lem-path-matching}
+For every forest of order $n$ and independence number $a$, with $v=n-a$,
+\begin{equation}
+ \binom{n-r+1}{r}\le c_r\qquad(r\ge0),
+ \label{f60:eq-path-bound}
+\end{equation}
+and
+\begin{equation}
+ I_F(z)\le_{\mathrm{coeff}}(1+z)^{a-v}(1+2z)^v.
+ \label{f60:eq-matching-bound}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The number of independent $r$-sets of the path on $n$ vertices is
+$p_{n,r}=\binom{n-r+1}{r}$.  A leaf $u$ with neighbour $w$ gives
+\[
+ I_F=I_{F-u}+zI_{F-\{u,w\}},
+\]
+and $p_{n,r}=p_{n-1,r}+p_{n-2,r-1}$.  Induction therefore proves
+\eqref{f60:eq-path-bound} when a leaf is present.  If $u$ is isolated,
+$I_F=(1+z)I_{F-u}$; the induction bound and
+$p_{n-1,r-1}\ge p_{n-2,r-1}$ give the same conclusion.  The empty and
+one-vertex forests start the induction.  Coefficients beyond the degree
+are handled by the binomial convention.
+
+For the upper bound, $m\le a-j$ in
+\eqref{f60:eq-decomposition}, and the layer mass is at most $\binom vj$.
+Consequently
+\begin{align*}
+ I_F(z)&\le_{\mathrm{coeff}}
+ \sum_{j=0}^{v}\binom vj z^j(1+z)^{a-j}\\
+ &=(1+z)^{a-v}(1+2z)^v.
+\end{align*}
+\end{proof}
+
+\begin{lemma}[Private-neighbour inequality]
+\label{f60:lem-private}
+For $2\le r\le v$ and every integer $h\ge0$,
+\begin{equation}
+ \sum_m\bigl((r-1)m+a-r+1-rh\bigr)_+t_{r,m}
+ \le(v-r+1)\sum_m(m-h)_+t_{r-1,m}.
+ \label{f60:eq-private}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Fix an independent $r$-set $J\subseteq Y$, put $m=m(J)$ and $d=a-m$,
+and consider the bipartite forest induced by $J\cup N_I(J)$.
+Each vertex of $J$ has a neighbour in $I$, since otherwise $I$ would not
+be maximum.  If this forest has $b\ge1$ components and $p$ vertices of
+degree one on its $I$ side, its number of edges is $r+d-b$, while summing
+degrees on that side gives at least $p+2(d-p)$.  Therefore
+\[
+ p\ge d-r+b\ge d-r+1.
+\]
+For $u\in J$, let $p_u$ be the number of its private neighbours in $I$,
+that is, neighbours of $u$ adjacent to no other member of $J$.  Then
+\begin{equation}
+ m(J\setminus\{u\})=m+p_u,\qquad
+ \sum_{u\in J}p_u\ge d-r+1.
+ \label{f60:eq-private-release}
+\end{equation}
+It follows that
+\[
+ \sum_{u\in J}(m+p_u-h)_+
+ \ge \left(r(m-h)+\sum_{u\in J}p_u\right)_+
+ \ge\bigl((r-1)m+a-r+1-rh\bigr)_+.
+\]
+Sum over $J$.  Each independent $(r-1)$-set of $Y$ is obtained by
+deleting one vertex from at most $v-r+1$ independent $r$-sets.  The
+resulting reverse count proves \eqref{f60:eq-private}.
+\end{proof}
+
+\begin{lemma}[Matching-based extension inequality]
+\label{f60:lem-hall}
+Put
+\[
+ H_{r,l}=\sum_m\binom ml t_{r,m},\qquad H_{0,l}=\binom al.
+\]
+Whenever the factor on the right is nonnegative,
+\begin{equation}
+ (r+1)H_{r+1,l}
+ \le\bigl(v-r-\max(0,l-\delta)\bigr)H_{r,l}.
+ \label{f60:eq-hall}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Fix a set $L\subseteq I$ of size $l$.  At most $\delta$ vertices of $I$
+are unmatched by a fixed maximum matching.  The matched vertices of $L$
+therefore exclude at least $\max(0,l-\delta)$ distinct vertices of $Y$.
+Among the remaining vertices, an independent $r$-set has at most
+$v-r-\max(0,l-\delta)$ extensions.  Double-count the pairs consisting of
+such an $r$-set and one extending vertex, and then sum over $L$.
+An independent set $J$ contributes $\binom{m(J)}l$ choices of $L$,
+giving precisely \eqref{f60:eq-hall}.
+\end{proof}
+
+\subsection{Choosing a maximum independent set with a sparse complement}
+\label{f60:subsec-sparse}
+
+The preceding formulas hold for every maximum independent set.  The
+remaining inequalities are used with a single maximum independent set
+chosen as follows.
+
+\begin{lemma}[Sparse-complement selection]
+\label{f60:lem-sparse}
+A forest has a maximum independent set $I$ whose complement $Y$ satisfies
+\begin{equation}
+ e(F[Y])\le E:=\max(0,\delta-1).
+ \label{f60:eq-sparse}
+\end{equation}
+If $v=|Y|\ge1$, then also $e(F[Y])\le v-1$.
+\end{lemma}
+
+\begin{proof}
+Fix a maximum matching and a bipartite colouring of each component of
+$F$.  Contract each matched edge to one paired node, and retain each
+unmatched vertex as a terminal.  The contracted graph is a forest.
+Every maximum independent set contains all terminals and selects exactly
+one endpoint from each matched pair.  Label a paired node by the original
+bipartite colour of its selected endpoint, and label a terminal by its own
+colour.
+
+Consider an edge of the contracted forest.  Its corresponding original
+edge joins opposite bipartite colours.  If the two node labels agree, the
+original edge has exactly one endpoint in $I$.  If they disagree, it has
+either both endpoints in $I$ or both in $Y$; the former is excluded by
+independence.  Thus edges between different labels correspond precisely
+to edges of $F[Y]$.  No such edge is incident with a terminal.
+
+Choose a maximum independent set minimizing $e(F[Y])$.  Suppose a
+monochromatic connected block in the contracted forest has no terminal
+and has a boundary edge.  Swap the selected and unselected endpoints in
+every matched pair belonging to this block.  Internal edges still have
+exactly one selected endpoint.  Every boundary edge, previously an edge
+with both endpoints in $Y$, now has exactly one selected endpoint.
+Matched edges still contribute one selected endpoint each.  Hence the
+new set is independent, has the same size, and has strictly fewer edges
+in its complement, a contradiction.
+
+In an original component containing $\delta_c>0$ terminals, every
+monochromatic block consequently contains a terminal.  There are at most
+$\delta_c$ such blocks, and contracting them gives a tree, so there are
+at most $\delta_c-1$ edges between blocks.  In a component without
+terminals there can be only one monochromatic block, hence no such
+edges.  Summing over components proves
+\eqref{f60:eq-sparse}.  The final assertion follows because $F[Y]$ is
+itself a forest.
+\end{proof}
+
+From now on, fix the set supplied by Lemma~\ref{f60:lem-sparse}.  Define
+\begin{equation}
+ D_0=\min(E,v-1),\qquad e=e(F[Y])=\binom v2-T_2.
+ \label{f60:eq-actual-edges}
+\end{equation}
+The last identity is exact: a two-element subset of $Y$ fails to be
+independent precisely when it is an edge.  All constraints below refer
+to this same $I$, this same $Y$, and this same value of $e$.
+
+\subsection{Two-sided information from deletion of a vertex}
+\label{f60:subsec-two-sided}
+
+For an independent $r$-set $J\subseteq Y$, retain the notation
+$m=m(J)$, $d=a-m$, and put $L=d-r+1$.  Since $r+m\le a$, we have
+$L\ge1$.  Moreover, applying maximality of the independence number to
+$J\setminus\{u\}$ gives
+$(r-1)+(m+p_u)\le a$.  Together with
+\eqref{f60:eq-private-release} and the fact that private neighbours are
+distinct, this yields
+\begin{equation}
+ 0\le p_u\le L,\qquad L\le\sum_{u\in J}p_u\le d.
+ \label{f60:eq-release-range}
+\end{equation}
+
+For $2\le r\le v$ and an integer $h\ge0$, define
+\begin{equation}
+ b_{r,h}(m)=
+ \begin{cases}
+ r,&m\ge h,\\
+ 1,&m<h\text{ and }rh\le a+(r-1)m,\\
+ 0,&\text{otherwise}.
+ \end{cases}
+ \label{f60:eq-step-function}
+\end{equation}
+
+\begin{lemma}[Lower deletion threshold]
+\label{f60:lem-tail}
+For every $2\le r\le v$ and integer $h\ge0$,
+\begin{equation}
+ \sum_m b_{r,h}(m)t_{r,m}
+ \le(v-r+1)\sum_{m\ge h}t_{r-1,m}.
+ \label{f60:eq-tail}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+If $m\ge h$, all $r$ deletions from $J$ give an available-vertex count
+at least $h$.  Otherwise let $t=h-m\ge1$.  The condition in the second
+line of \eqref{f60:eq-step-function} is $rt\le d$.  If every deletion
+had $p_u<t$, integrality would imply
+\[
+ \sum p_u\le r(t-1)\le d-r<L,
+\]
+contrary to \eqref{f60:eq-release-range}.  Thus at least one deletion
+has the required count.  Summing this lower bound over $J$ and using at
+most $v-r+1$ extensions for each parent set proves the inequality.
+\end{proof}
+
+For an independent $(r-1)$-set $A\subseteq Y$, the number of unselected
+vertices forbidden by its edges is at most the total number $e$ of edges
+of $F[Y]$.  Hence $A$ has at least
+\begin{equation}
+ s_r=\max(0,v-r+1-E)
+ \label{f60:eq-extension-lower}
+\end{equation}
+extensions to an independent $r$-set.
+
+To bound deletion sums in the other direction, write
+\[
+ d=qL+\rho,\qquad 0\le\rho<L.
+\]
+The identity
+$rL-d=(r-1)(d-r)\ge0$ gives $q\le r$; if $q=r$, then $\rho=0$.
+Define
+\begin{equation}
+ U_{r,h}(m)=q(m+L-h)_+
+ +\begin{cases}
+ (m+\rho-h)_++(r-q-1)(m-h)_+,&q<r,\\
+ 0,&q=r,
+ \end{cases}
+ \label{f60:eq-U}
+\end{equation}
+and
+\begin{equation}
+ V_{r,h}(m)=
+ \begin{cases}
+ r,&h\le m,\\
+ \min\bigl(r,\lfloor d/(h-m)\rfloor\bigr),&m<h\le m+L,\\
+ 0,&h>m+L.
+ \end{cases}
+ \label{f60:eq-V}
+\end{equation}
+
+\begin{lemma}[Upper deletion bounds]
+\label{f60:lem-release-upper}
+For $2\le r\le v$ and integer $h\ge0$,
+\begin{align}
+ s_r\sum_m(m-h)_+t_{r-1,m}
+ &\le\sum_m U_{r,h}(m)t_{r,m},
+ \label{f60:eq-release-upper}\\
+ s_r\sum_{m\ge h}t_{r-1,m}
+ &\le\sum_m V_{r,h}(m)t_{r,m}.
+ \label{f60:eq-tail-upper}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+For fixed $J$, consider the feasible release vector $(p_u)_{u\in J}$
+in \eqref{f60:eq-release-range}.  The function
+$p\mapsto(m+p-h)_+$ is convex and nondecreasing.  Under the upper
+constraints $0\le p_u\le L$ and $\sum p_u\le d$, its sum is maximized
+by concentrating mass: $q$ coordinates equal $L$, at most one further
+coordinate equals $\rho$, and the others are zero.  This follows, for
+example, by repeatedly transferring mass between two coordinates
+strictly inside $[0,L]$ toward an endpoint, choosing a direction that
+does not decrease the convex sum.  Monotonicity permits total mass $d$.
+The resulting maximum is \eqref{f60:eq-U}.
+
+For the indicator sum, all deletions qualify when $h\le m$.  If
+$0<h-m\le L$, each qualifying coordinate consumes at least $h-m$ of
+the total mass at most $d$, giving the middle bound in
+\eqref{f60:eq-V}.  If $h-m>L$, none qualifies.
+
+Now sum either deletion statistic over all independent $r$-sets.  The
+upper bounds just obtained give the right sides of
+\eqref{f60:eq-release-upper} and \eqref{f60:eq-tail-upper}.  Counting
+the same incidence relation from its $(r-1)$-set side gives the left
+sides, because every such set has at least $s_r$ extensions.  When
+$s_r=0$, both inequalities remain valid and are automatic consequences
+of nonnegativity.
+\end{proof}
+
+\subsection{Available-vertex means and the complement's actual edge count}
+\label{f60:subsec-mean}
+
+\begin{lemma}[Coverage union bound]
+\label{f60:lem-union}
+For $2\le r\le v$,
+\begin{equation}
+ \sum_m(a-m)t_{r,m}
+ \le\binom{v-1}{r-1}\sum_m(a-m)t_{1,m}.
+ \label{f60:eq-union}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For each independent $r$-set $J\subseteq Y$, its covered vertices in
+$I$ form a union of the neighbourhoods of its members.  Its cardinality
+is at most the sum of those neighbourhood sizes.  A fixed vertex of $Y$
+belongs to at most $\binom{v-1}{r-1}$ such sets.  Summing the union bound
+therefore gives the stated inequality.
+\end{proof}
+
+For $2\le r\le v$, put
+\begin{equation}
+ \beta_r=\binom{v-2}{r-1}-(a-2)\binom{v-2}{r-2},\qquad
+ C_r^0=a\binom{v-2}{r}+(\delta+1)\binom{v-2}{r-1}.
+ \label{f60:eq-mean-constants}
+\end{equation}
+
+\begin{lemma}[Mean bound retaining the actual edge count]
+\label{f60:lem-mean}
+With $e=e(F[Y])$ as in \eqref{f60:eq-actual-edges},
+\begin{equation}
+ M_r\ge C_r^0+\beta_r e\qquad(2\le r\le v).
+ \label{f60:eq-mean}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For $i\in I$, let $d_i=|N(i)\cap Y|$.  For integer $0\le d\le v$,
+the function $d\mapsto\binom{v-d}{r}$ is discretely convex: its forward
+differences are $-\binom{v-d-1}{r-1}$ and are nondecreasing.  The line
+through its values at $d=1,2$ is therefore a lower support line on the
+integer domain.  Explicitly,
+\[
+ \binom{v-d_i}{r}\ge
+ \binom{v-2}{r}+(2-d_i)\binom{v-2}{r-1}.
+\]
+The number of edges between $I$ and $Y$ is at most $n-1-e$.
+Consequently
+\begin{align*}
+ \sum_{i\in I}\binom{v-d_i}{r}
+ &\ge a\binom{v-2}{r}
+   +(2a-n+1+e)\binom{v-2}{r-1}\\
+ &=C_r^0+e\binom{v-2}{r-1}.
+\end{align*}
+The sum on the left counts pairs consisting of any $r$-subset of $Y$
+and an available vertex of $I$, without yet requiring the subset to be
+independent.
+
+For an edge $uw$ of $F[Y]$, both $u$ and $w$ have nonempty
+neighbourhoods in $I$, and those neighbourhoods are disjoint, since a
+common neighbour would produce a triangle.  Every $r$-set containing
+$u,w$ therefore has at most $a-2$ available vertices of $I$.  There are
+$\binom{v-2}{r-2}$ candidate sets containing this edge.  A union bound
+over the $e$ edges shows that deleting all nonindependent subsets from
+the preceding count loses at most
+$e(a-2)\binom{v-2}{r-2}$.  Subtracting this amount proves the lemma.
+\end{proof}
+
+The coefficient $\beta_r$ may be negative.  Accordingly we do not
+replace $e$ independently by an endpoint of its allowed interval for
+each $r$.  We retain the common variable and then substitute the exact
+identity $e=\binom v2-T_2$; this is the source of the linear row used in
+the certificates.
+
+\subsection{Coefficient bounds for a forest with a fixed edge count}
+\label{f60:subsec-edge-bounds}
+
+\begin{lemma}[Edge-count coefficient bounds]
+\label{f60:lem-edge-bounds}
+For a forest $G$ on $v\ge1$ vertices and with $e$ edges,
+\begin{equation}
+ i_r(G)\ge\binom vr-e\binom{v-2}{r-2},
+ \label{f60:eq-edge-lower-raw}
+\end{equation}
+where $i_r(G)$ counts its independent $r$-sets, and
+\begin{equation}
+ I_G(z)\le_{\mathrm{coeff}}
+ (1+z)^{v-1}+z(1+z)^{v-e-1}.
+ \label{f60:eq-star-upper}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The first bound deletes from the $\binom vr$ subsets all those
+containing an edge.  Each edge occurs in $\binom{v-2}{r-2}$ subsets,
+so the union bound proves the claim, including cases when its right
+side is negative.
+
+For the upper bound, write
+$B(v,e)=(1+z)^{v-1}+z(1+z)^{v-e-1}$.
+If $e=0$, equality holds; orders at most two are immediate.  For
+$v\ge3$ and $e>0$, choose a leaf $u$ with neighbour $w$ of degree $d$.
+The two smaller forests have parameters $(v-1,e-1)$ and $(v-2,e-d)$.
+Induction and leaf deletion give
+\[
+ I_G(z)\le_{\mathrm{coeff}}B(v-1,e-1)+zB(v-2,e-d).
+\]
+A direct subtraction gives
+\[
+ B(v,e)-B(v-1,e-1)-zB(v-2,e-d)
+ =z^2\bigl((1+z)^{v-3}-(1+z)^{v-e+d-3}\bigr).
+\]
+The remaining forest on $v-2\ge1$ vertices has $e-d\le v-3$ edges,
+so the second exponent is nonnegative.  Since $e\ge d$, it does not
+exceed the first exponent.  The displayed difference has nonnegative
+coefficients, completing the induction.
+\end{proof}
+
+Apply the lemma to $G=F[Y]$, whose independent-set coefficients are
+$T_r$.  From \eqref{f60:eq-star-upper},
+\begin{equation}
+ T_r\le\binom{v-1}{r}+\binom{v-e-1}{r-1}.
+ \label{f60:eq-edge-upper-raw}
+\end{equation}
+For $2\le r\le v$, the function on integer $0\le e\le v-1$ given by
+\[
+ g_r(e)=\binom{v-1}{r-1}-\binom{v-e-1}{r-1}
+\]
+is concave, satisfies $g_r(0)=0$, and has successive increments
+$\binom{v-e-2}{r-2}$, which are nonincreasing.  If $D_0\ge1$, define
+\begin{equation}
+ G_r=\binom{v-1}{r-1}-\binom{v-D_0-1}{r-1}.
+ \label{f60:eq-G}
+\end{equation}
+The chord bound gives $g_r(e)\ge eG_r/D_0$ for $0\le e\le D_0$.
+Substituting \eqref{f60:eq-actual-edges} in the lower bound and in this
+linearized upper bound yields
+\begin{align}
+ -T_r+\binom{v-2}{r-2}T_2
+ &\le-\binom vr+\binom{v-2}{r-2}\binom v2,
+ \label{f60:eq-edge-lower}\\
+ D_0T_r-G_rT_2
+ &\le D_0\binom vr-G_r\binom v2.
+ \label{f60:eq-edge-upper}
+\end{align}
+When $D_0=0$, the implemented replacement for
+\eqref{f60:eq-edge-upper} is the ordinary bound $T_r\le\binom vr$.
+This replacement is weaker than all information available in that
+case, but remains valid and is sufficient for the finite certificates.
+
+\subsection{Reduction to successive differences on a finite parameter domain}
+\label{f60:subsec-differences}
+
+Set
+\begin{equation}
+ \Delta_k=c_k-c_{k-1},\qquad
+ B_{m,j}(k)=\binom m{k-j}-\binom m{k-j-1}.
+ \label{f60:eq-difference-notation}
+\end{equation}
+The exact coefficient identity gives
+\begin{equation}
+ \Delta_k=B_{a,0}(k)+\sum_{j,m}B_{m,j}(k)t_{j,m}.
+ \label{f60:eq-difference}
+\end{equation}
+
+\begin{lemma}[Universal decreasing tail]
+\label{f60:lem-tail-cutoff}
+For a forest of independence number $a$,
+\begin{equation}
+ (k+1)c_{k+1}\le2(a-k)c_k.
+ \label{f60:eq-tail-ratio}
+\end{equation}
+In particular, with
+\begin{equation}
+ K(a)=\left\lfloor\frac{2a+1}{3}\right\rfloor,
+ \label{f60:eq-cutoff}
+\end{equation}
+the sequence $c_{K(a)},c_{K(a)+1},\ldots,c_a$ is nonincreasing.
+\end{lemma}
+
+\begin{proof}
+Given an independent $k$-set $S$, let $A(S)$ be the vertices that can
+be added to it.  The induced forest on $A(S)$ has independence number
+at most $a-k$, since any of its independent sets can be joined to $S$.
+A bipartite graph has an independent set containing at least half its
+vertices, so $|A(S)|\le2(a-k)$.  Count pairs $(S,u)$ with $u\in A(S)$.
+Every independent $(k+1)$-set occurs $k+1$ times, proving
+\eqref{f60:eq-tail-ratio}.  The factor $2(a-k)/(k+1)$ is at most one
+when $k\ge\lceil(2a-1)/3\rceil=K(a)$.
+\end{proof}
+
+For each $1\le k<K(a)$ it is sufficient to prove one of the statements
+\begin{equation}
+ \Delta_k>0,\qquad
+ \Delta_{k+1}\le0,\qquad
+ \Delta_k\le0\ \Longrightarrow\ \Delta_{k+1}\le0.
+ \label{f60:eq-alternative}
+\end{equation}
+Indeed, once a nonpositive difference occurs, these alternatives
+prevent a later positive difference before the tail.  The first
+alternative cannot apply at an index where the difference is already
+nonpositive, while the other two give the required next sign.
+Lemma~\ref{f60:lem-tail-cutoff} supplies all remaining signs.  Also
+$c_0=1$ and $c_1=n$.
+
+The empty forest and forests with no edges have independence polynomial
+$1$ or $(1+z)^n$, respectively, and are handled directly.  For forests
+with at least one edge and order at most $60$, all required triples lie
+in the explicitly regenerated domain
+\begin{equation}
+ \mathcal P_{60}=\left\{(n,a,k):\quad
+ \begin{aligned}
+ &2\le n\le60,\quad \lceil n/2\rceil\le a\le n-1,\\[-2pt]
+ &1\le k<\lfloor(2a+1)/3\rfloor
+ \end{aligned}\right\}.
+ \label{f60:eq-domain}
+\end{equation}
+It contains $17\,100$ triples.  Empty ranges for small values of $a$
+require no certificate.  These triples are scalar parameter choices,
+not representatives of graph isomorphism classes.
+
+\subsection{Exact certificate identities and the complete finite check}
+\label{f60:subsec-certificates}
+
+\paragraph{Direct criteria.}
+Let
+\begin{equation}
+ q_{a,v}(r)=\sum_{j=0}^{\min(v,r)}\binom vj2^j\binom{a-v}{r-j},
+ \label{f60:eq-q}
+\end{equation}
+the coefficient of $z^r$ in the upper-bound polynomial of
+Lemma~\ref{f60:lem-path-matching}.  The comparisons
+\[
+ \binom{n-k+1}{k}>q_{a,v}(k-1)
+ \quad\text{or}\quad
+ q_{a,v}(k+1)\le\binom{n-k+1}{k}
+\]
+prove, respectively, $\Delta_k>0$ or $\Delta_{k+1}\le0$.
+
+The basic layer masses give further direct bounds.  For each $j$ define
+\[
+ \begin{split}
+ L_j(r)&=\begin{cases}
+ \min_{0\le m\le a-1}B_{m,1}(r),&j=1,\\
+ \min\bigl(0,\min_{0\le m\le a-j}B_{m,j}(r)\bigr),&j\ge2,
+ \end{cases}\\
+ U_j(r)&=\begin{cases}
+ \max_{0\le m\le a-1}B_{m,1}(r),&j=1,\\
+ \max\bigl(0,\max_{0\le m\le a-j}B_{m,j}(r)\bigr),&j\ge2.
+ \end{cases}
+ \end{split}
+\]
+Then
+\begin{equation}
+ B_{a,0}(r)+\sum_{j=1}^{v}W_jL_j(r)
+ \le\Delta_r\le
+ B_{a,0}(r)+\sum_{j=1}^{v}W_jU_j(r).
+ \label{f60:eq-direct-layer}
+\end{equation}
+The absence of the extra zero in the first layer is justified by
+$T_1=v$ exactly.  A strictly positive lower bound at $r=k$ or a
+nonpositive upper bound at $r=k+1$ proves the corresponding alternative
+in \eqref{f60:eq-alternative}.
+
+For a rational number $s\ge0$, the same upper-bound rule can be applied
+to $B_{m,j}(k+1)-sB_{m,j}(k)$.  A nonpositive resulting bound proves
+\begin{equation}
+ \Delta_{k+1}\le s\Delta_k,
+ \label{f60:eq-separator}
+\end{equation}
+which proves the implication in \eqref{f60:eq-alternative}.  These are
+the one-parameter rational comparison certificates called
+\texttt{separator} in the data.
+
+\paragraph{General linear certificates.}
+Normalize the variables by $x_{j,m}=t_{j,m}/W_j$.  Their layer masses
+are at most one, and the first layer mass is exactly one.
+For every valid integer inequality
+\[
+ \sum_{j,m}a^{\rho}_{j,m}t_{j,m}\le b^{\rho},
+\]
+define its scale by
+\begin{equation}
+ N_\rho=\max\left(1,|b^{\rho}|,
+       \max_{j,m}|W_ja^{\rho}_{j,m}|\right),
+ \label{f60:eq-row-scale}
+\end{equation}
+and write the corresponding normalized row as
+$A^\rho x\le b_\rho$, where
+$A^\rho_{j,m}=W_ja^\rho_{j,m}/N_\rho$ and
+$b_\rho=b^\rho/N_\rho$.
+Normalize the target affine function in the same way, obtaining
+\[
+ Q(x)=q_0+\sum_{j,m}q_{j,m}x_{j,m}.
+\]
+If $\lambda_\rho\ge0$ and $\eta\in\mathbb R$, set
+\[
+ R_{j,m}=q_{j,m}-\sum_\rho\lambda_\rho A^\rho_{j,m}
+                    -\eta\mathbf{1}_{j=1}.
+\]
+The following elementary identity is the entire certificate principle:
+\begin{equation}
+ Q(x)\le q_0+\sum_\rho\lambda_\rho b_\rho+\eta
+       +\sum_{j=1}^{v}\max\bigl(0,\max_m R_{j,m}\bigr).
+ \label{f60:eq-certificate}
+\end{equation}
+To see this, subtract the nonnegative combination of valid rows and use
+the first-layer equality for the $\eta$ term.  On each remaining layer,
+nonnegativity and mass at most one bound its residual contribution by
+the nonnegative maximum of its residual coefficients.  No assertion
+about linear-programming optimality is needed.
+
+There are three linear certificate types.  A \texttt{positive}
+certificate uses the target $-\Delta_k$ and makes the right side of
+\eqref{f60:eq-certificate} strictly negative.  A \texttt{negative}
+certificate uses $\Delta_{k+1}$ and makes the bound nonpositive.  A
+\texttt{conditional} certificate has the latter target and is permitted
+to add the row $\Delta_k\le0$.  It therefore proves exactly the
+implication in \eqref{f60:eq-alternative}.  That assumption cannot be
+discarded while retaining an unconditional negative target claim.
+
+\paragraph{Exact arithmetic and exhaustive parameter coverage.}
+Each stored linear certificate gives a positive integer denominator
+$D_c$, integer row-weight numerators, and an integer numerator for the
+unrestricted equality weight.  The principal checker
+\texttt{verify.py} independently constructs the unweighted integer
+rows, computes a common multiple of their normalization denominators,
+and checks \eqref{f60:eq-certificate} using integers.  It regenerates
+every triple in \eqref{f60:eq-domain}; it rejects missing, duplicate, or
+extraneous triples, invalid row parameters, negative inequality
+multipliers, and conditional assumptions with the wrong index.
+Direct and one-parameter comparisons are likewise performed exactly.
+
+A second arithmetic implementation, \texttt{verify\_grid.py}, uses
+the weighted rows from \texttt{kernel.py}.  It rounds target coefficients
+and right sides upward and row coefficients downward on an integer
+grid.  Nonnegative variables and nonnegative row multipliers make this
+an outward, conservative bound.  This second implementation checks all
+$1\,907$ linear certificates; complete parameter coverage and the
+$670$ one-parameter comparisons are checked by the principal verifier.
+Both implementations use the Python standard library, without a graph
+catalogue, an optimizer, or floating-point feasibility tolerances.
+
+The complete partition obtained by rerunning these checks is shown in
+Table~\ref{f60:tab-coverage}.  The matching-upper/path-lower test for a
+nonpositive next difference is available in the verifier, but accounts
+for no additional cases in this partition.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\hline
+Certificate or direct criterion & Number of triples\\
+\hline
+Path lower bound exceeds the preceding matching upper bound & $6\,724$\\
+Direct positive lower bound for $\Delta_k$ & $5\,709$\\
+Direct nonpositive upper bound for $\Delta_{k+1}$ & $2\,090$\\
+One-parameter rational comparison & $670$\\
+\texttt{positive} linear certificate & $603$\\
+\texttt{negative} linear certificate & $158$\\
+\texttt{conditional} linear certificate & $1\,146$\\
+\hline
+Total & $17\,100$\\
+\hline
+\end{tabular}
+\caption{Complete parameter coverage for Theorem~\ref{f60:thm-main}.}
+\label{f60:tab-coverage}
+\end{table}
+
+The data contain $2\,577$ stored triples: $670$ comparison parameters
+and $1\,907$ linear certificates.  The latter contain $142\,017$
+nonzero row-weight terms.  There are at most $610$ variables $t_{j,m}$
+for any parameter pair in this domain; their values are not enumerated.
+The largest common denominator used by the principal arithmetic check
+has $68$ decimal digits.  The minimum verified normalized linear
+margin is
+\[
+ \frac{953977}{42042000000}>0,
+\]
+attained at $(n,a,k)=(34,19,10)$.  This is a certificate upper-bound
+margin after normalization, not a lower bound for an unnormalized
+coefficient curvature.
+
+The exact data file \texttt{certificates.json} is identified by the
+SHA-256 digest
+\begin{center}\small\ttfamily
+a77f4fc43aec1b8eecab91c4418b6990\allowbreak
+f72dee69d802129c78efd67d2e1bcc5a.
+\end{center}
+The archived proof data and checker source are mathematical supplements
+to the finite theorem; the execution logs alone are not substitutes for
+them.
+
+\begin{proof}[Proof of Theorem~\ref{f60:thm-main}]
+Forests without edges were dealt with above.  For a forest with an edge,
+choose $I$ by Lemma~\ref{f60:lem-sparse} and form its exact counts
+$t_{j,m}$.  The preceding lemmas show that these counts satisfy every
+structural inequality used by the certificates.  Its parameters lie in
+the stated ranges, and the exact finite check proves
+\eqref{f60:eq-alternative} for every required index.  The first
+nonpositive difference, if one occurs before $K(a)$, is followed only
+by nonpositive differences through index $K(a)$.  The tail is nonincreasing
+by Lemma~\ref{f60:lem-tail-cutoff}.  Hence the whole coefficient sequence
+is unimodal.
+\end{proof}
+
+\subsection{The complete integer-row specification}
+\label{f60:subsec-row-specification}
+
+For clarity and reproducibility, the following specifies every row
+family used by the finite linear certificates.  A row labelled $\rho$
+means $\sum_{j,m}a^\rho_{j,m}t_{j,m}\le b^\rho$; unspecified
+coefficients vanish.  All indices satisfy $1\le j\le v$ and
+$0\le m\le a-j$.  The symbols in the rows are defined above, and
+$r,h,l$ are integers.
+
+\begin{description}
+\item[\texttt{count}$(r)$.]
+For $2\le r\le v$, use
+$a_{j,m}=\mathbf{1}_{j=r}$ and $b=\binom vr$.
+
+\item[\texttt{path}$(r)$.]
+For $2\le r\le a$, use
+$a_{j,m}=-\binom m{r-j}$ and
+$b=\binom ar-\binom{n-r+1}{r}$.
+
+\item[\texttt{private}$(r,h)$.]
+For $2\le r\le v$ and $0\le h<a$, set
+\[
+ a_{j,m}=\mathbf{1}_{j=r}\bigl((r-1)m+a-r+1-rh\bigr)_+
+ -(v-r+1)\mathbf{1}_{j=r-1}(m-h)_+,
+ \qquad b=0.
+\]
+
+\item[\texttt{hall}$(r,l)$.]
+Take $0\le l\le a$, $0\le r<\min(v,a-l)$, and
+$c=v-r-\max(0,l-\delta)\ge0$.  Set
+\[
+ a_{j,m}=\bigl((r+1)\mathbf{1}_{j=r+1}-c\mathbf{1}_{j=r}\bigr)
+                 \binom ml,\qquad
+ b=\begin{cases}c\binom al,&r=0,\\0,&r>0.\end{cases}
+\]
+The implemented domain with $l=0$ uses $1\le r<v$; the omitted
+$(r,l)=(0,0)$ case is the already imposed first-layer equality.
+
+\item[\texttt{tail}$(r,h)$.]
+For $2\le r\le v$ and $0\le h\le a-r+1$, set
+\[
+ a_{j,m}=\mathbf{1}_{j=r}b_{r,h}(m)
+ -(v-r+1)\mathbf{1}_{j=r-1}\mathbf{1}_{m\ge h},\qquad b=0.
+\]
+
+\item[\texttt{release\_upper}$(r,h)$.]
+On the same range, set
+\[
+ a_{j,m}=s_r\mathbf{1}_{j=r-1}(m-h)_+
+            -\mathbf{1}_{j=r}U_{r,h}(m),\qquad b=0.
+\]
+
+\item[\texttt{tail\_upper}$(r,h)$.]
+On the same range, set
+\[
+ a_{j,m}=s_r\mathbf{1}_{j=r-1}\mathbf{1}_{m\ge h}
+            -\mathbf{1}_{j=r}V_{r,h}(m),\qquad b=0.
+\]
+
+\item[\texttt{mean}$(r)$.]
+For $2\le r\le v$, set
+\[
+ a_{j,m}=-m\mathbf{1}_{j=r}-\beta_r\mathbf{1}_{j=2},\qquad
+ b=-C_r^0-\beta_r\binom v2.
+\]
+
+\item[\texttt{union}$(r)$.]
+For $2\le r\le v$, set
+\[
+ a_{j,m}=(a-m)\left(\mathbf{1}_{j=r}
+                -\binom{v-1}{r-1}\mathbf{1}_{j=1}\right),\qquad b=0.
+\]
+
+\item[\texttt{edge\_lower}$(r)$.]
+For $2\le r\le v$, set
+\[
+ a_{j,m}=-\mathbf{1}_{j=r}+\binom{v-2}{r-2}\mathbf{1}_{j=2},\qquad
+ b=-\binom vr+\binom{v-2}{r-2}\binom v2.
+\]
+
+\item[\texttt{edge\_upper}$(r)$.]
+For $2\le r\le v$ and $D_0>0$, set
+\[
+ a_{j,m}=D_0\mathbf{1}_{j=r}-G_r\mathbf{1}_{j=2},\qquad
+ b=D_0\binom vr-G_r\binom v2.
+\]
+For $D_0=0$, use the \texttt{count}$(r)$ row instead.
+
+\item[\texttt{assumption}$(k)$.]
+Only in a \texttt{conditional} certificate at the same index $k$, use
+\[
+ a_{j,m}=B_{m,j}(k),\qquad b=-B_{a,0}(k).
+\]
+\end{description}
+
+These formulas specify a relaxation containing the counts of every
+forest after the prescribed choice of $I$.  They do not assert that
+every point in the relaxation is realizable by a forest.
+
+\subsection{An explicit affine comparison at the final parameter gap}
+\label{f60:subsec-example}
+
+For $(n,a,k)=(60,33,19)$ the data include a certificate with $193$
+nonzero row multipliers, including one assumption row.  Its denominator
+is $D_c=10^7$ and its equality-weight numerator is $1395$.
+Retaining the assumption row algebraically on the left, rather than
+declaring it true, gives the unconditional affine comparison
+\begin{equation}
+ \Delta_{20}\le\frac{96885639}{100000000}\Delta_{19}
+ -\frac{4010142596414187852788421881}{28302876966000000000}.
+ \label{f60:eq-example-exact}
+\end{equation}
+Since the last positive fraction is strictly greater than $141686748$,
+\begin{equation}
+ \Delta_{20}\le\frac{96885639}{100000000}\Delta_{19}-141686748.
+ \label{f60:eq-example-rounded}
+\end{equation}
+The complete weights are in \texttt{example\_60\_33\_19.json}, which
+agrees exactly with the corresponding entry of the master data file.
+The comparison has been checked by recomputing both normalization
+scales and the rational residual bound.  It applies simultaneously to
+all forests with $(n,a)=(60,33)$, rather than to a selected graph.
+
+\subsection{Exact obstructions to extending the stated relaxations}
+\label{f60:subsec-countermodels}
+
+The supplements also record two rational countermodels to specified
+real-valued relaxations.  They are useful for delineating the reach of
+the method, but have a different logical status from the finite forest
+theorem.
+
+The first, at $(n,a,k)=(55,30,18)$, satisfies all rows in the original
+four families \texttt{count}, \texttt{path}, \texttt{private}, and
+\texttt{hall} with $l\ge1$.  It has $193$ nonzero count variables and
+a common denominator with $135$ decimal digits.  The second, at
+$(100,55,31)$, satisfies the extended row families above, together
+with $44$ additional valid cover rows
+\begin{equation}
+ T_r\ge\max\left(0,\binom vr-E\binom{v-2}{r-2}\right)
+ \qquad(2\le r\le v).
+ \label{f60:eq-cover}
+\end{equation}
+These follow from \eqref{f60:eq-edge-lower-raw} and $e\le E$.
+The second countermodel has $693$ nonzero count variables and a common
+denominator with $612$ decimal digits.  Its reverse-deletion rows with
+$s_r=0$ need not be stored because they hold automatically for every
+nonnegative array.
+
+The checker \texttt{verify\_countermodels.py} regenerates the complete
+specified row domains, rather than trusting a list of selected rows.
+It checks nonnegativity, the first-layer equality, all inequalities,
+and the coefficient differences using integer numerators and a common
+positive denominator.  The resulting $1\,198$ and $8\,356$ row checks,
+respectively, give
+\begin{equation}
+\begin{array}{c|cc}
+ (n,a,k)&\Delta_k&\Delta_{k+1}\\
+ \hline
+ (55,30,18)&<-69\,000\,000&>74\,000\\
+ (100,55,31)&<-2\cdot10^{18}&>3\cdot10^{17}.
+\end{array}
+ \label{f60:eq-countermodel-differences}
+\end{equation}
+Substitution into \eqref{f60:eq-decomposition} produces a formal
+polynomial with nonnegative rational coefficients, constant coefficient
+$1$, linear coefficient $n$, and degree $a$.  No graph realization of
+either array is asserted.
+
+It follows that the explicitly specified real-valued systems cannot
+by themselves prove the no-recovery implication at these parameter
+triples: a nonnegative linear combination of valid rows must remain
+valid at a point satisfying all the rows.  This does not disprove
+forest unimodality, rule out stronger consistency conditions or
+integrality information, or rule out a different proof at order $100$.
+It shows precisely why replacing the upper limit $60$ by $100$ in the
+finite theorem is not justified by these certificates.

@@ -1,0 +1,417 @@
+{
+  "N": 80,
+  "previous_N": 99,
+  "new_finite_vertex_range": [
+    80,
+    98
+  ],
+  "inherited_vertex_range": [
+    99,
+    "infinity"
+  ],
+  "all_new_exact_certificates_passed": true,
+  "certificate_count": 236,
+  "all_continuous_q_m_covered": true,
+  "parent_intervals": 43,
+  "q_strata": 154,
+  "kernel_method_counts": {
+    "left": 37,
+    "central": 129,
+    "right": 70
+  },
+  "variance_profile_counts": {
+    "ratio": 99,
+    "log_linear": 4,
+    "log_integer_rank": 36,
+    "flow_ratio": 97
+  },
+  "mixed_kernel_no_local_minimum_argument": true,
+  "reused99_kernel_certificates": 188,
+  "reused130_kernel_certificates": 243,
+  "reused170_kernel_certificates": 558,
+  "total_finite_kernel_rectangles": 1225,
+  "inherited_large_m_thresholds_checked": true,
+  "full_frozen99_chain_replayed": true,
+  "frozen99_zip_sha256": "1193e2ece3e95ef523b2b08de2b461fc2f8639096b50f86a47e9009883173fa2",
+  "source_summary": {
+    "passed": true,
+    "selector_count": 37,
+    "flow_selector_count": 14,
+    "log_selector_count": 14,
+    "probability_cells": 28692,
+    "retention_cells": 116974,
+    "parent_cases": 403825,
+    "response_regions": 1211475,
+    "seconds": 381.01599999997416,
+    "workers": 3,
+    "arithmetic": "Fraction, directed elementary-function rational bounds, exact polynomial signs",
+    "floating_point_acceptance": false,
+    "density": {
+      "passed": true,
+      "activity_count": 106,
+      "branch_cases": 11130,
+      "method": "exact path formula; n-induction, degrees 3/4 exhaustive branch types and all degree>=5 branch-removal argument"
+    }
+  },
+  "total_endpoint_integer_state_checks": 2523312,
+  "total_infinite_real_halfline_checks": 93456,
+  "minimum_normalized_margin_lower": "10528115305903683745719661/250000000000000000000000000000",
+  "minimum_margin_certificate": "new_80_09_001_0003",
+  "minimum_margin_scale": 38,
+  "minimum_unscaled_kernel_lower": "10528115305903683745719661/9500000000000000000000000000000",
+  "minimum_unscaled_certificate": "new_80_09_001_0003",
+  "floating_point_acceptance": false,
+  "numerical_optimizer_used": false,
+  "optional_modules_preloaded_by_environment": [],
+  "site_initialization_disabled": true,
+  "signed_variance_profiles_depend_on_declared_N": true,
+  "mean_m_is_real": true,
+  "diagnostics": {
+    "passed": true,
+    "exact_binomial_identity_checks": 11160,
+    "direct_Fraction_probability_enclosures": 1794,
+    "direct_Fraction_Laplace_enclosures": 1782,
+    "arithmetic": "fractions.Fraction and integers",
+    "scope": "Supplementary formula and interval-arithmetic diagnostics; not a replacement for the universal analytic argument.",
+    "common_noise_diagnostics": {
+      "passed": true,
+      "exact_common_noise_identities": 72,
+      "exact_tilted_marked_mean_upper_checks": 72,
+      "quarter_coefficient_sharp_conditional_mixture_checked": true,
+      "no_valley_sequence_checks": 3267,
+      "finite_path_boundary_diagnostics": 93,
+      "scope": "Supplementary exact diagnostics, not exhaustive forest enumeration or a substitute for the all-domain proof."
+    },
+    "message_flow_diagnostics": {
+      "passed": true,
+      "message_flow_zero_sums": 65,
+      "message_variance_identities": 65,
+      "log_product_identities": 65,
+      "parent_feasible_ranges": 300,
+      "leaf_root_bonus_checks": 110,
+      "source_inequality_spot_checks": 26,
+      "arithmetic": "fractions.Fraction and directed rational logarithm bounds",
+      "scope": "Small-forest identity and source sanity checks only; universal proofs are the separate continuous-domain source certificates."
+    }
+  },
+  "seconds": 1680.0629999999946,
+  "scope": "Research theorem conditional on explicitly declared inherited structural lemmas. Exact source reconstruction and complete continuous-domain certificates; not proof-assistant formalization.",
+  "prior99_replay_summary": {
+    "N": 99,
+    "previous_N": 130,
+    "new_finite_vertex_range": [
+      99,
+      129
+    ],
+    "inherited_vertex_range": [
+      130,
+      "infinity"
+    ],
+    "all_new_exact_certificates_passed": true,
+    "certificate_count": 188,
+    "parent_intervals": 43,
+    "q_strata": 148,
+    "all_continuous_q_m_covered": true,
+    "kernel_method_counts": {
+      "left": 30,
+      "central": 98,
+      "right": 60
+    },
+    "certificates_using_a_different_kernel_than_old_role": 28,
+    "mixed_kernel_no_local_minimum_argument": true,
+    "reused130_kernel_certificates": 243,
+    "reused170_kernel_certificates": 558,
+    "inherited_large_m_thresholds_checked": true,
+    "full_frozen130_chain_replayed": true,
+    "frozen130_zip_sha256": "38eeeced5b27e41ae65198847c0660cbf9b133c3f84133994c955be35ec58239",
+    "added_source_summary": {
+      "passed": true,
+      "marked_source_count": 31,
+      "full_mean_source_count": 3,
+      "probability_cells": 8624,
+      "retention_cells": 25604,
+      "all_real_response_regions_verified": true,
+      "independent_polynomial_reconstruction": true,
+      "boundary_lemma": {
+        "passed": true,
+        "vertex_minimum": 8,
+        "mean_at_one_density_lower": "276393/1000000",
+        "boundary_gain": "19/125",
+        "single_tree_all_size_gain_lower": "3482532401010619/30584568319500000",
+        "single_tree_n_ge_8_gain_lower": "74453119154345438541914831124337/488248942475911060748196799500000",
+        "decreasing_even_correction_ratio_upper": "191/400",
+        "scope": "Exact rational premises for the path formula and forest component argument in PROOF_ZH.md; path mean minimization is inherited."
+      },
+      "seconds": 60.828000000008615
+    },
+    "total_endpoint_integer_state_checks": 3397160,
+    "total_infinite_real_halfline_checks": 97760,
+    "minimum_normalized_margin_lower": "397397816903828464065081719/1000000000000000000000000000000",
+    "minimum_margin_certificate": "optimized_99_16_000_0092",
+    "minimum_margin_certificate_scale": 49,
+    "minimum_unscaled_kernel_lower": "56771116700546923437868817/7000000000000000000000000000000",
+    "minimum_unscaled_certificate": "optimized_99_16_000_0092",
+    "floating_point_acceptance": false,
+    "numerical_optimizer_used": false,
+    "optional_modules_preloaded_by_environment": [],
+    "site_initialization_disabled": true,
+    "diagnostics": {
+      "passed": true,
+      "exact_binomial_identity_checks": 11160,
+      "direct_Fraction_probability_enclosures": 2100,
+      "direct_Fraction_Laplace_enclosures": 2340,
+      "arithmetic": "fractions.Fraction and integers",
+      "scope": "Supplementary formula and interval-arithmetic diagnostics; not a replacement for the universal analytic argument.",
+      "new_structural_diagnostics": {
+        "passed": true,
+        "exact_common_noise_identities": 72,
+        "exact_tilted_marked_mean_upper_checks": 72,
+        "quarter_coefficient_sharp_conditional_mixture_checked": true,
+        "no_valley_sequence_checks": 3267,
+        "finite_path_boundary_diagnostics": 93,
+        "scope": "Supplementary exact diagnostics, not exhaustive forest enumeration or a substitute for the all-domain proof."
+      }
+    },
+    "seconds": 1055.6879999999946,
+    "scope": "Conditional on the explicitly declared inherited structural lemmas. Exact source reconstruction, continuous-domain certificates, and no-local-minimum implication; not proof-assistant formalization.",
+    "prior130_replay_summary": {
+      "N": 130,
+      "previous_N": 170,
+      "all_new_exact_certificates_passed": true,
+      "certificate_count": 243,
+      "finite_vertex_range": [
+        130,
+        169
+      ],
+      "inherited_vertex_range": [
+        170,
+        "infinity"
+      ],
+      "all_continuous_activity_and_mean_intervals_covered": true,
+      "parent_intervals": 43,
+      "q_strata": 148,
+      "reused170_kernel_certificates": 558,
+      "all_inherited_larger_m_budgets_match": true,
+      "full_frozen170_chain_replayed": true,
+      "frozen170_zip_sha256": "13077535163db470fcb9c4578e41afea893f49e7cd1690557e4304bae375d35a",
+      "new_source_summary": {
+        "passed": true,
+        "tilted_source_count": 36,
+        "selection_source_count": 92,
+        "tilted_probability_cells": 2855,
+        "tilted_retention_cells": 2855,
+        "tilted_response_region_checks": 6987,
+        "selection_probability_cells": 26186,
+        "selection_retention_cells": 55215,
+        "all_polynomials_independently_reconstructed": true,
+        "all_real_response_regions_verified": true,
+        "arithmetic": "fractions.Fraction; directed rational elementary bounds",
+        "seconds": 215.23399999999674
+      },
+      "total_endpoint_integer_state_checks": 7394490,
+      "total_infinite_real_halfline_checks": 165240,
+      "minimum_normalized_margin_lower": "8283392798494017812873959/50000000000000000000000000000",
+      "minimum_margin_certificate": "bridge_130_10_002_0059",
+      "minimum_margin_certificate_scale": 80,
+      "corresponding_unscaled_kernel_expectation_lower": "8283392798494017812873959/4000000000000000000000000000000",
+      "integer_target_rank_used": true,
+      "mean_m_is_not_assumed_integer": true,
+      "floating_point_acceptance": false,
+      "numerical_optimizer_used": false,
+      "optional_modules_preloaded_by_environment": [],
+      "site_initialization_disabled": true,
+      "diagnostics": {
+        "passed": true,
+        "exact_binomial_identity_checks": 11160,
+        "direct_Fraction_probability_enclosures": 2520,
+        "direct_Fraction_Laplace_enclosures": 3060,
+        "arithmetic": "fractions.Fraction and integers",
+        "scope": "Supplementary formula and interval-arithmetic diagnostics; not a replacement for the universal analytic argument.",
+        "source_identity_diagnostics": {
+          "passed": true,
+          "exact_tree_response_variance_identities": 102,
+          "exact_joint_partition_function_identities": 34,
+          "small_forest_source_bound_diagnostics": 102,
+          "arithmetic": "fractions.Fraction; exact independent-set enumeration only for these diagnostics",
+          "scope": "Supplementary small-forest identities and sanity checks, not enumeration of all forests or a substitute for universal certificates."
+        }
+      },
+      "scope": "Conditional on explicitly declared inherited structural lemmas; exact arithmetic and complete continuous-domain checks, not proof-assistant formalization.",
+      "seconds": 765.625,
+      "prior170_replay_summary": {
+        "N": 170,
+        "previous_N": 350,
+        "all_exact_bridge_certificates_passed": true,
+        "certificate_count": 558,
+        "all_continuous_activity_and_mean_intervals_covered": true,
+        "q_strata": 130,
+        "parent_intervals": 43,
+        "finite_vertex_range": [
+          170,
+          349
+        ],
+        "inherited_vertex_range": [
+          350,
+          "infinity"
+        ],
+        "inherited_larger_m_budgets_match": true,
+        "full_frozen350_chain_replayed": true,
+        "frozen350_zip_sha256": "447d369b50169f056cfd5210ef6d2ffcead0b1e33e960103e0b95ea87145d100",
+        "total_endpoint_integer_state_checks": 70112700,
+        "total_infinite_real_halfline_checks": 781200,
+        "minimum_normalized_margin_lower": "177285776443222660902327469/250000000000000000000000000000",
+        "minimum_margin_certificate": "ext_170_14_0065",
+        "diagnostics": {
+          "passed": true,
+          "exact_binomial_identity_checks": 11160,
+          "direct_Fraction_probability_enclosures": 3840,
+          "direct_Fraction_Laplace_enclosures": 6300,
+          "arithmetic": "fractions.Fraction and integers",
+          "scope": "Supplementary formula and interval-arithmetic diagnostics; not a replacement for the universal analytic argument."
+        },
+        "arithmetic": "Exact Fraction parameters; directed rational elementary bounds; 70-place outward integer intervals",
+        "floating_point_acceptance": false,
+        "numerical_optimizer_used": false,
+        "optional_modules_preloaded_by_environment": [],
+        "site_initialization_disabled": true,
+        "scope": "Research proof conditional on the explicitly declared inherited structural lemmas. Finite arithmetic and continuous-domain certificates replayed; not proof-assistant formalization of the entire theory.",
+        "seconds": 472.5,
+        "prior350_replay_summary": {
+          "N": 350,
+          "all_43_fixed_budget_rows_identical": true,
+          "all_marked_source_certificates_regenerated": true,
+          "independent_polynomial_reconstruction_passed": true,
+          "marked_probability_cells": 3600,
+          "marked_retention_cells": 10800,
+          "new_direction_envelopes": [
+            {
+              "tmax": "1/2",
+              "rectangles": 16,
+              "coefficients_independently_assembled": true,
+              "compactification_independently_inverted": true,
+              "complete_unbounded_domain_checked": true
+            },
+            {
+              "tmax": "3/5",
+              "rectangles": 16,
+              "coefficients_independently_assembled": true,
+              "compactification_independently_inverted": true,
+              "complete_unbounded_domain_checked": true
+            }
+          ],
+          "recovered_gradient_check": {
+            "arithmetic": "fractions.Fraction",
+            "finite_polynomials_verified": 1978,
+            "continuous_intervals_verified": 1978,
+            "all_exact_checks_passed": true,
+            "seconds": 11.25,
+            "large_variance_case": "Inherited 279/1000 bound at mv>=9; finite scalar cases and their full q domains checked here."
+          },
+          "all_frozen_500_inputs_replayed": true,
+          "analytic_identities": {
+            "all_checks_passed": true,
+            "arithmetic": "fractions.Fraction",
+            "triangular_variance": "1/6",
+            "fourth_kernel_error": "1/1440",
+            "sixth_eighth_reserve": "-233/8709120",
+            "sixth_moment_normalized_error": "1/96",
+            "finite_step_curvature_remainder": "1/24",
+            "scope": "Exact finite coefficient identities; accompanying calculus proofs cover the continuous domains."
+          },
+          "diagnostics": {
+            "all_checks_passed": true,
+            "independent_support_named_forest_tests": 540,
+            "lattice_matched_binomial_tests": 290,
+            "arithmetic": "fractions.Fraction",
+            "scope": "Finite diagnostics only; universal results are proved analytically and by full continuous scalar certificates."
+          },
+          "arithmetic": "fractions.Fraction",
+          "numerical_optimizer_used": false,
+          "seconds": 323.63999999998487,
+          "scope": "Fixed exact proof computations and declared continuous certificates, not independent proof-assistant formalization of the complete historical structural theory.",
+          "inherited500_replay_summary": {
+            "N": 500,
+            "all_29_fixed_rows_identical": true,
+            "all_new_sources_regenerated": true,
+            "source_probability_intervals": 472,
+            "source_retention_intervals": 472,
+            "all_new_direction_envelopes_regenerated": true,
+            "envelope_rectangles": 209,
+            "independent_polynomial_reconstruction_passed": true,
+            "analytic_interfaces_identical": true,
+            "diagnostics": {
+              "all_checks_passed": true,
+              "named_weighted_forest_tests": 180,
+              "finite_binomial_tests": 289,
+              "arithmetic": "fractions.Fraction",
+              "scope": "Named finite diagnostics only; no universal claim is inferred by sampling."
+            },
+            "all_frozen_900_inputs_replayed": true,
+            "arithmetic": "fractions.Fraction",
+            "numerical_optimizer_used": false,
+            "seconds": 132.89000000001397,
+            "scope": "Exact fixed computation and declared scalar certificates; not independent formal verification of the analytic forest reductions or a proof of the remaining n<500 cases.",
+            "inherited_replay_summary": {
+              "full_unimodality_threshold": 900,
+              "all_28_fixed_budget_rows_identical": true,
+              "all_selected_structural_certificates_regenerated": true,
+              "selection_response_polynomials_independently_reconstructed": true,
+              "probability_intervals": 4988,
+              "retention_intervals": 9344,
+              "source_intervals": 1016,
+              "all_8_analytic_gradient_constants_rechecked": true,
+              "analytic_interfaces_and_fixed_comparisons_identical": true,
+              "inherited_mean_finite_type_rechecks": {
+                "all_checks_passed": true,
+                "cases": [
+                  {
+                    "script": "adjusted_mean_leg_cluster.py",
+                    "passed": true,
+                    "saved_mathematical_fields_identical": true,
+                    "seconds": 0.35899999999674037
+                  },
+                  {
+                    "script": "endbranch_path_context_certificate.py",
+                    "passed": true,
+                    "saved_mathematical_fields_identical": true,
+                    "seconds": 0.7820000000065193
+                  },
+                  {
+                    "script": "audit_endbranch_path_context.py",
+                    "passed": true,
+                    "saved_mathematical_fields_identical": true,
+                    "seconds": 1.0309999999881256
+                  },
+                  {
+                    "script": "adjusted_mean_global_closure.py",
+                    "passed": true,
+                    "saved_mathematical_fields_identical": true,
+                    "seconds": 0.25
+                  },
+                  {
+                    "script": "audit_terminal_fan_second_stage.py",
+                    "passed": true,
+                    "saved_mathematical_fields_identical": true,
+                    "seconds": 0.25
+                  }
+                ],
+                "scope": "Recomputed finite structural identities and comparisons for inherited mean theorem; analytic reduction is supplied separately."
+              },
+              "diagnostics": {
+                "named_forest_cases": 336,
+                "finite_binomial_cases": 402
+              },
+              "arithmetic": "fractions.Fraction",
+              "external_optimization_used": false,
+              "seconds": 78.60899999999674,
+              "scope": "Complete fixed computation for this new continuation; analytic universal lemmas and declared inherited structural results still need mathematical scrutiny. Not proof-assistant formalization.",
+              "isolated_work_directory": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-09-26\\latex-x20\\work\\audit59\\replay59\\work\\input\\forest_threshold_80_release\\work\\input\\forest_threshold_99_release\\work\\input\\forest_threshold_130_release\\work\\input\\forest_threshold_170_release\\work\\input\\forest_threshold_350_release\\work\\input\\forest_threshold_500_release\\work\\input\\forest_threshold_900_release\\work\\clean_replay_paa0pmdb"
+            },
+            "isolated_work_directory": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-09-26\\latex-x20\\work\\audit59\\replay59\\work\\input\\forest_threshold_80_release\\work\\input\\forest_threshold_99_release\\work\\input\\forest_threshold_130_release\\work\\input\\forest_threshold_170_release\\work\\input\\forest_threshold_350_release\\work\\input\\forest_threshold_500_release\\work\\clean_replay_c8zjff6c"
+          },
+          "isolated_work_directory": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-09-26\\latex-x20\\work\\audit59\\replay59\\work\\input\\forest_threshold_80_release\\work\\input\\forest_threshold_99_release\\work\\input\\forest_threshold_130_release\\work\\input\\forest_threshold_170_release\\work\\input\\forest_threshold_350_release\\work\\clean_replay_bsdho1zq"
+        }
+      }
+    }
+  }
+}

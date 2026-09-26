@@ -1,0 +1,194 @@
+[
+  {
+    "stage": 59,
+    "source_relative_to_release": "CERTIFICATE_FORMAT.md",
+    "package_path": "math-sources/stage-59/CERTIFICATE_FORMAT.md",
+    "sha256": "66458c0b7dbc073a02f548daf096e5c146719667e9ba0e383cf4ca8055f46a00"
+  },
+  {
+    "stage": 59,
+    "source_relative_to_release": "PROOF_ZH.md",
+    "package_path": "math-sources/stage-59/PROOF_ZH.md",
+    "sha256": "9fc6a3d3b86e2da80728270d5f076d6b56c2245e5ded6fada6cbaaec1dabc6aa"
+  },
+  {
+    "stage": 59,
+    "source_relative_to_release": "README.md",
+    "package_path": "math-sources/stage-59/README.md",
+    "sha256": "56524f1431b499f35e08f28426c14861d242a7f11e07f65149decf492593de70"
+  },
+  {
+    "stage": 80,
+    "source_relative_to_release": "CERTIFICATE_FORMAT.md",
+    "package_path": "math-sources/stage-80/CERTIFICATE_FORMAT.md",
+    "sha256": "5d1303894f05ea5f57b18e9171856a15ba6292319dc7b07c084506769a7dfb84"
+  },
+  {
+    "stage": 80,
+    "source_relative_to_release": "PROOF_ZH.md",
+    "package_path": "math-sources/stage-80/PROOF_ZH.md",
+    "sha256": "c2ea9007ad8fcba412172cfe669b26b0378de5f7c6076b00e414d87e935bc237"
+  },
+  {
+    "stage": 80,
+    "source_relative_to_release": "README.md",
+    "package_path": "math-sources/stage-80/README.md",
+    "sha256": "dcbaefba9c6502d16a7d0f4e9aa79b5588cb6112ccb64f387c170999a5ec9309"
+  },
+  {
+    "stage": 99,
+    "source_relative_to_release": "PROOF_ZH.md",
+    "package_path": "math-sources/stage-99/PROOF_ZH.md",
+    "sha256": "169fdb590baec83c215fef572aca5fff15dacc20a99ac17e89aa63e6d79e698c"
+  },
+  {
+    "stage": 99,
+    "source_relative_to_release": "README.md",
+    "package_path": "math-sources/stage-99/README.md",
+    "sha256": "c3cb0dd1c1d61be3261730fac9327a91bbaf3823d1a9a01443c4ba30f6df5c1a"
+  },
+  {
+    "stage": 130,
+    "source_relative_to_release": "PROOF_ZH.md",
+    "package_path": "math-sources/stage-130/PROOF_ZH.md",
+    "sha256": "c099f50758e77f59e4deabaab8988903be5702972188919bc2db37fae312df45"
+  },
+  {
+    "stage": 130,
+    "source_relative_to_release": "README.md",
+    "package_path": "math-sources/stage-130/README.md",
+    "sha256": "5d34c5e2fbd33dd1e59fa883251bc19a9b58640d94fb38b9e217e9b6d6827e56"
+  },
+  {
+    "stage": 170,
+    "source_relative_to_release": "CERTIFICATE_FORMAT.md",
+    "package_path": "math-sources/stage-170/CERTIFICATE_FORMAT.md",
+    "sha256": "05e61919e376e9ef6fff9d2dd9aabf777b2188527c92d9034d40904b4ff0a966"
+  },
+  {
+    "stage": 170,
+    "source_relative_to_release": "PROOF_ZH.md",
+    "package_path": "math-sources/stage-170/PROOF_ZH.md",
+    "sha256": "132850c2757797888898a4e70de29ee8b5c70b1ffa37ca53f3f905eea5cb09c8"
+  },
+  {
+    "stage": 170,
+    "source_relative_to_release": "README.md",
+    "package_path": "math-sources/stage-170/README.md",
+    "sha256": "94e6fab0b4165e13b50578d496672a8707d97a21fbd2c6e53b209cd6f388a58a"
+  },
+  {
+    "stage": 350,
+    "source_relative_to_release": "PROOF_ZH.md",
+    "package_path": "math-sources/stage-350/PROOF_ZH.md",
+    "sha256": "3840a466842c41bf6a67d7a75e932ab73900de7a7d23c8f6c437555ce51ce34d"
+  },
+  {
+    "stage": 350,
+    "source_relative_to_release": "README.md",
+    "package_path": "math-sources/stage-350/README.md",
+    "sha256": "638d31d3f2c0c9bc223c8f0bd5e3161ef26e42efb25b7d751ff0e9b1ceb75e6a"
+  },
+  {
+    "stage": 500,
+    "source_relative_to_release": "PROOF_ZH.md",
+    "package_path": "math-sources/stage-500/PROOF_ZH.md",
+    "sha256": "5aa6c320cf22a045165bb09622db6943993ba3df1c876ea3292712aca99de672"
+  },
+  {
+    "stage": 500,
+    "source_relative_to_release": "README.md",
+    "package_path": "math-sources/stage-500/README.md",
+    "sha256": "99bf37636ae005fb544733895f008dd02a36fb7ca1558e6a9467fca9c08e022b"
+  },
+  {
+    "stage": 900,
+    "source_relative_to_release": "PROOF_ZH.md",
+    "package_path": "math-sources/stage-900/PROOF_ZH.md",
+    "sha256": "692d3f850ac355661209e13f6617bec0b2dcedf291ad59d7ec6e63a06b8a0d95"
+  },
+  {
+    "stage": 900,
+    "source_relative_to_release": "README.md",
+    "package_path": "math-sources/stage-900/README.md",
+    "sha256": "184f4ed41ab1e6167b80dac85f0b7477b9fad6a49e8ef53418a4a71788e44c73"
+  },
+  {
+    "stage": 900,
+    "source_relative_to_release": "inputs/conditional_gaussian_curvature_proof.md",
+    "package_path": "math-sources/stage-900/inputs/conditional_gaussian_curvature_proof.md",
+    "sha256": "da957b2c43945558b5fc069c6d22f3918fe9e62a9c85a9218ff6a1520e02120f"
+  },
+  {
+    "stage": 900,
+    "source_relative_to_release": "inputs/earlier_finite_gradient_proof.md",
+    "package_path": "math-sources/stage-900/inputs/earlier_finite_gradient_proof.md",
+    "sha256": "6ffae15d8fae49fcbfd9d23aaba36058c2b4830f6823e33c504570602ca2d662"
+  },
+  {
+    "stage": 900,
+    "source_relative_to_release": "inputs/inherited_mean/全森林的十的三十六次方单峰门槛.md",
+    "package_path": "math-sources/stage-900/inputs/inherited_mean/全森林的十的三十六次方单峰门槛.md",
+    "sha256": "295f42600ac7d05de961f32baed2fb637eb11fa322dade416c060e17530038ff"
+  },
+  {
+    "stage": 900,
+    "source_relative_to_release": "inputs/inherited_mean/条件噪声结构研究.md",
+    "package_path": "math-sources/stage-900/inputs/inherited_mean/条件噪声结构研究.md",
+    "sha256": "34ddbb1305dc15504570049b7f96ac1c1b5508ccd53772fc3aa17a35b1ccd85b"
+  },
+  {
+    "stage": 900,
+    "source_relative_to_release": "inputs/inherited_mean/森林活动度二的普适均值下界.md",
+    "package_path": "math-sources/stage-900/inputs/inherited_mean/森林活动度二的普适均值下界.md",
+    "sha256": "e34470066c9860ec21dda09fd77bf1dbf17c3c604662ebfdacf24af685f3dc91"
+  },
+  {
+    "stage": 900,
+    "source_relative_to_release": "inputs/inherited_mean/森林规模修正均值不等式的证明.md",
+    "package_path": "math-sources/stage-900/inputs/inherited_mean/森林规模修正均值不等式的证明.md",
+    "sha256": "bc64c1533234f5d9437384c2295b0a388dec16c1153e6c3a0c51e2af2c8081ea"
+  },
+  {
+    "stage": 900,
+    "source_relative_to_release": "inputs/inherited_mean/活动度九四的联合熵界.md",
+    "package_path": "math-sources/stage-900/inputs/inherited_mean/活动度九四的联合熵界.md",
+    "sha256": "00357ec107168d6ca43d6662206d9b410dca45156b045c9bb0b754986f249435"
+  },
+  {
+    "stage": 900,
+    "source_relative_to_release": "inputs/inherited_mean/渐近界改进证明.md",
+    "package_path": "math-sources/stage-900/inputs/inherited_mean/渐近界改进证明.md",
+    "sha256": "ef933b38bdda1527ed1dac7647f917a671742c42444971e8dfb574757daa1116"
+  },
+  {
+    "stage": 900,
+    "source_relative_to_release": "inputs/inherited_mean/规模修正均值候选的短腿归约.md",
+    "package_path": "math-sources/stage-900/inputs/inherited_mean/规模修正均值候选的短腿归约.md",
+    "sha256": "ae79a2b6c98c1d1d7abfa2c1543886a46f0e16aaa0b3b840fc5dda51d6fda26d"
+  },
+  {
+    "stage": 900,
+    "source_relative_to_release": "inputs/inherited_mean/规模修正均值的两型末端归约.md",
+    "package_path": "math-sources/stage-900/inputs/inherited_mean/规模修正均值的两型末端归约.md",
+    "sha256": "063706d39923d9b00480d7745b8dc47e2318f2abca566a4eff58de3c520811f3"
+  },
+  {
+    "stage": 900,
+    "source_relative_to_release": "inputs/inherited_mean/较小活动度的三阶矩界.md",
+    "package_path": "math-sources/stage-900/inputs/inherited_mean/较小活动度的三阶矩界.md",
+    "sha256": "4112ebdab050081785eefcedc32d0e2fbfc7bf08ee8225ad2428d0e7641ae4c2"
+  },
+  {
+    "stage": 900,
+    "source_relative_to_release": "inputs/nonnegative_source_proof.md",
+    "package_path": "math-sources/stage-900/inputs/nonnegative_source_proof.md",
+    "sha256": "f42edf459281fad41af0515594c1ea372cdf07d8ea5cb1c734ded771999be3e6"
+  },
+  {
+    "stage": 900,
+    "source_relative_to_release": "inputs/previous_central900_proof.md",
+    "package_path": "math-sources/stage-900/inputs/previous_central900_proof.md",
+    "sha256": "099d9726e4e0d763ed70afc9bf036c9c7e9921faee95f3c2dac275f71df2fef1"
+  }
+]

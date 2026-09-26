@@ -1,0 +1,241 @@
+\section{The monotone window and the hard-core reduction}\label{sec:window}
+This section fixes the interface used by the large-order chain. Its structural statements are independent of the finite-order relaxation.
+
+\begin{lemma}[Initial and final monotone segments]\label{l59:window}
+Let $F$ be an $n$-vertex forest with independence number $a$. Put
+\[
+ L=\lceil n/4\rceil,\qquad U=\lfloor(n+2a)/6\rfloor+1.
+\]
+Then $c_0\le\cdots\le c_L$ and $c_U\ge c_{U+1}\ge\cdots\ge c_a$.
+\end{lemma}
+\begin{proof}
+Root every component. For an independent $k$-set $S$, consider triples $(S,v,u)$ with $v\in S$ and $u$ a child of $v$. If $u$ has no child in $S$, send the triple to $((S\setminus\{v\})\cup\{u\},u)$. Otherwise choose the first child $w$ of $u$ belonging to $S$ and send it to $(S,w)$. Outputs are independent $k$-sets with a marked nonroot vertex. In the first case the grandparent of the mark, if it exists, is absent; in the second it is the selected vertex $v$. The mark and its ancestors therefore recover the input, proving injectivity. If $D(S)=\sum_{v\in S}\deg(v)$ and $\rho_k=\sum_S|S\cap\{\text{roots}\}|$, this gives
+\[
+ \sum_S D(S)-kc_k+\rho_k\le kc_k-\rho_k.
+\]
+Counting extensions now yields $(k+1)c_{k+1}\ge(n-3k)c_k$. For every $k<L$, $n-3k\ge k+1$, proving the initial segment.
+
+Fix a maximum matching of size $v=n-a$. Retaining only its edges gives a disjoint union of $v$ pairs and $a-v$ singletons, with polynomial
+\[
+ Q(x)=(1+2x)^v(1+x)^{a-v}=\sum q_kx^k.
+\]
+Uniform independent sets in two consecutive ranks of this reference graph admit an inclusion coupling. To see this, more generally give the blocks weights $w_1,\ldots,w_r>0$. Select a $k$-subset of blocks proportionally to the product of its weights. If $e_j$ denotes the elementary symmetric sum of the first $r-1$ weights, the probability of selecting the last block is $w_re_{k-1}/(e_k+w_re_{k-1})$. It increases with $k$, because the coefficient sequence of $\prod_{i<r}(1+w_ix)$ is log-concave. Couple these last-block indicators monotonically. If they agree, couple the remaining ranks by induction; if they differ, use the same remaining block set. Within common blocks use the same uniform element. All conditional marginals are preserved, including boundary ranks.
+
+Independence in $F$ is a downward-closed event under this coupling, so $c_{k+1}/q_{k+1}\le c_k/q_k$. Finally
+\[
+ (k+1)(q_{k+1}-q_k)
+ =(n+2a-6k+1)q_k-2(a-k+1)(q_k-q_{k-1}).
+\]
+For $k\ge U$ the first coefficient is nonpositive. If $q_k\ge q_{k-1}$ this proves $q_{k+1}\le q_k$ directly; otherwise log-concavity proves it. Ratio domination transfers this to $c_k$.
+\end{proof}
+
+At activity $\lambda>0$, sample an independent set with probability $\lambda^{|S|}/I_F(\lambda)$. Let $K=|S|$, $\mu=\E K$, and $V=\Var K$. We use the following scale-corrected mean lemma from Supplement A:
+\begin{lemma}[Activity-two mean input]\label{l59:mean}
+Every forest satisfies $3\mu_F(2)\ge a+29n/60$.
+\end{lemma}
+The complete proof of Lemma~\ref{l59:mean}, including its short-leg and terminal-branch reductions, is preserved among the foundational documents of stage 900. Its last step reduces a minimal negative tree to a leaf-rooted host with branches in
+\[
+ \{T_{33},T_{35},P_2,P_4,P_6,P_8,P_{10},P_{12}\}.
+\]
+The terminal rooted trees $T_{33},T_{35}$ have a root and two pendant paths of lengths $(3,3)$ and $(3,5)$. Each branch $T$ has root state $\alpha(T)-\alpha(T-\mathrm{root})=0$; this is an independence-number difference, not an occupation probability. With $G(F)=3\mu_F(2)-a-29n/60$, host ratio $r\in[5/3,3]$, $X=rG(H)$ and $Y=G(H-u)$, the source derives
+\[
+ E=60(Ar+B)G(F),\qquad E_2=180X+120Y+6r-54\ge0,
+\]
+where $A$ is the product of the branch partition functions with roots deleted and $A+B$ is the product without deletion. For $2\le m\le5$ branches, all 823 multisets containing a terminal tree satisfy
+\[
+ E-\frac A3E_2=A(60R-100)Y+A J(r)>0,\qquad R=(A+B)/A.
+\]
+Here $R\ge(7/5)^2$ and the least endpoint value of $J$ is $3523/473$. For all $m\ge6$, the remaining term is bounded below by
+\[
+ \left(\frac75\right)^m\left(\frac{343m}{1140}-\frac{89}{60}\right)
+ -\frac{11m}{30}+\frac{89}{60}>0;
+\]
+its value at 6 is $5068593/2968750$ and successive increments are at least $11/60$. The earlier reductions prove that these cases exhaust every minimal negative tree; the 823-case arithmetic alone does not prove that exhaustion. The dependency map identifies all three source proofs and five reconstruction scripts.
+
+Since $d\mu/d\log\lambda=V>0$ for a nonempty graph, the mean is strictly increasing. Conditioning on either bipartition class gives $V\ge\mu/[2(1+\lambda)]$, whence
+\[
+ \mu(9/4)\ge\sqrt{27/26}\,\mu(2)>(n+2a)/6.
+\]
+The last inequality follows from $a\ge n/2$ and $27\cdot59^2>26\cdot60^2$. Since every vertex has marginal occupation at most $\lambda/(1+\lambda)$, also $\mu(1/3)\le n/4$. Thus every necessary rank $L\le k<U$ has a unique activity $\lambda_k\in[1/3,9/4)$ with $\mu(\lambda_k)=k$.
+
+For such an activity, let $\pi_v$ be the actual marginal at $v$, and choose an independent set $B$ maximizing $W=\sum_{v\in B}\pi_v$. This is a maximum-weight set, not necessarily a maximum-cardinality set. Bipartiteness gives $W\ge\mu/2$. Write $C=V(F)\setminus B$. Conditional on the entire occupied configuration in $C$, let $Y$ be its size and $M$ the number of unblocked vertices in $B$. Then
+\begin{equation}\label{l59:mixture}
+ K=Y+\operatorname{Bin}(M,q),\quad q=\frac\lambda{1+\lambda},\quad m=\E M,\quad qm=W.
+\end{equation}
+At $\mu=k$, put $j=k-Y$ and $\delta=j-qM$. The same probability space gives
+\begin{equation}\label{l59:moments}
+ \E\delta=0,\qquad \E\delta^2=V-q(1-q)m.
+\end{equation}
+No independence of $M$ and $Y$ is asserted.
+
+\section{The final matching-count extension: orders 59 through 79}\label{sec:matching59}
+We describe the part added by the outermost release. The older release proves the range $n\ge80$ using the same reduction.
+
+\begin{lemma}[Leaves and the complement matching]\label{l59:matching}
+Let $B$ be as in \eqref{l59:mixture}, $h=|B|$, and $H=F[C]$. Then
+\[
+ h\ge\lceil n/3\rceil,\quad \nu(H)\ge\max(0,n-2h),\quad \alpha(H)\le\lfloor n/2\rfloor.
+\]
+\end{lemma}
+\begin{proof}
+For a leaf $u$ whose component is not a single edge, let $v$ be its neighbor. The formulas
+\[
+ \pi_u=\frac{\lambda I_{F-\{u,v\}}(\lambda)}{I_F(\lambda)},\qquad
+ \pi_v=\frac{\lambda I_{F-N[v]}(\lambda)}{I_F(\lambda)}
+\]
+show $\pi_u>\pi_v$, since the second induced graph is strictly smaller than the first. Replacing $v$ by $u$ would improve a maximum-weight independent set; therefore $v\notin B$, and maximality implies $u\in B$. Isolated vertices are in $B$, and in each edge component exactly one endpoint is in $B$.
+
+Let $\kappa$ be the number of components of $F$, $d$ the number of its edge components, $c=n-h$, $e=|E(H)|$, and $s_0$ the number of isolated vertices in $H$. Each $C$-vertex has a neighbor in $B$. An isolated vertex of $H$ has at least two such neighbors, except for the $d$ endpoints in edge components. Hence $e(B,C)\ge c+s_0-d$, and $e+s_0\le h-\kappa+d$. The number of nontrivial components of $H$ is $c-e-s_0\ge n-2h$. Choosing one edge from each gives the matching bound. Comparing twice its size with $c$ gives $h\ge n/3$. If $h\le n/2$, then $\alpha(H)\le c-(n-2h)=h$; otherwise $\alpha(H)\le c=n-h$.
+\end{proof}
+
+For $c\ge2r$ define
+\[
+ D(c,r;y)=\sum_t\binom rt2^t\binom{c-2r}{y-t}.
+\]
+Deleting all edges of $H$ except a matching bounds its independent-set coefficients by those of $(1+2x)^r(1+x)^{c-2r}$. Therefore safe integer envelopes are
+\begin{equation}\label{l59:envelope}
+ A_{n,y}^{(M)}=\max_{\substack{\lceil n/3\rceil\le h\le n\\h\ge M}}
+ D(n-h,\max(0,n-2h);y),\qquad A_{n,y}=A_{n,y}^{(0)}.
+\end{equation}
+An empty maximum is zero; binomial coefficients outside their natural ranges are zero.
+
+\begin{lemma}[Exact cancellation]\label{l59:cancel}
+For every integer $y$,
+\[
+ \E[\ind_{\{Y=y\}}(1-q)^M]
+ =\frac{i_y(H)\lambda^y}{I_F(\lambda)}
+ \le\frac{A_{n,y}\lambda^y}{P_n(\lambda)},
+\]
+where $P_n(x)=\sum_t\binom{n-t+1}{t}x^t$ is the path polynomial.
+\end{lemma}
+\begin{proof}
+The probability of an independent configuration $S\subseteq C$ is $\lambda^{|S|}(1+\lambda)^{M(S)}/I_F(\lambda)$. Multiplication by $(1-q)^{M(S)}$ cancels the free-vertex factor. Sum over $|S|=y$ and use \eqref{l59:envelope} and the path coefficient lower bound proved in the finite-order part.
+\end{proof}
+
+Fix a rectangle $q\in[q_a,q_b]$, $m\in[m_l,m_h]$, and $59\le n\le79$. Put $a_0=q_a/(1-q_a)$, $b_0=q_b/(1-q_b)$. The certified density bound and integer rounding give $k\ge k_{\min}$ and $m\ge k_{\min}/(2q_b)$. All real target distributions are included in
+\[
+ \mathcal A=\{(n,k)\in\mathbb Z^2:59\le n\le79,\ k_{\min}\le k\le\lfloor2q_bm_h\rfloor,
+ \ n/4\le k\le n/2,\ rn\le k\le q_bn\}.
+\]
+The value $r$ here is a certified density constant, not the matching size in $D$. Define fixed upward rational bounds
+\[
+ B_j\ge\max_{(n,k)\in\mathcal A}\frac{A_{n,k-j}b_0^{k-j}}{P_n(a_0)}.
+\]
+Terms with $k-j$ outside the range of independent-set sizes are zero. Lemma~\ref{l59:cancel} proves $\E[\ind_{\{k-Y=j\}}(1-q)^M]\le B_j$ throughout the rectangle. All possible conditional states belong to the finite set
+\[
+ \mathcal S=\{(M,j)\in\mathbb Z^2:0\le M\le79,\ \exists(n,k)\in\mathcal A:
+ A_{n,k-j}^{(M)}>0\}.
+\]
+Excluding a state uses a zero combinatorial count, never a small numerical probability.
+
+\section{Rational mixture certificates and the inherited chain}\label{sec:cert59}
+Let $b_M(j;q)$ be the binomial point probability, extended by zero outside its support. Define
+\[
+ f_L=(1-q)b_M(j;q)-qb_M(j-1;q),\quad
+ f_R=qb_M(j;q)-(1-q)b_M(j+1;q),
+\]
+\[
+ f_C=2b_M(j;q)-b_M(j-1;q)-b_M(j+1;q).
+\]
+Every certificate uses fixed nonnegative weights $w_L,w_R,w_C$, not all zero, and $f=w_Lf_L+w_Rf_R+w_Cf_C$. Its scale $S$ is positive. Source inequalities on the same distribution provide
+\begin{equation}\label{l59:sourcebounds}
+ \E\delta^2\le\alpha_0m+\beta_0,\quad
+ \Var M\le D_0m,\quad
+ \E(1-q+qt_i)^M\le e^{-\ell_i m}.
+\end{equation}
+Here the finitely many $t_i\in[0,1]$ and $\ell_i\ge0$ are fixed rational parameters of the source bounds. Their proof is part of the chain, as described below; constants cannot be copied to a smaller threshold without checking the signs of the $n$-dependent terms.
+
+The pointwise acceptance inequality is
+\begin{equation}\label{l59:pointwise}
+ Sf(M,j;q)\ge A_0+B_0M+C_0\delta-D_\delta\delta^2-D_MM^2
+ -\sum_iT_i(1-q+qt_i)^M-U_j(1-q)^M,
+\end{equation}
+for every state in $\mathcal S$ and every $q$ in the rectangle, with $D_\delta,D_M,T_i,U_j\ge0$. The other coefficients may have either sign. Taking expectations gives
+\begin{align}\label{l59:budget}
+ S\E f\ge H(m):={}&A_0+B_0m-D_\delta(\alpha_0m+\beta_0)
+ -D_M(m^2+D_0m)\notag\\
+ &-\sum_iT_i e^{-\ell_i m}-\sum_jU_jB_j.
+\end{align}
+Since $H''(m)=-2D_M-\sum_iT_i\ell_i^2e^{-\ell_i m}\le0$, strictly positive endpoint budgets certify all real $m\in[m_l,m_h]$.
+
+\subsection{Continuous activity certification}
+For a fixed state let $R(q)$ be the left side of \eqref{l59:pointwise} minus the right side. Write $B_L(M)$, $B_R(M)$, and $B_C(M)$ for the supplied uniform upper bounds on the second $q$-derivatives of the three kernels, valid for every integer $j$ and all $q\in[q_a,q_b]$. They are reconstructed by \nolinkurl{derivative_bounds} in stage 80's \nolinkurl{bridge_compressed.py}, with their use specified in stage 59's proof, Section 9, and independent acceptance in \nolinkurl{check_matching_kernel.py}. These bounds give
+\begin{align*}
+ R''(q)\le Z_{M,j}:={}&S(w_LB_L(M)+w_RB_R(M)+w_CB_C(M))+2D_\delta M^2\\
+ &+\sum_iT_iM(M-1)(1-t_i)^2(1-q_a+q_at_i)^{M-2}\\
+ &+U_jM(M-1)(1-q_a)^{M-2}.
+\end{align*}
+The terms containing $M(M-1)$ are zero when $M<2$. With $h_q=q_b-q_a$, it suffices to check $R(q_a),R(q_b)\ge h_q^2Z_{M,j}/8$. The interpolation remainder then proves $R(q)\ge0$ on the entire interval. Rational enclosures for elementary functions and probabilities are directed; a precision scale is not a floating-point tolerance.
+
+\subsection{The structural source interface}
+For clarity, the frozen analytic sources use rooted-tree identities. If $p_v$ is the downward occupation message, $z_v$ its logarithmic response, and $r_v=\pi_v/p_v$, then
+\[
+ \frac{p_v}{1-p_v}=\lambda\prod_{u\text{ child of }v}(1-p_u),\quad
+ z_v=1-\sum_up_uz_u,
+\]
+\[
+ \mu=\sum_vp_vz_v=\sum_vp_vr_v,\qquad
+ V=\sum_vp_vr_v(1-p_v)z_v^2.
+\]
+For $\lambda\le b$, $[1+b(1-p_v)]^{-1}\le r_v\le1$. Put
+\[
+ T_b(p)=\log\frac{b(1-p)}p,\quad \Lambda_b(p)=\frac1{pT_b(p)},\quad h(p)=1-p/2.
+\]
+If $0\le R_i\le b$ and $\sum_i\log(1+R_i)\le t$, convexity gives
+\[
+ \sum_iR_i\le H_b(t):=sb+e^{t-s\log(1+b)}-1,
+ \qquad s=\lfloor t/\log(1+b)\rfloor.
+\]
+For the displayed scalar formulas take $0<p<q_b=b/(1+b)$. At the endpoint $p=q_b$, the vertex has no children and $z=1$; terms containing $(1-z)^2/T_b(p)$, $(1-z)_+^2/T_b(p)$, or $(z-1)_+^2/T_b(p)$ are defined to be zero there, as are the corresponding empty-child capacity terms. The checkers handle this leaf endpoint separately. Weighted Cauchy--Schwarz over disjoint child sets gives the summed nonpositive expressions
+\[
+ \sum_vp_v[\Lambda_b(p_v)(1-z_v)_+^2-h(p_v)(z_v)_+^2]\le0,
+\]
+\[
+ \sum_vp_v[\Lambda_b(p_v)(z_v-1)_+^2-h(p_v)(z_v)_-^2]\le0,
+\]
+\[
+ \sum_vp_v\left[\frac{r_v(1-z_v)^2}{H_b(T_b(p_v))}
+ -(1-r_v)(1-p_v)z_v^2\right]\le0.
+\]
+These, additional message-flow identities, and $\sum_vp_v(z_v-r_v)=0$ transform the variance bounds into scalar inequalities in $(p,r,z)$. The response variable $z$ ranges over all real numbers. The checkers split its three intervals $(-\infty,0]$, $[0,1]$, and $[1,\infty)$ and prove polynomial nonnegativity, rather than sampling responses. Later stages replace $h(p)$ with the sharper $p/[-\log(1-p)]$ and add flow and logarithmic terms; the full formulas remain in their source documents.
+
+For the Laplace bound in \eqref{l59:sourcebounds}, hold $B$ fixed and lower only its activities. The identity
+\[
+ \E e^{-s_\lambda(u)M}=\E e^{-uK_B},\qquad
+ s_\lambda(u)=\log\frac{1+\lambda}{1+\lambda e^{-u}}
+\]
+allows integration of heterogeneous nonnegative-source variance bounds. Applying a common-activity variance bound to an unverified heterogeneous path would not suffice. The source proof explicitly establishes the needed heterogeneous domain.
+
+The basic density source at activity 1 uses the path-mean result of Andriantiana, Razanajatovo Misanantenaina, and Wagner \cite{average}; it is not applied as a path extremality theorem at arbitrary activity. The activity-density improvements at stage 80 use 106 rational activity points. Their finite branch classes distinguish one-, two-, and three-vertex branches from larger ones; degrees 3 and 4 give 105 classes per point, while all higher degrees follow by removing one branch and an analytic induction. Thus the 11,130 checks are checks of the full induction scheme, not enumeration of forests up to some chosen order. Stage 59 adds four flow--log source certificates and recalculates the signed vertex costs with $59\le n\le79$.
+
+\subsection{Coverage and exclusion of valleys}
+The 231 new certificates cover 154 activity strata, subordinate to 43 parent activity intervals. Together with 188, 243, and 558 older finite kernels, respectively from stages 99, 130, and 170, they form 1220 finite rectangles. Their upper $m$ boundary joins the stage-350 unbounded-$m$ estimates. All 236 stage-80 kernels are excluded for $n<80$, because some of them use signed costs requiring $n\ge80$. This distinction is checked by the source and coverage code.
+
+For the new certificates, the stored and replayed integer endpoint-state count is 1,185,408, and the smallest normalized expectation budget is
+\[
+ \frac{424830401847072141613691}{10^{28}}>0.
+\]
+The corresponding scale is 23; thus this normalized number must be divided by 23 to interpret it as a lower bound on the unscaled mixed-kernel expectation. It is not a common lower bound on a coefficient curvature.
+
+Suppose at a necessary rank $k$ that $c_k\le c_{k-1}$ and $c_k\le c_{k+1}$. Writing $p_j=c_j\lambda^j/I_F(\lambda)$, the first two inequalities give $\E f_L\le0$ and $\E f_R\le0$. They also imply
+\[
+ p_{k-1}+p_{k+1}\ge(\lambda^{-1}+\lambda)p_k\ge2p_k,
+\]
+so $\E f_C\le0$. This contradicts the strictly positive budget in \eqref{l59:budget}. Every necessary rank therefore satisfies $c_k>\min(c_{k-1},c_{k+1})$. If a strict descent is followed later by a strict ascent, choose the first subsequent index $k$ with $c_{k+1}\ge c_k$. Then $c_{k-1}>c_k$ and $c_{k+1}\ge c_k$. The monotone end segments in Lemma~\ref{l59:window} place such an index in $[L,U-1]$, giving a prohibited weak local minimum, including the possibility of a flat valley. Consequently all orders $59\le n\le79$ are covered once the source and coverage certificates are accepted.
+
+\begin{table}[ht]
+\centering
+\caption{Frozen large-order stages. Each row proves the new finite interval and inherits the larger orders; the base stage includes an unbounded-order argument.}
+\begin{tabular}{rrl}
+\toprule Stage & New orders & Mathematical source in Supplement A\\\midrule
+900 & $n\ge900$ & base source and kernel proof\\
+500 & $500\le n\le899$ & stage 500 proof and replay\\
+350 & $350\le n\le499$ & stage 350 proof and replay\\
+170 & $170\le n\le349$ & stage 170 proof and replay\\
+130 & $130\le n\le169$ & stage 130 proof and replay\\
+99 & $99\le n\le129$ & stage 99 proof and replay\\
+80 & $80\le n\le98$ & stage 80 proof and replay\\
+59 & $59\le n\le79$ & final matching-count extension\\\bottomrule
+\end{tabular}
+\end{table}
+The recursive replay authenticates and checks these frozen stages. The original mathematical proofs are included to justify their all-order and continuous-domain claims. Taking the base and each extension in the table establishes Proposition~\ref{prop:large}; this is a dependency-chain proof, not an extrapolation from the 79-vertex conditional-state bound.

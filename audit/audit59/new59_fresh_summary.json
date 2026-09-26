@@ -1,0 +1,65 @@
+{
+  "N": 59,
+  "previous_N": 80,
+  "new_finite_vertex_range": [
+    59,
+    79
+  ],
+  "inherited_vertex_range": [
+    80,
+    "infinity"
+  ],
+  "new_certificate_count": 231,
+  "all_new_exact_certificates_passed": true,
+  "all_continuous_q_m_covered": true,
+  "all_discrete_n_k_cases_covered": true,
+  "q_strata": 154,
+  "parent_intervals": 43,
+  "total_finite_kernel_rectangles": 1220,
+  "reused99_kernel_certificates": 188,
+  "reused130_kernel_certificates": 243,
+  "reused170_kernel_certificates": 558,
+  "no80_N_dependent_kernel_reused": true,
+  "all_new_variance_profiles_recomputed_at_declared_N": true,
+  "matching_counts_independently_reconstructed": true,
+  "total_endpoint_integer_state_checks": 1185408,
+  "total_admissible_n_k_pair_checks": 28987,
+  "minimum_normalized_margin_lower": "424830401847072141613691/10000000000000000000000000000",
+  "minimum_margin_certificate": "count_59_11_0012",
+  "minimum_margin_scale": 23,
+  "minimum_margin_kernel_weights": [
+    "0",
+    "17915685937/500000000000",
+    "1982084314063/2000000000000"
+  ],
+  "source_summary": {
+    "passed": true,
+    "new_combined_source_count": 4,
+    "probability_cells": 1363,
+    "retention_cells": 8435,
+    "parent_cases": 37026,
+    "real_response_region_checks": 111078,
+    "all_source_polynomials_independently_reconstructed": true,
+    "seconds": 106.32799999997951
+  },
+  "full_frozen80_chain_replayed": false,
+  "frozen80_zip_sha256": "d1eb9f2903b554475634a3f0fac59d625ae196fdbe0525e6cfc6a97071742f03",
+  "diagnostics": {
+    "passed": true,
+    "max_enumerated_vertices": 6,
+    "labeled_forests": 3271,
+    "activity_forest_cases": 9813,
+    "conditional_cancellation_identities": 26007,
+    "coefficient_count_checks": 44386,
+    "independent_matching_envelope_checks": 87739,
+    "standard_library_only": true,
+    "scope": "Finite implementation diagnostics; universal claims use the written leaf/matching and partition-function proofs.",
+    "seconds": 2.1719999999913853
+  },
+  "floating_point_acceptance": false,
+  "numerical_optimizer_used": false,
+  "site_initialization_disabled": true,
+  "optional_modules_preloaded_by_environment": [],
+  "seconds": 370.5469999999914,
+  "scope": "Research theorem conditional on explicitly declared inherited structural lemmas. Exact source proofs, matching-count reconstruction, and full continuous/discrete coverage; not proof-assistant formalization."
+}

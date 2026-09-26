@@ -1,0 +1,8 @@
+{
+  "all_exact_checks_passed": true,
+  "algebra_cases": 1907,
+  "arithmetic": "outward-rounded integer intervals",
+  "uses_optimizer": false,
+  "seconds": 27.358,
+  "certificate_sha256": "a77f4fc43aec1b8eecab91c4418b6990f72dee69d802129c78efd67d2e1bcc5a"
+}

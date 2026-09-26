@@ -1,0 +1,102 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,array,longtable}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage{xcolor}
+\usepackage[unicode,colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{enumitem}
+\hypersetup{pdftitle={Exact Certificates for Unimodality of Forest Independence Polynomials},pdfauthor={Tong Zhang}}
+\setlist{nosep}
+\allowdisplaybreaks
+\emergencystretch=2em
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb E}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Prb}{\mathbb P}
+\newcommand{\ind}{\mathbf1}
+\newcommand{\pos}[1]{(#1)_+}
+\title{Exact Certificates for Unimodality of Forest Independence Polynomials\\[3mm]\large A consolidated proof manuscript and reproducible supplement}
+\author{Tong Zhang\\\small\texttt{ZhangZenoZhang@gmail.com}}
+\date{26 September 2026\quad Version 1.1 (revised submission draft)}
+\begin{document}
+\maketitle
+\begin{abstract}
+We assemble two certificate-assisted arguments for the independence sequences of finite simple forests. The finite-order argument covers every forest on at most 60 vertices by structural counting inequalities, 670 rational separating inequalities, and 1907 nonnegative rational linear certificates. A separate hard-core argument, supplied with a frozen dependency chain, asserts unimodality for all forests on at least 59 vertices. Their scopes overlap, so that no order is omitted. We give the finite-order structural proof, the conditional-mixture reduction and new matching-count constraints for the large-order argument, and a precise map to the full inherited mathematical and computational supplements. Acceptance uses integer or directed rational arithmetic; numerical optimizers are not part of the verification. This is a mathematical proof submission for review, not a claim of completed Lean formalization or prior journal acceptance. A rational obstruction at order 100 concerns only the finite-order relaxation and is not a graph counterexample.
+\end{abstract}
+\noindent\textbf{Keywords.} Forest; independent set; unimodality; hard-core model; exact certificate; computer-assisted proof.
+
+\section{The statement, scope, and proof architecture}\label{sec:scope}
+For a finite simple graph $F$, write
+\[
+ I_F(x)=\sum_{r=0}^{\alpha(F)}c_r(F)x^r,
+ \qquad c_r(F)=|\{S\subseteq V(F): S\text{ independent},\ |S|=r\}|.
+\]
+A finite sequence is unimodal when it weakly increases to some index and weakly decreases thereafter. We include the empty forest, with polynomial 1, as well as isolated vertices and disconnected forests. Throughout, $n$ denotes the number of vertices; it never denotes the matching number or a coefficient index.
+
+The tree and forest questions originate in Alavi, Malde, Schwenk, and Erd\H{o}s \cite{alavi} and appear as Erd\H{o}s Problem 993 and Justin Sun Prize Problem JSP-000826 \cite{erdos,jsp}. The forest assertion cannot be inferred merely by multiplying arbitrary unimodal tree polynomials: unimodality is not generally preserved by convolution. Our two inputs each quantify over forests directly.
+
+\begin{theorem}[Consolidated assertion submitted for review]\label{thm:all}
+The independence sequence of every finite simple forest is unimodal.
+\end{theorem}
+The proof is organized through the following two propositions.
+\begin{proposition}[Finite-order part]\label{prop:finite}
+Every finite simple forest on at most 60 vertices has a unimodal independence sequence.
+\end{proposition}
+\begin{proposition}[Large-order part]\label{prop:large}
+Every finite simple forest on at least 59 vertices has a unimodal independence sequence.
+\end{proposition}
+\begin{proof}[Proof of Theorem~\ref{thm:all} from the two propositions]
+If $n\le60$, use Proposition~\ref{prop:finite}. If $n\ge61$, use Proposition~\ref{prop:large}. The two propositions also independently cover $n=59,60$. No induction across these orders and no closure under disjoint union is needed.
+\end{proof}
+
+Proposition~\ref{prop:finite} is developed below with its exact certificate interface. Proposition~\ref{prop:large} uses the large-order manuscript and frozen dependency chain distributed as Supplement A. We reproduce its final extension and the principal analytic interface in Sections~\ref{sec:window}--\ref{sec:repro}. The full analytic proofs and earlier thresholds are integral parts of the supplement, not assumptions supplied by a numerical success flag. The historical wording ``conditional on inherited structural lemmas'' in the input releases refers to those stated dependencies. To accept the consolidated theorem, a reviewer must accept their proofs as well as the finite arithmetic; two overlapping numerical ranges alone are not a proof.
+
+Fang, Lu, Nevo, Yao, and Zheng \cite{fang} prove unimodality for every sufficiently large forest. Their Theorem 1.1 states the existence of an absolute threshold; it does not supply the value 59 used here. We do not substitute that existence statement for the explicit threshold chain, nor claim priority over their asymptotic result. Counterexamples to log-concavity of tree independence sequences \cite{kadrawi,ramos} do not contradict the unimodality assertion. We make no assertion of log-concavity of the full sequence.
+
+\paragraph{Reading the supplement.}
+Supplement A is the original \nolinkurl{forest_threshold_59_audited_handoff.zip}; its nested archives preserve the stages $80,99,130,170,350,500,900$. Supplement B is \nolinkurl{forest_n60_extension_and_n100_gap.zip}. A separate Chinese finite-order proof supplied with the files is byte-identical to its copy in Supplement B. The distribution includes those original bytes, a flattened map of mathematical source documents, the present English manuscript, and fresh audit evidence. Supplementary Chinese texts retain their original notation and historical scope statements.
+
+\input{finite60}
+
+\input{large59}
+
+\section{Reproducibility, dependencies, and interpretation}\label{sec:repro}
+The mathematical trust boundary has three parts. First, structural proofs must show that every forest satisfies the asserted inequalities. Second, arithmetic checkers must implement those inequalities with safe rounding and verify the full parameter domains. Third, the domains must cover all required orders, ranks, activities, and conditional states. Passing one of these checks is not a substitute for the others.
+
+The finite-order verifier constructs the full scalar domain instead of trusting a list of covered parameters. It rejects missing, duplicate, and extraneous stored certificates, inadmissible rows, and negative inequality multipliers. The large-order checkers independently reconstruct matching-count envelopes and the discrete $(n,k)$ and $(M,j)$ domains; continuous activity intervals and real $m=\E M$ intervals are certified by derivative or concavity arguments.
+
+\subsection{Commands and preserved inputs}
+The wrapper \texttt{verification/reproduce.py} in the distribution checks the input archive hashes, extracts into a user-selected working directory, runs the finite-order and countermodel verifiers, and, in full mode, executes the complete large-order chain. The underlying commands are:
+\begin{verbatim}
+python -S verify.py
+python -S verify_grid.py
+python -S verify_countermodels.py
+python -S check_release.py
+python -S replay.py
+\end{verbatim}
+The first three run in Supplement B; the last two run in Supplement A. Use Python 3.10 or later and do not use \texttt{-O}. The computational proof acceptance path needs only the standard library. Optional discovery routines and numerical optimizers are not called by acceptance. The large-order chain can be much slower than the finite-order part and creates nested working directories; a short extraction path is helpful on Windows.
+
+Fresh runs, inherited records, and diagnostic checks are separated in the accompanying audit report. A run with \texttt{--skip-prior} authenticates inherited bytes and checks the new segment, but is not described as rerunning all earlier stages. The source archive hashes and final distribution manifest identify the exact mathematical data. Runtime-dependent audit files are not frozen mathematical premises.
+
+\subsection{Precise limits of the 100-vertex obstruction}
+The array in \texttt{countermodel\_100\_55\_31.json} satisfies the stated nonnegative-real relaxation for $(n,a,k)=(100,55,31)$, including its extra covering rows, and has $\Delta_{31}<0<\Delta_{32}$. This proves that those relaxation constraints alone cannot imply the needed no-valley conclusion. The formal polynomial is not asserted to be the independence polynomial of any graph. Proposition~\ref{prop:large} uses additional probabilistic and structural information, so there is no contradiction between that obstruction and the consolidated assertion. The analogous order-55 array concerns the older, weaker finite-order model.
+
+\subsection{Computational and editorial assistance}
+AI-assisted tools were used for mathematical review, exact computational reproduction, literature research, translation, and manuscript preparation. The resulting audit reports document their scope and limitations; they are not independent human referee reports or proof-assistant certificates. All mathematical claims are submitted for review together with the written arguments, exact certificates, and complete dependency sources. Submission instructions and provenance records are provided separately from the mathematical text.
+
+\begin{thebibliography}{9}
+\bibitem{alavi} Y. Alavi, P. J. Malde, A. J. Schwenk, and P. Erd\H{o}s, The vertex independence sequence of a graph is not constrained, \emph{Congressus Numerantium} \textbf{58} (1987), 15--23.
+\bibitem{erdos} Erd\H{o}s Problems, Problem 993, \url{https://www.erdosproblems.com/993}, accessed 26 September 2026.
+\bibitem{jsp} The Justin Sun Prize, Problem JSP-000826 and contribution guidelines, \url{https://github.com/TheJustinSunPrize/awards/blob/main/problems/catalog-0801-0900.md}, \url{https://github.com/TheJustinSunPrize/awards/blob/main/CONTRIBUTING.md}, accessed 26 September 2026.
+\bibitem{fang} E. X. Fang, J. Lu, E. Nevo, Y. Yao, and H. Zheng, Unimodality of Independence Polynomials for Sufficiently Large Forests, arXiv:2609.20961v1 (2026), \url{https://arxiv.org/abs/2609.20961v1}.
+\bibitem{average} E. O. D. Andriantiana, V. Razanajatovo Misanantenaina, and S. Wagner, The average size of independent sets of graphs, arXiv:1807.08290, \url{https://arxiv.org/abs/1807.08290}.
+\bibitem{kadrawi} O. Kadrawi and V. E. Levit, The independence polynomial of trees is not always log-concave starting from order 26, \emph{Ars Mathematica Contemporanea} \textbf{25} (2025), P4.03, \url{https://doi.org/10.26493/1855-3974.3207.2ad}.
+\bibitem{ramos} E. Ramos and S. Sun, An AI enhanced approach to the tree unimodality conjecture, arXiv:2510.18826 (2025), \url{https://arxiv.org/abs/2510.18826}.
+\end{thebibliography}
+\end{document}

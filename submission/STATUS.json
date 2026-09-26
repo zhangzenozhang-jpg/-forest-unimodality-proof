@@ -1,0 +1,36 @@
+{
+  "problem_id": "JSP-000826",
+  "erdos_problem_id": 993,
+  "author": "Tong Zhang",
+  "mathematical_audit": "completed_scoped_review_no_concrete_gap_found",
+  "lean_verified": false,
+  "public_repository": null,
+  "public_commit": null,
+  "public_authorship_evidence": null,
+  "external_submission_performed": false,
+  "rules_checked_on": "2026-09-26",
+  "official_repository_commit": "1d1db84a39201357236183f0bbd620e2b220747e",
+  "finite_exact_replay_passed": true,
+  "new59_exact_replay_passed": true,
+  "full_inherited_chain_replayed": true,
+  "full_inherited_chain_passed": true,
+  "complete_solution_candidate": true,
+  "official_mathematical_acceptance": false,
+  "remaining_submission_metadata": [
+    "actual public commit SHA",
+    "official PR URL"
+  ],
+  "audit_scope": "Structural review of key reductions plus full exact arithmetic replay; not independent human peer review or a proof-assistant formalization.",
+  "manuscript_version": "1.1",
+  "second_scoped_review_completed": true,
+  "second_review_no_concrete_gap_found": true,
+  "independent_small_forest_check": {
+    "maximum_order": 10,
+    "forests": 637,
+    "structural_rows": 45529,
+    "passed": true
+  },
+  "github_account": "zhangzenozhang-jpg",
+  "target_repository": "https://github.com/zhangzenozhang-jpg/-forest-unimodality-proof",
+  "publication_state": "preparing_publication"
+}

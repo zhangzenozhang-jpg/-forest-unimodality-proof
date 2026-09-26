@@ -1,0 +1,13 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "source_manifest_files_checked": 19,
+  "source_manifest_all_passed": true,
+  "standalone_markdown_equals_archive_copy": true,
+  "proof_markdown_sha256": "2ff7ffecb93263d4f9730b2f128021a57051229490b343198a27e1f4a932ac89",
+  "example_identical_to_master_certificate": true,
+  "example_terms_including_assumption": 193,
+  "example_affine_slope": "96885639/100000000",
+  "example_affine_constant": "-4010142596414187852788421881/28302876966000000000",
+  "example_integer_constant_is_valid": true
+}

@@ -1,0 +1,42 @@
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Documents\Codex\2026-09-26\latex-x20\work\audit59\replay59\work\input\forest_threshold_80_release\work\input\forest_threshold_99_release\work\input\forest_threshold_130_release\work\input\forest_threshold_170_release\replay.py", line 84, in <module>
+    args=parser.parse_args();run(args.skip_prior)
+                             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Documents\Codex\2026-09-26\latex-x20\work\audit59\replay59\work\input\forest_threshold_80_release\work\input\forest_threshold_99_release\work\input\forest_threshold_130_release\work\input\forest_threshold_170_release\replay.py", line 27, in run
+    subprocess.run([sys.executable,'-u',str(ROOT/'replay.py')],cwd=ROOT,check=True)
+  File "C:\Users\Lenovo\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\Lenovo\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\subprocess.py", line 1538, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NotADirectoryError: [WinError 267] Ŀ¼������Ч��
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Documents\Codex\2026-09-26\latex-x20\work\audit59\replay59\work\input\forest_threshold_80_release\work\input\forest_threshold_99_release\work\input\forest_threshold_130_release\replay.py", line 83, in <module>
+    args=parser.parse_args();run(args.skip_prior)
+                             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Documents\Codex\2026-09-26\latex-x20\work\audit59\replay59\work\input\forest_threshold_80_release\work\input\forest_threshold_99_release\work\input\forest_threshold_130_release\replay.py", line 21, in run
+    subprocess.run([sys.executable,'-S','-u',str(PRIOR/'replay.py')],cwd=PRIOR,check=True)
+  File "C:\Users\Lenovo\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\Users\\Lenovo\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe', '-S', '-u', 'C:\\Users\\Lenovo\\Documents\\Codex\\2026-09-26\\latex-x20\\work\\audit59\\replay59\\work\\input\\forest_threshold_80_release\\work\\input\\forest_threshold_99_release\\work\\input\\forest_threshold_130_release\\work\\input\\forest_threshold_170_release\\replay.py']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Documents\Codex\2026-09-26\latex-x20\work\audit59\replay59\work\input\forest_threshold_80_release\work\input\forest_threshold_99_release\replay.py", line 74, in <module>
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--skip-prior',action='store_true');a=p.parse_args();run(a.skip_prior)
+                                                                                                                       ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Documents\Codex\2026-09-26\latex-x20\work\audit59\replay59\work\input\forest_threshold_80_release\work\input\forest_threshold_99_release\replay.py", line 20, in run
+    subprocess.run([sys.executable,'-S','-u',str(PRIOR130/'replay.py')],cwd=PRIOR130,check=True)
+  File "C:\Users\Lenovo\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\Users\\Lenovo\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe', '-S', '-u', 'C:\\Users\\Lenovo\\Documents\\Codex\\2026-09-26\\latex-x20\\work\\audit59\\replay59\\work\\input\\forest_threshold_80_release\\work\\input\\forest_threshold_99_release\\work\\input\\forest_threshold_130_release\\replay.py']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Documents\Codex\2026-09-26\latex-x20\work\audit59\replay59\work\input\forest_threshold_80_release\replay.py", line 77, in <module>
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--skip-prior',action='store_true');args=p.parse_args();run(args.skip_prior)
+                                                                                                                          ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Documents\Codex\2026-09-26\latex-x20\work\audit59\replay59\work\input\forest_threshold_80_release\replay.py", line 20, in run
+    subprocess.run([sys.executable,'-S','-u',str(PRIOR99/'replay.py')],cwd=PRIOR99,check=True)
+  File "C:\Users\Lenovo\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['C:\\Users\\Lenovo\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe', '-S', '-u', 'C:\\Users\\Lenovo\\Documents\\Codex\\2026-09-26\\latex-x20\\work\\audit59\\replay59\\work\\input\\forest_threshold_80_release\\work\\input\\forest_threshold_99_release\\replay.py']' returned non-zero exit status 1.

@@ -1,0 +1,883 @@
+SELECTION CERTIFIED activity_1_3_to_1_2 55 55
+SELECTION CERTIFIED activity_1_2_to_7_10 104 141
+SELECTION CERTIFIED activity_7_10_to_4_5 140 228
+SELECTION CERTIFIED activity_4_5_to_17_20 167 296
+SELECTION CERTIFIED activity_17_20_to_22_25 159 284
+SELECTION CERTIFIED activity_22_25_to_9_10 152 282
+SELECTION CERTIFIED activity_9_10_to_23_25 152 283
+SELECTION CERTIFIED activity_23_25_to_47_50 148 286
+SELECTION CERTIFIED activity_47_50_to_24_25 143 282
+SELECTION CERTIFIED activity_24_25_to_49_50 144 281
+SELECTION CERTIFIED activity_49_50_to_1 145 280
+SELECTION CERTIFIED activity_1_to_51_50 147 266
+SELECTION CERTIFIED activity_51_50_to_26_25 149 271
+SELECTION CERTIFIED activity_26_25_to_53_50 157 293
+SELECTION CERTIFIED activity_53_50_to_107_100 214 431
+SELECTION CERTIFIED activity_107_100_to_27_25 208 430
+SELECTION CERTIFIED activity_27_25_to_109_100 214 454
+SELECTION CERTIFIED activity_109_100_to_11_10 225 487
+SELECTION CERTIFIED activity_11_10_to_111_100 222 457
+SELECTION CERTIFIED activity_111_100_to_28_25 232 420
+SELECTION CERTIFIED activity_28_25_to_113_100 232 422
+SELECTION CERTIFIED activity_113_100_to_57_50 232 423
+SELECTION CERTIFIED activity_57_50_to_29_25 226 441
+SELECTION CERTIFIED activity_29_25_to_6_5 232 454
+SELECTION CERTIFIED activity_6_5_to_13_10 183 339
+SELECTION CERTIFIED activity_13_10_to_3_2 183 310
+SELECTION CERTIFIED activity_3_2_to_9_5 186 339
+SELECTION CERTIFIED activity_9_5_to_9_4 237 409
+ALL STRUCTURAL SCALAR RECHECKS PASSED 4988 9344
+FIXED BUDGET activity_1_3_to_1_2 0.06829145145717663
+FIXED BUDGET activity_1_2_to_7_10 0.057329541621562896
+FIXED BUDGET activity_7_10_to_4_5 0.03367430490744768
+FIXED BUDGET activity_4_5_to_17_20 0.014298681567327196
+FIXED BUDGET activity_17_20_to_22_25 0.002100844468206396
+FIXED BUDGET activity_22_25_to_9_10 0.017917637785797535
+FIXED BUDGET activity_9_10_to_23_25 0.010624787957261775
+FIXED BUDGET activity_23_25_to_47_50 0.008502354438386043
+FIXED BUDGET activity_47_50_to_24_25 0.006189773502839866
+FIXED BUDGET activity_24_25_to_49_50 0.009819265642079482
+FIXED BUDGET activity_49_50_to_1 0.016431389860894628
+FIXED BUDGET activity_1_to_51_50 0.016778396418110592
+FIXED BUDGET activity_51_50_to_26_25 0.010950396641411876
+FIXED BUDGET activity_26_25_to_53_50 0.0020546930535900007
+FIXED BUDGET activity_53_50_to_107_100 0.027412875026802275
+FIXED BUDGET activity_107_100_to_27_25 0.024541201143114737
+FIXED BUDGET activity_27_25_to_109_100 0.021628879185477148
+FIXED BUDGET activity_109_100_to_11_10 0.01702026272493503
+FIXED BUDGET activity_11_10_to_111_100 0.012783511027168595
+FIXED BUDGET activity_111_100_to_28_25 0.009888375356912551
+FIXED BUDGET activity_28_25_to_113_100 0.00699454906849622
+FIXED BUDGET activity_113_100_to_57_50 0.004065401123766926
+FIXED BUDGET activity_57_50_to_29_25 0.003329326408337411
+FIXED BUDGET activity_29_25_to_6_5 0.009903235721352547
+FIXED BUDGET activity_6_5_to_13_10 0.014293215152664348
+FIXED BUDGET activity_13_10_to_3_2 0.03265920114789457
+FIXED BUDGET activity_3_2_to_9_5 0.0510642275305389
+FIXED BUDGET activity_9_5_to_9_4 0.07798375919164534
+COMPLETE 900 REPLAY PASSED
+{
+  "full_unimodality_threshold": 900,
+  "all_28_fixed_budget_rows_identical": true,
+  "all_selected_structural_certificates_regenerated": true,
+  "selection_response_polynomials_independently_reconstructed": true,
+  "probability_intervals": 4988,
+  "retention_intervals": 9344,
+  "source_intervals": 1016,
+  "all_8_analytic_gradient_constants_rechecked": true,
+  "analytic_interfaces_and_fixed_comparisons_identical": true,
+  "inherited_mean_finite_type_rechecks": {
+    "all_checks_passed": true,
+    "cases": [
+      {
+        "script": "adjusted_mean_leg_cluster.py",
+        "passed": true,
+        "saved_mathematical_fields_identical": true,
+        "seconds": 0.35899999999674037
+      },
+      {
+        "script": "endbranch_path_context_certificate.py",
+        "passed": true,
+        "saved_mathematical_fields_identical": true,
+        "seconds": 0.7820000000065193
+      },
+      {
+        "script": "audit_endbranch_path_context.py",
+        "passed": true,
+        "saved_mathematical_fields_identical": true,
+        "seconds": 1.0309999999881256
+      },
+      {
+        "script": "adjusted_mean_global_closure.py",
+        "passed": true,
+        "saved_mathematical_fields_identical": true,
+        "seconds": 0.25
+      },
+      {
+        "script": "audit_terminal_fan_second_stage.py",
+        "passed": true,
+        "saved_mathematical_fields_identical": true,
+        "seconds": 0.25
+      }
+    ],
+    "scope": "Recomputed finite structural identities and comparisons for inherited mean theorem; analytic reduction is supplied separately."
+  },
+  "diagnostics": {
+    "named_forest_cases": 336,
+    "finite_binomial_cases": 402
+  },
+  "arithmetic": "fractions.Fraction",
+  "external_optimization_used": false,
+  "seconds": 78.60899999999674,
+  "scope": "Complete fixed computation for this new continuation; analytic universal lemmas and declared inherited structural results still need mathematical scrutiny. Not proof-assistant formalization.",
+  "isolated_work_directory": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-09-26\\latex-x20\\work\\audit59\\replay59\\work\\input\\forest_threshold_80_release\\work\\input\\forest_threshold_99_release\\work\\input\\forest_threshold_130_release\\work\\input\\forest_threshold_170_release\\work\\input\\forest_threshold_350_release\\work\\input\\forest_threshold_500_release\\work\\input\\forest_threshold_900_release\\work\\clean_replay_paa0pmdb"
+}
+AFFINE SOURCE CERTIFIED 1/2 22
+AFFINE SOURCE CERTIFIED 7/10 23
+AFFINE SOURCE CERTIFIED 17/20 24
+AFFINE SOURCE CERTIFIED 9/10 23
+AFFINE SOURCE CERTIFIED 24/25 23
+AFFINE SOURCE CERTIFIED 1 29
+AFFINE SOURCE CERTIFIED 103/100 31
+AFFINE SOURCE CERTIFIED 21/20 30
+AFFINE SOURCE CERTIFIED 11/10 32
+AFFINE SOURCE CERTIFIED 57/50 31
+AFFINE SOURCE CERTIFIED 29/25 31
+AFFINE SOURCE CERTIFIED 6/5 32
+AFFINE SOURCE CERTIFIED 13/10 34
+AFFINE SOURCE CERTIFIED 3/2 43
+AFFINE SOURCE CERTIFIED 9/4 64
+ENVELOPE CERTIFIED 1 zero 4
+ENVELOPE CERTIFIED 1 negative 13
+ENVELOPE CERTIFIED 1 middle 5
+ENVELOPE CERTIFIED 1 positive 3
+ENVELOPE CERTIFIED 11/10 zero 4
+ENVELOPE CERTIFIED 11/10 negative 12
+ENVELOPE CERTIFIED 11/10 middle 5
+ENVELOPE CERTIFIED 11/10 positive 3
+ENVELOPE CERTIFIED 33/20 zero 4
+ENVELOPE CERTIFIED 33/20 negative 15
+ENVELOPE CERTIFIED 33/20 middle 5
+ENVELOPE CERTIFIED 33/20 positive 5
+ENVELOPE CERTIFIED 3/2 zero 4
+ENVELOPE CERTIFIED 3/2 negative 15
+ENVELOPE CERTIFIED 3/2 middle 5
+ENVELOPE CERTIFIED 3/2 positive 5
+ENVELOPE CERTIFIED 3/4 zero 4
+ENVELOPE CERTIFIED 3/4 negative 9
+ENVELOPE CERTIFIED 3/4 middle 5
+ENVELOPE CERTIFIED 3/4 positive 3
+ENVELOPE CERTIFIED 5/4 zero 4
+ENVELOPE CERTIFIED 5/4 negative 13
+ENVELOPE CERTIFIED 5/4 middle 5
+ENVELOPE CERTIFIED 5/4 positive 5
+ENVELOPE CERTIFIED 7/5 zero 4
+ENVELOPE CERTIFIED 7/5 negative 15
+ENVELOPE CERTIFIED 7/5 middle 5
+ENVELOPE CERTIFIED 7/5 positive 5
+ENVELOPE CERTIFIED 9/10 zero 4
+ENVELOPE CERTIFIED 9/10 negative 13
+ENVELOPE CERTIFIED 9/10 middle 5
+ENVELOPE CERTIFIED 9/10 positive 3
+ALL NEW POLYNOMIAL CHECKS PASSED 15 8 2.6410000000032596
+{'all_checks_passed': True, 'named_weighted_forest_tests': 180, 'finite_binomial_tests': 289, 'arithmetic': 'fractions.Fraction', 'scope': 'Named finite diagnostics only; no universal claim is inferred by sampling.'}
+FIXED 500 0 1/3 1/2 left 27633084298195635867437321001/1000000000000000000000000000000
+FIXED 500 1 1/2 7/10 left 34546555395988846911075482647/1000000000000000000000000000000
+FIXED 500 2 7/10 4/5 left 37697528486976865952117101439/250000000000000000000000000000
+FIXED 500 3 4/5 17/20 left 1983815132631951454880203007/12500000000000000000000000000
+FIXED 500 4 17/20 22/25 left 16034043698241112857013254681/500000000000000000000000000000
+FIXED 500 5 22/25 9/10 central 25228551786201412826174766037/1000000000000000000000000000000
+FIXED 500 6 9/10 23/25 central 19931889294700579557932065439/1000000000000000000000000000000
+FIXED 500 7 23/25 47/50 central 9441820705208440123904065353/500000000000000000000000000000
+FIXED 500 8 47/50 24/25 central 2205884682140164701936381889/125000000000000000000000000000
+FIXED 500 9 24/25 49/50 central 4130991770360688767538574661/250000000000000000000000000000
+FIXED 500 10 49/50 1 central 35518206423723871561186811/1600000000000000000000000000
+FIXED 500 11 1 51/50 central 878617903756288365708601439/40000000000000000000000000000
+FIXED 500 12 51/50 26/25 central 3013000008870832126310990487/200000000000000000000000000000
+FIXED 500 13 26/25 53/50 central 5819756154613002776258277987/1000000000000000000000000000000
+FIXED 500 14 53/50 107/100 central 27817847604724727478479302593/1000000000000000000000000000000
+FIXED 500 15 107/100 27/25 central 1545414309672536681467669131/62500000000000000000000000000
+FIXED 500 16 27/25 109/100 central 21601362681294936990363346219/1000000000000000000000000000000
+FIXED 500 17 109/100 11/10 central 4234674128662461883319814083/250000000000000000000000000000
+FIXED 500 18 11/10 111/100 central 3094696067860104378513525461/250000000000000000000000000000
+FIXED 500 19 111/100 28/25 central 1159517975705399304929676473/125000000000000000000000000000
+FIXED 500 20 28/25 113/100 central 617739089890421525164937563/100000000000000000000000000000
+FIXED 500 21 113/100 57/50 central 3049227584614176804299098797/1000000000000000000000000000000
+FIXED 500 22 57/50 29/25 right 58074800552050785882819515009/1000000000000000000000000000000
+FIXED 500 23 29/25 6/5 right 30900967799462405182630698563/500000000000000000000000000000
+FIXED 500 24 6/5 13/10 right 9431576228258441951314794387/1000000000000000000000000000000
+FIXED 500 25 13/10 7/5 right 1137891228398470854027472813/200000000000000000000000000000
+FIXED 500 26 7/5 3/2 right 4398643664768431455564997373/125000000000000000000000000000
+FIXED 500 27 3/2 9/5 right 4665600259415463180088352341/500000000000000000000000000000
+FIXED 500 28 9/5 9/4 right 14353173279293791457668445521/1000000000000000000000000000000
+ALL 29 FIXED INTERVALS POSITIVE; seconds 47.26600000000326
+COMPLETE 500 REPLAY PASSED
+{
+  "N": 500,
+  "all_29_fixed_rows_identical": true,
+  "all_new_sources_regenerated": true,
+  "source_probability_intervals": 472,
+  "source_retention_intervals": 472,
+  "all_new_direction_envelopes_regenerated": true,
+  "envelope_rectangles": 209,
+  "independent_polynomial_reconstruction_passed": true,
+  "analytic_interfaces_identical": true,
+  "diagnostics": {
+    "all_checks_passed": true,
+    "named_weighted_forest_tests": 180,
+    "finite_binomial_tests": 289,
+    "arithmetic": "fractions.Fraction",
+    "scope": "Named finite diagnostics only; no universal claim is inferred by sampling."
+  },
+  "all_frozen_900_inputs_replayed": true,
+  "arithmetic": "fractions.Fraction",
+  "numerical_optimizer_used": false,
+  "seconds": 132.89000000001397,
+  "scope": "Exact fixed computation and declared scalar certificates; not independent formal verification of the analytic forest reductions or a proof of the remaining n<500 cases.",
+  "inherited_replay_summary": {
+    "full_unimodality_threshold": 900,
+    "all_28_fixed_budget_rows_identical": true,
+    "all_selected_structural_certificates_regenerated": true,
+    "selection_response_polynomials_independently_reconstructed": true,
+    "probability_intervals": 4988,
+    "retention_intervals": 9344,
+    "source_intervals": 1016,
+    "all_8_analytic_gradient_constants_rechecked": true,
+    "analytic_interfaces_and_fixed_comparisons_identical": true,
+    "inherited_mean_finite_type_rechecks": {
+      "all_checks_passed": true,
+      "cases": [
+        {
+          "script": "adjusted_mean_leg_cluster.py",
+          "passed": true,
+          "saved_mathematical_fields_identical": true,
+          "seconds": 0.35899999999674037
+        },
+        {
+          "script": "endbranch_path_context_certificate.py",
+          "passed": true,
+          "saved_mathematical_fields_identical": true,
+          "seconds": 0.7820000000065193
+        },
+        {
+          "script": "audit_endbranch_path_context.py",
+          "passed": true,
+          "saved_mathematical_fields_identical": true,
+          "seconds": 1.0309999999881256
+        },
+        {
+          "script": "adjusted_mean_global_closure.py",
+          "passed": true,
+          "saved_mathematical_fields_identical": true,
+          "seconds": 0.25
+        },
+        {
+          "script": "audit_terminal_fan_second_stage.py",
+          "passed": true,
+          "saved_mathematical_fields_identical": true,
+          "seconds": 0.25
+        }
+      ],
+      "scope": "Recomputed finite structural identities and comparisons for inherited mean theorem; analytic reduction is supplied separately."
+    },
+    "diagnostics": {
+      "named_forest_cases": 336,
+      "finite_binomial_cases": 402
+    },
+    "arithmetic": "fractions.Fraction",
+    "external_optimization_used": false,
+    "seconds": 78.60899999999674,
+    "scope": "Complete fixed computation for this new continuation; analytic universal lemmas and declared inherited structural results still need mathematical scrutiny. Not proof-assistant formalization.",
+    "isolated_work_directory": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-09-26\\latex-x20\\work\\audit59\\replay59\\work\\input\\forest_threshold_80_release\\work\\input\\forest_threshold_99_release\\work\\input\\forest_threshold_130_release\\work\\input\\forest_threshold_170_release\\work\\input\\forest_threshold_350_release\\work\\input\\forest_threshold_500_release\\work\\input\\forest_threshold_900_release\\work\\clean_replay_paa0pmdb"
+  },
+  "isolated_work_directory": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-09-26\\latex-x20\\work\\audit59\\replay59\\work\\input\\forest_threshold_80_release\\work\\input\\forest_threshold_99_release\\work\\input\\forest_threshold_130_release\\work\\input\\forest_threshold_170_release\\work\\input\\forest_threshold_350_release\\work\\input\\forest_threshold_500_release\\work\\clean_replay_c8zjff6c"
+}
+MARKED SOURCE REGENERATED ['22/25', '1'] 16391069/12500000 341
+MARKED SOURCE REGENERATED ['1', '11/10'] 66563367/50000000 329
+MARKED SOURCE REGENERATED ['11/10', '57/50'] 129553901/100000000 394
+MARKED SOURCE REGENERATED ['7/10', '22/25'] 66804403/50000000 325
+MARKED SOURCE REGENERATED ['57/50', '6/5'] 33494171/25000000 379
+MARKED SOURCE REGENERATED ['6/5', '13/10'] 7094721/5000000 341
+MARKED SOURCE REGENERATED ['13/10', '3/2'] 159655229/100000000 287
+MARKED SOURCE REGENERATED ['3/2', '9/5'] 45689627/25000000 480
+MARKED SOURCE REGENERATED ['9/5', '9/4'] 109621781/50000000 398
+MARKED SOURCE REGENERATED ['53/50', '57/50'] 66518673/50000000 326
+INDEPENDENT MARKED CHECK ['22/25', '1']
+INDEPENDENT MARKED CHECK ['1', '11/10']
+INDEPENDENT MARKED CHECK ['11/10', '57/50']
+INDEPENDENT MARKED CHECK ['7/10', '22/25']
+INDEPENDENT MARKED CHECK ['57/50', '6/5']
+INDEPENDENT MARKED CHECK ['6/5', '13/10']
+INDEPENDENT MARKED CHECK ['13/10', '3/2']
+INDEPENDENT MARKED CHECK ['3/2', '9/5']
+INDEPENDENT MARKED CHECK ['9/5', '9/4']
+INDEPENDENT MARKED CHECK ['53/50', '57/50']
+ENVELOPE CERTIFIED 1/2 zero 4
+ENVELOPE CERTIFIED 1/2 negative 7
+ENVELOPE CERTIFIED 1/2 middle 4
+ENVELOPE CERTIFIED 1/2 positive 1
+ENVELOPE CERTIFIED 3/5 zero 4
+ENVELOPE CERTIFIED 3/5 negative 7
+ENVELOPE CERTIFIED 3/5 middle 4
+ENVELOPE CERTIFIED 3/5 positive 1
+BINOMIAL SCALAR 0
+BINOMIAL SCALAR 1
+BINOMIAL SCALAR 2
+BINOMIAL SCALAR 3
+BINOMIAL SCALAR 4
+BINOMIAL SCALAR 5
+BINOMIAL SCALAR 6
+BINOMIAL SCALAR 7
+BINOMIAL SCALAR 8
+BINOMIAL SCALAR 9
+BINOMIAL SCALAR 10
+BINOMIAL SCALAR 11
+BINOMIAL SCALAR 12
+BINOMIAL SCALAR 13
+BINOMIAL SCALAR 14
+BINOMIAL SCALAR 15
+BINOMIAL SCALAR 16
+BINOMIAL SCALAR 17
+BINOMIAL SCALAR 18
+BINOMIAL SCALAR 19
+BINOMIAL SCALAR 20
+BINOMIAL SCALAR 21
+BINOMIAL SCALAR 22
+BINOMIAL SCALAR 23
+BINOMIAL SCALAR 24
+BINOMIAL SCALAR 25
+BINOMIAL SCALAR 26
+BINOMIAL SCALAR 27
+BINOMIAL SCALAR 28
+BINOMIAL SCALAR 29
+BINOMIAL SCALAR 30
+BINOMIAL SCALAR 31
+BINOMIAL SCALAR 32
+BINOMIAL SCALAR 33
+BINOMIAL SCALAR 34
+BINOMIAL SCALAR 35
+BINOMIAL SCALAR 36
+BINOMIAL SCALAR 37
+BINOMIAL SCALAR 38
+BINOMIAL SCALAR 39
+BINOMIAL SCALAR 40
+BINOMIAL SCALAR 41
+BINOMIAL SCALAR 42
+GLOBAL GRADIENT CERTIFIED 1978 1978
+{
+  "arithmetic": "fractions.Fraction",
+  "finite_polynomials_verified": 1978,
+  "continuous_intervals_verified": 1978,
+  "all_exact_checks_passed": true,
+  "seconds": 11.25,
+  "large_variance_case": "Inherited 279/1000 bound at mv>=9; finite scalar cases and their full q domains checked here."
+}
+{'all_checks_passed': True, 'arithmetic': 'fractions.Fraction', 'triangular_variance': '1/6', 'fourth_kernel_error': '1/1440', 'sixth_eighth_reserve': '-233/8709120', 'sixth_moment_normalized_error': '1/96', 'finite_step_curvature_remainder': '1/24', 'scope': 'Exact finite coefficient identities; accompanying calculus proofs cover the continuous domains.'}
+{'all_checks_passed': True, 'independent_support_named_forest_tests': 540, 'lattice_matched_binomial_tests': 290, 'arithmetic': 'fractions.Fraction', 'scope': 'Finite diagnostics only; universal results are proved analytically and by full continuous scalar certificates.'}
+FIXED350 0 1/3 2/5 left 5564608995521203951390851147/50000000000000000000000000000
+FIXED350 1 2/5 1/2 left 489491518668873029452771681/50000000000000000000000000000
+FIXED350 2 1/2 7/10 left 3417824146006347011370777329/200000000000000000000000000000
+FIXED350 3 7/10 4/5 left 30425402717824495023547060933/250000000000000000000000000000
+FIXED350 4 4/5 17/20 left 104907191490856580346215696953/1000000000000000000000000000000
+FIXED350 5 17/20 22/25 left 11310033746492375010553087069/500000000000000000000000000000
+FIXED350 6 22/25 9/10 central 24168940583554471477485857427/1000000000000000000000000000000
+FIXED350 7 9/10 23/25 central 4281023111970758468978086393/200000000000000000000000000000
+FIXED350 8 23/25 47/50 central 20724164318606163824984591607/1000000000000000000000000000000
+FIXED350 9 47/50 24/25 central 4964088580376839458642490057/250000000000000000000000000000
+FIXED350 10 24/25 49/50 central 4523586220271142758562990247/250000000000000000000000000000
+FIXED350 11 49/50 1 central 24682045296648288044132503677/1000000000000000000000000000000
+FIXED350 12 1 51/50 central 6073369364226014245553425207/250000000000000000000000000000
+FIXED350 13 51/50 26/25 central 17724660863155689366150281147/1000000000000000000000000000000
+FIXED350 14 26/25 53/50 central 2473269073835119509806966657/250000000000000000000000000000
+FIXED350 15 53/50 107/100 central 31585977365642482815421754329/1000000000000000000000000000000
+FIXED350 16 107/100 27/25 central 3540814577971578006507421943/125000000000000000000000000000
+FIXED350 17 27/25 109/100 central 6258598960221380595300432949/250000000000000000000000000000
+FIXED350 18 109/100 11/10 central 5055528276205535730910192209/250000000000000000000000000000
+FIXED350 19 11/10 111/100 central 3792945243623298936571259837/200000000000000000000000000000
+FIXED350 20 111/100 28/25 central 15701324776295860604077269071/1000000000000000000000000000000
+FIXED350 21 28/25 113/100 central 3110696353270536379730755281/250000000000000000000000000000
+FIXED350 22 113/100 57/50 central 4578083662128341986864739127/500000000000000000000000000000
+FIXED350 23 57/50 29/25 right 1823899923870187656209124271/200000000000000000000000000000
+FIXED350 24 29/25 6/5 right 503256532671782049842580599/50000000000000000000000000000
+FIXED350 25 6/5 97/80 right 11699269326674184928096604569/500000000000000000000000000000
+FIXED350 26 97/80 49/40 right 23907779868820368239325818847/500000000000000000000000000000
+FIXED350 27 49/40 99/80 right 63881650255176129247855046429/1000000000000000000000000000000
+FIXED350 28 99/80 5/4 right 152289535698979344499926491/1953125000000000000000000000
+FIXED350 29 5/4 13/10 right 13736466497313142549859915129/250000000000000000000000000000
+FIXED350 30 13/10 21/16 right 4570078929021937769369167047/1000000000000000000000000000000
+FIXED350 31 21/16 53/40 right 28999863110842925898910692583/1000000000000000000000000000000
+FIXED350 32 53/40 107/80 right 4174598742081318079638069879/125000000000000000000000000000
+FIXED350 33 107/80 27/20 right 18346092358323960098377543257/500000000000000000000000000000
+FIXED350 34 27/20 7/5 right 1542006355697915520679607129/200000000000000000000000000000
+FIXED350 35 7/5 3/2 right 2731791674275945335075651391/1000000000000000000000000000000
+FIXED350 36 3/2 123/80 right 11413662350751306392954001841/1000000000000000000000000000000
+FIXED350 37 123/80 63/40 right 20207867698545573315016893637/1000000000000000000000000000000
+FIXED350 38 63/40 129/80 right 14268291552900901737401377599/500000000000000000000000000000
+FIXED350 39 129/80 33/20 right 36413862748395583063269063893/1000000000000000000000000000000
+FIXED350 40 33/20 9/5 right 8023769767752822444230203133/500000000000000000000000000000
+FIXED350 41 9/5 2 right 2408879370592949310388213147/250000000000000000000000000000
+FIXED350 42 2 9/4 right 14647944383705856978137281073/1000000000000000000000000000000
+ALL350 FIXED CHECKS PASSED 110.68799999999464
+ALL 43 FIXED350 REPLAY ROWS IDENTICAL
+{
+  "N": 350,
+  "all_43_fixed_budget_rows_identical": true,
+  "all_marked_source_certificates_regenerated": true,
+  "independent_polynomial_reconstruction_passed": true,
+  "marked_probability_cells": 3600,
+  "marked_retention_cells": 10800,
+  "new_direction_envelopes": [
+    {
+      "tmax": "1/2",
+      "rectangles": 16,
+      "coefficients_independently_assembled": true,
+      "compactification_independently_inverted": true,
+      "complete_unbounded_domain_checked": true
+    },
+    {
+      "tmax": "3/5",
+      "rectangles": 16,
+      "coefficients_independently_assembled": true,
+      "compactification_independently_inverted": true,
+      "complete_unbounded_domain_checked": true
+    }
+  ],
+  "recovered_gradient_check": {
+    "arithmetic": "fractions.Fraction",
+    "finite_polynomials_verified": 1978,
+    "continuous_intervals_verified": 1978,
+    "all_exact_checks_passed": true,
+    "seconds": 11.25,
+    "large_variance_case": "Inherited 279/1000 bound at mv>=9; finite scalar cases and their full q domains checked here."
+  },
+  "all_frozen_500_inputs_replayed": true,
+  "analytic_identities": {
+    "all_checks_passed": true,
+    "arithmetic": "fractions.Fraction",
+    "triangular_variance": "1/6",
+    "fourth_kernel_error": "1/1440",
+    "sixth_eighth_reserve": "-233/8709120",
+    "sixth_moment_normalized_error": "1/96",
+    "finite_step_curvature_remainder": "1/24",
+    "scope": "Exact finite coefficient identities; accompanying calculus proofs cover the continuous domains."
+  },
+  "diagnostics": {
+    "all_checks_passed": true,
+    "independent_support_named_forest_tests": 540,
+    "lattice_matched_binomial_tests": 290,
+    "arithmetic": "fractions.Fraction",
+    "scope": "Finite diagnostics only; universal results are proved analytically and by full continuous scalar certificates."
+  },
+  "arithmetic": "fractions.Fraction",
+  "numerical_optimizer_used": false,
+  "seconds": 323.63999999998487,
+  "scope": "Fixed exact proof computations and declared continuous certificates, not independent proof-assistant formalization of the complete historical structural theory.",
+  "inherited500_replay_summary": {
+    "N": 500,
+    "all_29_fixed_rows_identical": true,
+    "all_new_sources_regenerated": true,
+    "source_probability_intervals": 472,
+    "source_retention_intervals": 472,
+    "all_new_direction_envelopes_regenerated": true,
+    "envelope_rectangles": 209,
+    "independent_polynomial_reconstruction_passed": true,
+    "analytic_interfaces_identical": true,
+    "diagnostics": {
+      "all_checks_passed": true,
+      "named_weighted_forest_tests": 180,
+      "finite_binomial_tests": 289,
+      "arithmetic": "fractions.Fraction",
+      "scope": "Named finite diagnostics only; no universal claim is inferred by sampling."
+    },
+    "all_frozen_900_inputs_replayed": true,
+    "arithmetic": "fractions.Fraction",
+    "numerical_optimizer_used": false,
+    "seconds": 132.89000000001397,
+    "scope": "Exact fixed computation and declared scalar certificates; not independent formal verification of the analytic forest reductions or a proof of the remaining n<500 cases.",
+    "inherited_replay_summary": {
+      "full_unimodality_threshold": 900,
+      "all_28_fixed_budget_rows_identical": true,
+      "all_selected_structural_certificates_regenerated": true,
+      "selection_response_polynomials_independently_reconstructed": true,
+      "probability_intervals": 4988,
+      "retention_intervals": 9344,
+      "source_intervals": 1016,
+      "all_8_analytic_gradient_constants_rechecked": true,
+      "analytic_interfaces_and_fixed_comparisons_identical": true,
+      "inherited_mean_finite_type_rechecks": {
+        "all_checks_passed": true,
+        "cases": [
+          {
+            "script": "adjusted_mean_leg_cluster.py",
+            "passed": true,
+            "saved_mathematical_fields_identical": true,
+            "seconds": 0.35899999999674037
+          },
+          {
+            "script": "endbranch_path_context_certificate.py",
+            "passed": true,
+            "saved_mathematical_fields_identical": true,
+            "seconds": 0.7820000000065193
+          },
+          {
+            "script": "audit_endbranch_path_context.py",
+            "passed": true,
+            "saved_mathematical_fields_identical": true,
+            "seconds": 1.0309999999881256
+          },
+          {
+            "script": "adjusted_mean_global_closure.py",
+            "passed": true,
+            "saved_mathematical_fields_identical": true,
+            "seconds": 0.25
+          },
+          {
+            "script": "audit_terminal_fan_second_stage.py",
+            "passed": true,
+            "saved_mathematical_fields_identical": true,
+            "seconds": 0.25
+          }
+        ],
+        "scope": "Recomputed finite structural identities and comparisons for inherited mean theorem; analytic reduction is supplied separately."
+      },
+      "diagnostics": {
+        "named_forest_cases": 336,
+        "finite_binomial_cases": 402
+      },
+      "arithmetic": "fractions.Fraction",
+      "external_optimization_used": false,
+      "seconds": 78.60899999999674,
+      "scope": "Complete fixed computation for this new continuation; analytic universal lemmas and declared inherited structural results still need mathematical scrutiny. Not proof-assistant formalization.",
+      "isolated_work_directory": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-09-26\\latex-x20\\work\\audit59\\replay59\\work\\input\\forest_threshold_80_release\\work\\input\\forest_threshold_99_release\\work\\input\\forest_threshold_130_release\\work\\input\\forest_threshold_170_release\\work\\input\\forest_threshold_350_release\\work\\input\\forest_threshold_500_release\\work\\input\\forest_threshold_900_release\\work\\clean_replay_paa0pmdb"
+    },
+    "isolated_work_directory": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-09-26\\latex-x20\\work\\audit59\\replay59\\work\\input\\forest_threshold_80_release\\work\\input\\forest_threshold_99_release\\work\\input\\forest_threshold_130_release\\work\\input\\forest_threshold_170_release\\work\\input\\forest_threshold_350_release\\work\\input\\forest_threshold_500_release\\work\\clean_replay_c8zjff6c"
+  },
+  "isolated_work_directory": "C:\\Users\\Lenovo\\Documents\\Codex\\2026-09-26\\latex-x20\\work\\audit59\\replay59\\work\\input\\forest_threshold_80_release\\work\\input\\forest_threshold_99_release\\work\\input\\forest_threshold_130_release\\work\\input\\forest_threshold_170_release\\work\\input\\forest_threshold_350_release\\work\\clean_replay_bsdho1zq"
+}
+BRIDGE 1 / 558 PASS
+BRIDGE 26 / 558 PASS
+BRIDGE 51 / 558 PASS
+BRIDGE 76 / 558 PASS
+BRIDGE 101 / 558 PASS
+BRIDGE 126 / 558 PASS
+BRIDGE 151 / 558 PASS
+BRIDGE 176 / 558 PASS
+BRIDGE 201 / 558 PASS
+BRIDGE 226 / 558 PASS
+BRIDGE 251 / 558 PASS
+BRIDGE 276 / 558 PASS
+BRIDGE 301 / 558 PASS
+BRIDGE 326 / 558 PASS
+BRIDGE 351 / 558 PASS
+BRIDGE 376 / 558 PASS
+BRIDGE 401 / 558 PASS
+BRIDGE 426 / 558 PASS
+BRIDGE 451 / 558 PASS
+BRIDGE 476 / 558 PASS
+BRIDGE 501 / 558 PASS
+BRIDGE 526 / 558 PASS
+BRIDGE 551 / 558 PASS
+BRIDGE 558 / 558 PASS
+{
+  "N": 170,
+  "previous_N": 350,
+  "all_exact_bridge_certificates_passed": true,
+  "certificate_count": 558,
+  "all_continuous_activity_and_mean_intervals_covered": true,
+  "q_strata": 130,
+  "parent_intervals": 43,
+  "finite_vertex_range": [
+    170,
+    349
+  ],
+  "inherited_vertex_range": [
+    350,
+    "infinity"
+  ],
+  "inherited_larger_m_budgets_match": true,
+  "full_frozen350_chain_replayed": true,
+  "frozen350_zip_sha256": "447d369b50169f056cfd5210ef6d2ffcead0b1e33e960103e0b95ea87145d100",
+  "total_endpoint_integer_state_checks": 70112700,
+  "total_infinite_real_halfline_checks": 781200,
+  "minimum_normalized_margin_lower": "177285776443222660902327469/250000000000000000000000000000",
+  "minimum_margin_certificate": "ext_170_14_0065",
+  "diagnostics": {
+    "passed": true,
+    "exact_binomial_identity_checks": 11160,
+    "direct_Fraction_probability_enclosures": 3840,
+    "direct_Fraction_Laplace_enclosures": 6300,
+    "arithmetic": "fractions.Fraction and integers",
+    "scope": "Supplementary formula and interval-arithmetic diagnostics; not a replacement for the universal analytic argument."
+  },
+  "arithmetic": "Exact Fraction parameters; directed rational elementary bounds; 70-place outward integer intervals",
+  "floating_point_acceptance": false,
+  "numerical_optimizer_used": false,
+  "optional_modules_preloaded_by_environment": [],
+  "site_initialization_disabled": true,
+  "scope": "Research proof conditional on the explicitly declared inherited structural lemmas. Finite arithmetic and continuous-domain certificates replayed; not proof-assistant formalization of the entire theory.",
+  "seconds": 472.5
+}
+NEW_SOURCES_ALL_PASS 36 92
+NEW_BRIDGE 1 / 243 PASS
+NEW_BRIDGE 21 / 243 PASS
+NEW_BRIDGE 41 / 243 PASS
+NEW_BRIDGE 61 / 243 PASS
+NEW_BRIDGE 81 / 243 PASS
+NEW_BRIDGE 101 / 243 PASS
+NEW_BRIDGE 121 / 243 PASS
+NEW_BRIDGE 141 / 243 PASS
+NEW_BRIDGE 161 / 243 PASS
+NEW_BRIDGE 181 / 243 PASS
+NEW_BRIDGE 201 / 243 PASS
+NEW_BRIDGE 221 / 243 PASS
+NEW_BRIDGE 241 / 243 PASS
+NEW_BRIDGE 243 / 243 PASS
+{
+  "N": 130,
+  "previous_N": 170,
+  "all_new_exact_certificates_passed": true,
+  "certificate_count": 243,
+  "finite_vertex_range": [
+    130,
+    169
+  ],
+  "inherited_vertex_range": [
+    170,
+    "infinity"
+  ],
+  "all_continuous_activity_and_mean_intervals_covered": true,
+  "parent_intervals": 43,
+  "q_strata": 148,
+  "reused170_kernel_certificates": 558,
+  "all_inherited_larger_m_budgets_match": true,
+  "full_frozen170_chain_replayed": true,
+  "frozen170_zip_sha256": "13077535163db470fcb9c4578e41afea893f49e7cd1690557e4304bae375d35a",
+  "new_source_summary": {
+    "passed": true,
+    "tilted_source_count": 36,
+    "selection_source_count": 92,
+    "tilted_probability_cells": 2855,
+    "tilted_retention_cells": 2855,
+    "tilted_response_region_checks": 6987,
+    "selection_probability_cells": 26186,
+    "selection_retention_cells": 55215,
+    "all_polynomials_independently_reconstructed": true,
+    "all_real_response_regions_verified": true,
+    "arithmetic": "fractions.Fraction; directed rational elementary bounds",
+    "seconds": 215.23399999999674
+  },
+  "total_endpoint_integer_state_checks": 7394490,
+  "total_infinite_real_halfline_checks": 165240,
+  "minimum_normalized_margin_lower": "8283392798494017812873959/50000000000000000000000000000",
+  "minimum_margin_certificate": "bridge_130_10_002_0059",
+  "minimum_margin_certificate_scale": 80,
+  "corresponding_unscaled_kernel_expectation_lower": "8283392798494017812873959/4000000000000000000000000000000",
+  "integer_target_rank_used": true,
+  "mean_m_is_not_assumed_integer": true,
+  "floating_point_acceptance": false,
+  "numerical_optimizer_used": false,
+  "optional_modules_preloaded_by_environment": [],
+  "site_initialization_disabled": true,
+  "diagnostics": {
+    "passed": true,
+    "exact_binomial_identity_checks": 11160,
+    "direct_Fraction_probability_enclosures": 2520,
+    "direct_Fraction_Laplace_enclosures": 3060,
+    "arithmetic": "fractions.Fraction and integers",
+    "scope": "Supplementary formula and interval-arithmetic diagnostics; not a replacement for the universal analytic argument.",
+    "source_identity_diagnostics": {
+      "passed": true,
+      "exact_tree_response_variance_identities": 102,
+      "exact_joint_partition_function_identities": 34,
+      "small_forest_source_bound_diagnostics": 102,
+      "arithmetic": "fractions.Fraction; exact independent-set enumeration only for these diagnostics",
+      "scope": "Supplementary small-forest identities and sanity checks, not enumeration of all forests or a substitute for universal certificates."
+    }
+  },
+  "scope": "Conditional on explicitly declared inherited structural lemmas; exact arithmetic and complete continuous-domain checks, not proof-assistant formalization.",
+  "seconds": 765.625
+}
+ALL_ADDED_SOURCES_PASS 31 3
+OPTIMIZED_CERTIFICATE 1 / 188 PASS
+OPTIMIZED_CERTIFICATE 21 / 188 PASS
+OPTIMIZED_CERTIFICATE 41 / 188 PASS
+OPTIMIZED_CERTIFICATE 61 / 188 PASS
+OPTIMIZED_CERTIFICATE 81 / 188 PASS
+OPTIMIZED_CERTIFICATE 101 / 188 PASS
+OPTIMIZED_CERTIFICATE 121 / 188 PASS
+OPTIMIZED_CERTIFICATE 141 / 188 PASS
+OPTIMIZED_CERTIFICATE 161 / 188 PASS
+OPTIMIZED_CERTIFICATE 181 / 188 PASS
+OPTIMIZED_CERTIFICATE 188 / 188 PASS
+{
+  "N": 99,
+  "previous_N": 130,
+  "new_finite_vertex_range": [
+    99,
+    129
+  ],
+  "inherited_vertex_range": [
+    130,
+    "infinity"
+  ],
+  "all_new_exact_certificates_passed": true,
+  "certificate_count": 188,
+  "parent_intervals": 43,
+  "q_strata": 148,
+  "all_continuous_q_m_covered": true,
+  "kernel_method_counts": {
+    "left": 30,
+    "central": 98,
+    "right": 60
+  },
+  "certificates_using_a_different_kernel_than_old_role": 28,
+  "mixed_kernel_no_local_minimum_argument": true,
+  "reused130_kernel_certificates": 243,
+  "reused170_kernel_certificates": 558,
+  "inherited_large_m_thresholds_checked": true,
+  "full_frozen130_chain_replayed": true,
+  "frozen130_zip_sha256": "38eeeced5b27e41ae65198847c0660cbf9b133c3f84133994c955be35ec58239",
+  "added_source_summary": {
+    "passed": true,
+    "marked_source_count": 31,
+    "full_mean_source_count": 3,
+    "probability_cells": 8624,
+    "retention_cells": 25604,
+    "all_real_response_regions_verified": true,
+    "independent_polynomial_reconstruction": true,
+    "boundary_lemma": {
+      "passed": true,
+      "vertex_minimum": 8,
+      "mean_at_one_density_lower": "276393/1000000",
+      "boundary_gain": "19/125",
+      "single_tree_all_size_gain_lower": "3482532401010619/30584568319500000",
+      "single_tree_n_ge_8_gain_lower": "74453119154345438541914831124337/488248942475911060748196799500000",
+      "decreasing_even_correction_ratio_upper": "191/400",
+      "scope": "Exact rational premises for the path formula and forest component argument in PROOF_ZH.md; path mean minimization is inherited."
+    },
+    "seconds": 60.828000000008615
+  },
+  "total_endpoint_integer_state_checks": 3397160,
+  "total_infinite_real_halfline_checks": 97760,
+  "minimum_normalized_margin_lower": "397397816903828464065081719/1000000000000000000000000000000",
+  "minimum_margin_certificate": "optimized_99_16_000_0092",
+  "minimum_margin_certificate_scale": 49,
+  "minimum_unscaled_kernel_lower": "56771116700546923437868817/7000000000000000000000000000000",
+  "minimum_unscaled_certificate": "optimized_99_16_000_0092",
+  "floating_point_acceptance": false,
+  "numerical_optimizer_used": false,
+  "optional_modules_preloaded_by_environment": [],
+  "site_initialization_disabled": true,
+  "diagnostics": {
+    "passed": true,
+    "exact_binomial_identity_checks": 11160,
+    "direct_Fraction_probability_enclosures": 2100,
+    "direct_Fraction_Laplace_enclosures": 2340,
+    "arithmetic": "fractions.Fraction and integers",
+    "scope": "Supplementary formula and interval-arithmetic diagnostics; not a replacement for the universal analytic argument.",
+    "new_structural_diagnostics": {
+      "passed": true,
+      "exact_common_noise_identities": 72,
+      "exact_tilted_marked_mean_upper_checks": 72,
+      "quarter_coefficient_sharp_conditional_mixture_checked": true,
+      "no_valley_sequence_checks": 3267,
+      "finite_path_boundary_diagnostics": 93,
+      "scope": "Supplementary exact diagnostics, not exhaustive forest enumeration or a substitute for the all-domain proof."
+    }
+  },
+  "seconds": 1055.6879999999946,
+  "scope": "Conditional on the explicitly declared inherited structural lemmas. Exact source reconstruction, continuous-domain certificates, and no-local-minimum implication; not proof-assistant formalization."
+}
+ALL_NEW_VARIANCE_SOURCES_PASS 37 14 14
+NEW_KERNEL 1 / 236 PASS
+NEW_KERNEL 21 / 236 PASS
+NEW_KERNEL 41 / 236 PASS
+NEW_KERNEL 61 / 236 PASS
+NEW_KERNEL 81 / 236 PASS
+NEW_KERNEL 101 / 236 PASS
+NEW_KERNEL 121 / 236 PASS
+NEW_KERNEL 141 / 236 PASS
+NEW_KERNEL 161 / 236 PASS
+NEW_KERNEL 181 / 236 PASS
+NEW_KERNEL 201 / 236 PASS
+NEW_KERNEL 221 / 236 PASS
+NEW_KERNEL 236 / 236 PASS
+{
+  "N": 80,
+  "previous_N": 99,
+  "new_finite_vertex_range": [
+    80,
+    98
+  ],
+  "inherited_vertex_range": [
+    99,
+    "infinity"
+  ],
+  "all_new_exact_certificates_passed": true,
+  "certificate_count": 236,
+  "all_continuous_q_m_covered": true,
+  "parent_intervals": 43,
+  "q_strata": 154,
+  "kernel_method_counts": {
+    "left": 37,
+    "central": 129,
+    "right": 70
+  },
+  "variance_profile_counts": {
+    "ratio": 99,
+    "log_linear": 4,
+    "log_integer_rank": 36,
+    "flow_ratio": 97
+  },
+  "mixed_kernel_no_local_minimum_argument": true,
+  "reused99_kernel_certificates": 188,
+  "reused130_kernel_certificates": 243,
+  "reused170_kernel_certificates": 558,
+  "total_finite_kernel_rectangles": 1225,
+  "inherited_large_m_thresholds_checked": true,
+  "full_frozen99_chain_replayed": true,
+  "frozen99_zip_sha256": "1193e2ece3e95ef523b2b08de2b461fc2f8639096b50f86a47e9009883173fa2",
+  "source_summary": {
+    "passed": true,
+    "selector_count": 37,
+    "flow_selector_count": 14,
+    "log_selector_count": 14,
+    "probability_cells": 28692,
+    "retention_cells": 116974,
+    "parent_cases": 403825,
+    "response_regions": 1211475,
+    "seconds": 381.01599999997416,
+    "workers": 3,
+    "arithmetic": "Fraction, directed elementary-function rational bounds, exact polynomial signs",
+    "floating_point_acceptance": false,
+    "density": {
+      "passed": true,
+      "activity_count": 106,
+      "branch_cases": 11130,
+      "method": "exact path formula; n-induction, degrees 3/4 exhaustive branch types and all degree>=5 branch-removal argument"
+    }
+  },
+  "total_endpoint_integer_state_checks": 2523312,
+  "total_infinite_real_halfline_checks": 93456,
+  "minimum_normalized_margin_lower": "10528115305903683745719661/250000000000000000000000000000",
+  "minimum_margin_certificate": "new_80_09_001_0003",
+  "minimum_margin_scale": 38,
+  "minimum_unscaled_kernel_lower": "10528115305903683745719661/9500000000000000000000000000000",
+  "minimum_unscaled_certificate": "new_80_09_001_0003",
+  "floating_point_acceptance": false,
+  "numerical_optimizer_used": false,
+  "optional_modules_preloaded_by_environment": [],
+  "site_initialization_disabled": true,
+  "signed_variance_profiles_depend_on_declared_N": true,
+  "mean_m_is_real": true,
+  "diagnostics": {
+    "passed": true,
+    "exact_binomial_identity_checks": 11160,
+    "direct_Fraction_probability_enclosures": 1794,
+    "direct_Fraction_Laplace_enclosures": 1782,
+    "arithmetic": "fractions.Fraction and integers",
+    "scope": "Supplementary formula and interval-arithmetic diagnostics; not a replacement for the universal analytic argument.",
+    "common_noise_diagnostics": {
+      "passed": true,
+      "exact_common_noise_identities": 72,
+      "exact_tilted_marked_mean_upper_checks": 72,
+      "quarter_coefficient_sharp_conditional_mixture_checked": true,
+      "no_valley_sequence_checks": 3267,
+      "finite_path_boundary_diagnostics": 93,
+      "scope": "Supplementary exact diagnostics, not exhaustive forest enumeration or a substitute for the all-domain proof."
+    },
+    "message_flow_diagnostics": {
+      "passed": true,
+      "message_flow_zero_sums": 65,
+      "message_variance_identities": 65,
+      "log_product_identities": 65,
+      "parent_feasible_ranges": 300,
+      "leaf_root_bonus_checks": 110,
+      "source_inequality_spot_checks": 26,
+      "arithmetic": "fractions.Fraction and directed rational logarithm bounds",
+      "scope": "Small-forest identity and source sanity checks only; universal proofs are the separate continuous-domain source certificates."
+    }
+  },
+  "seconds": 1680.0629999999946,
+  "scope": "Research theorem conditional on explicitly declared inherited structural lemmas. Exact source reconstruction and complete continuous-domain certificates; not proof-assistant formalization."
+}

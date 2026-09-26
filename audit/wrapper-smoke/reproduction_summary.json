@@ -1,0 +1,41 @@
+{
+  "started_utc": "2026-09-26T01:36:49.828039+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "mode": "finite",
+  "input_hashes_verified": {
+    "60点以内全森林单峰_接续证明.md": "2ff7ffecb93263d4f9730b2f128021a57051229490b343198a27e1f4a932ac89",
+    "forest_n60_extension_and_n100_gap.zip": "3cbf5c0b32bbbce213e23db79655138aebd9ceb01fc9f55df4ac52a91ed12759",
+    "forest_threshold_59_audited_handoff.zip": "cbe5b28a4c0335ef099435356edaba0d440e650f7fd7398eb3dab8e11d0fa7f1"
+  },
+  "checks": [
+    {
+      "script": "verify.py",
+      "release": "forest_n60_extension_and_n100_gap",
+      "arguments": [],
+      "returncode": 0,
+      "seconds": 24.046999999991385,
+      "log": "forest_n60_extension_and_n100_gap__verify.log"
+    },
+    {
+      "script": "verify_grid.py",
+      "release": "forest_n60_extension_and_n100_gap",
+      "arguments": [],
+      "returncode": 0,
+      "seconds": 24.844000000011874,
+      "log": "forest_n60_extension_and_n100_gap__verify_grid.log"
+    },
+    {
+      "script": "verify_countermodels.py",
+      "release": "forest_n60_extension_and_n100_gap",
+      "arguments": [],
+      "returncode": 0,
+      "seconds": 4.23399999999674,
+      "log": "forest_n60_extension_and_n100_gap__verify_countermodels.log"
+    }
+  ],
+  "proof_assistant_formalization": false,
+  "scope": "Exact arithmetic replay; written structural proofs remain necessary.",
+  "all_requested_checks_passed": true,
+  "full_inherited_chain_replayed": false,
+  "finished_utc": "2026-09-26T01:37:43.002428+00:00"
+}
