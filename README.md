@@ -1,5 +1,7 @@
 # Forest independence polynomial unimodality — Tong Zhang
 
+**Submitted for mathematical review:** [official PR #4551](https://github.com/TheJustinSunPrize/awards/pull/4551). Status at receipt: open, not accepted or merged. See `submission/PUBLICATION_STATUS.md` for the exact proof commit and receipts.
+
 This repository-ready package is a complete mathematical proof **candidate** for
 Justin Sun Prize JSP-000826 / Erdős Problem 993. It is submitted for mathematical
 review, with no claim of prior acceptance or completed Lean formalization.

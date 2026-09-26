@@ -4,10 +4,10 @@
   "author": "Tong Zhang",
   "mathematical_audit": "completed_scoped_review_no_concrete_gap_found",
   "lean_verified": false,
-  "public_repository": null,
-  "public_commit": null,
-  "public_authorship_evidence": null,
-  "external_submission_performed": false,
+  "public_repository": "https://github.com/zhangzenozhang-jpg/-forest-unimodality-proof",
+  "public_commit": "7cee5104a983dd1271db14be7606e96c504aa370",
+  "public_authorship_evidence": "https://github.com/zhangzenozhang-jpg/-forest-unimodality-proof/blob/7cee5104a983dd1271db14be7606e96c504aa370/AUTHORSHIP.md",
+  "external_submission_performed": true,
   "rules_checked_on": "2026-09-26",
   "official_repository_commit": "1d1db84a39201357236183f0bbd620e2b220747e",
   "finite_exact_replay_passed": true,
@@ -16,10 +16,7 @@
   "full_inherited_chain_passed": true,
   "complete_solution_candidate": true,
   "official_mathematical_acceptance": false,
-  "remaining_submission_metadata": [
-    "actual public commit SHA",
-    "official PR URL"
-  ],
+  "remaining_submission_metadata": [],
   "audit_scope": "Structural review of key reductions plus full exact arithmetic replay; not independent human peer review or a proof-assistant formalization.",
   "manuscript_version": "1.1",
   "second_scoped_review_completed": true,
@@ -32,5 +29,8 @@
   },
   "github_account": "zhangzenozhang-jpg",
   "target_repository": "https://github.com/zhangzenozhang-jpg/-forest-unimodality-proof",
-  "publication_state": "preparing_publication"
+  "publication_state": "published_and_pr_open",
+  "official_pr_url": "https://github.com/TheJustinSunPrize/awards/pull/4551",
+  "official_pr_state": "open",
+  "official_pr_merged": false
 }

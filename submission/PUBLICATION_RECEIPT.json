@@ -1,0 +1,31 @@
+{
+  "published_repository": "https://github.com/zhangzenozhang-jpg/-forest-unimodality-proof",
+  "proof_commit": "7cee5104a983dd1271db14be7606e96c504aa370",
+  "remote_tree_matches_all_local_files": true,
+  "verified_blob_count": 114,
+  "public_material_checks": {
+    "paper/forest_unimodality_Tong_Zhang.pdf": {
+      "sha256": "ea563cb4b13525b2ba425a502ebebcb335ee8ce7fd3b5ef53d158f2436644f83",
+      "public_download_verified": true
+    },
+    "AUTHORSHIP.md": {
+      "sha256": "2c4bab01e18b301be7f0fce691a07a81c72b6cfe37a1d22e32132cd9bae272ef",
+      "public_download_verified": true
+    },
+    "audit/FINAL_REVIEW_EN.md": {
+      "sha256": "5363fa7ad0ee3518242196822d463815f217cd0a815ee1513492744a43f8580c",
+      "public_download_verified": true
+    },
+    "inputs/forest_threshold_59_audited_handoff.zip": {
+      "public_download_head_status": 200,
+      "git_blob_sha1": "df2d15e8d97d1504d80cec2037759336bb474e17"
+    },
+    "inputs/forest_n60_extension_and_n100_gap.zip": {
+      "public_download_head_status": 200,
+      "git_blob_sha1": "e849b898881d6f10ced1609808bf6eb9d7da7e22"
+    }
+  },
+  "verified_utc": "2026-09-26T02:12:39.372223+00:00",
+  "publication_verified": true,
+  "official_acceptance": false
+}

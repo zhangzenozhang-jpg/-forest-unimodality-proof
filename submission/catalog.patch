@@ -1,0 +1,18 @@
+--- a/problems/catalog-0801-0900.md
++++ b/problems/catalog-0801-0900.md
+@@ -442,12 +442,13 @@
+ | Date proposed | No later than 1987 (bibliographic evidence) |
+ | Mathematical area | Graph theory |
+ | Problem description | Is the sequence counting independent sets by size in a tree or forest unimodal? |
+-| Current status | Open |
++| Current status | Solved<br>Proof contributors: Tong Zhang. |
+ | Lean proof | No |
+ | Eligible to claim | No |
+ | Historical bounty |  |
+ | Elapsed years | About 39 years (since 1987) |
+-| Publication details |  |
++| Attribution basis | Tong Zhang; [contribution and account record](https://github.com/zhangzenozhang-jpg/-forest-unimodality-proof/blob/7cee5104a983dd1271db14be7606e96c504aa370/AUTHORSHIP.md). The submission discloses AI assistance and retains prior-work attribution. |
++| Publication details | [Exact Certificates for Unimodality of Forest Independence Polynomials](https://github.com/zhangzenozhang-jpg/-forest-unimodality-proof/blob/7cee5104a983dd1271db14be7606e96c504aa370/paper/forest_unimodality_Tong_Zhang.pdf) — candidate complete proof, version 2026-09-26; Theorem 1.1, p. 1; assembly on p. 2; finite-order proof in Section 2; large-order proof in Sections 3-5 with mandatory Supplements A and B. [Audit and reproduction evidence](https://github.com/zhangzenozhang-jpg/-forest-unimodality-proof/blob/7cee5104a983dd1271db14be7606e96c504aa370/audit/FINAL_REVIEW_EN.md). Submitted for mathematical review; no complete Lean formalization is claimed. |
+ | Scholarly recognition |  |
+ 
+ <a id="JSP-000827"></a>

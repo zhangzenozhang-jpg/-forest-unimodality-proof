@@ -33,7 +33,7 @@ Related records: https://github.com/TheJustinSunPrize/awards/issues/53, https://
 
 ## Submission checklist
 
-- [ ] The final submitted manuscript fully proves the original statement; all dependencies and cases are included or properly cited, and the author has reviewed the final public version.
+- [ ] The submitted proof claim addresses the complete original statement; all dependencies and cases are included or properly cited, and its review status is stated accurately above.
 - [ ] This diff changes only the relevant catalog's allowed attribution, proof/publication references or status fields, with supporting public evidence.
 - [ ] The public URLs and version identifiers above resolve to the exact materials submitted.
 - [ ] I am entitled to contribute the submitted material and have retained third-party attribution and license information.

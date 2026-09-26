@@ -1,0 +1,16 @@
+{
+  "checked_utc": "2026-09-26T02:14:26.873635+00:00",
+  "pr_url": "https://github.com/TheJustinSunPrize/awards/pull/4551",
+  "state": "open",
+  "draft": false,
+  "merged": false,
+  "mergeable_at_check": true,
+  "changed_files": [
+    "problems/catalog-0801-0900.md"
+  ],
+  "commits": 1,
+  "additions": 3,
+  "deletions": 2,
+  "remote_diff_matches_prepared_catalog_change": true,
+  "official_acceptance": false
+}
