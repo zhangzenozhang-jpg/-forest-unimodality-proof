@@ -1,0 +1,307 @@
+--- f2d7c3a8e6\forest_threshold_59_release\replay.py
++++ proof-only/replay.py
+@@ -24,7 +24,7 @@
+  from kernel_matching import CAP
+  from check_matching_kernel import verify
+  from coverage_matching import cover,inherited
+- from diagnostics_matching import run as diagnostics_run
++ # diagnostics_matching import omitted: supplementary diagnostics
+  config=load(HERE/'release_config.json');data=load(HERE/'certificates.json.gz');N=config['N'];cs=data['certificates']
+  assert 8<=N<60 and CAP==79 and data['N']==N and data['CAP']==CAP and len(cs)==config['new_certificate_count']
+  assert len({c['certificate_id']for c in cs})==len(cs)
+@@ -43,7 +43,7 @@
+   cfg=p130.frozen_bridge.prepare(dict(row,index=i),N=350)
+   assert cfg['mhi']==Q(result['constants']['m'])and result['all_larger_m_monotonicity_checked']and Q(result['margin_lower'])>0
+   for a,b in [('D','D'),('R','RR'),('r','r'),('vmax','vmax')]:assert cfg[a]==Q(result['constants'][b])
+- diag=diagnostics_run()
++ diag={'executed': False, 'reason': 'Supplementary diagnostics omitted by proof-only entry point'}
+  assert not ({x for x in ['numpy','scipy']if x in sys.modules}-preloaded)
+  nonempty=[r for r in checks if not r['empty']];minimum=min(nonempty,key=lambda r:Q(r['margin_lower']))
+  summary=dict(N=N,previous_N=80,new_finite_vertex_range=[N,CAP],inherited_vertex_range=[80,'infinity'],new_certificate_count=len(cs),all_new_exact_certificates_passed=True,all_continuous_q_m_covered=True,all_discrete_n_k_cases_covered=True,q_strata=geometry['q_strata'],parent_intervals=43,total_finite_kernel_rectangles=geometry['total_finite_kernel_rectangles'],reused99_kernel_certificates=188,reused130_kernel_certificates=243,reused170_kernel_certificates=558,no80_N_dependent_kernel_reused=True,all_new_variance_profiles_recomputed_at_declared_N=True,matching_counts_independently_reconstructed=True,total_endpoint_integer_state_checks=sum(r.get('endpoint_integer_state_checks',0)for r in checks),total_admissible_n_k_pair_checks=sum(r.get('discrete_n_k_pairs',0)for r in checks),minimum_normalized_margin_lower=minimum['margin_lower'],minimum_margin_certificate=minimum['certificate_id'],minimum_margin_scale=minimum['scale'],minimum_margin_kernel_weights=minimum['kernel_weights'],source_summary={k:v for k,v in sources.items()if k!='checks'},full_frozen80_chain_replayed=not skip_prior,frozen80_zip_sha256=INPUT_SHA256,diagnostics=diag,floating_point_acceptance=False,numerical_optimizer_used=False,site_initialization_disabled=bool(sys.flags.no_site),optional_modules_preloaded_by_environment=sorted(preloaded),seconds=time.monotonic()-start,scope='Research theorem conditional on explicitly declared inherited structural lemmas. Exact source proofs, matching-count reconstruction, and full continuous/discrete coverage; not proof-assistant formalization.')
+--- 00c01bdb16\forest_threshold_80_release\replay.py
++++ proof-only/replay.py
+@@ -28,7 +28,7 @@
+  from bridge_compressed import MMAX
+  from check_kernel_compressed import verify
+  from coverage_compressed import cover
+- from diagnostics_compressed import run as diagnostics_run
++ # diagnostics_compressed import omitted: supplementary diagnostics
+  # Frozen large-m bounds are kernel statements, not small-graph applications
+  # of a large-graph theorem. Their constants and monotonicity are rechecked.
+  from bootstrap_optimized import prior_bridge
+@@ -49,7 +49,7 @@
+   results.append(dict(certificate_id=c['certificate_id'],parent_index=c['parent_index'],method=c['method'],scale=c['scale'],variance_type=c['variance_type'],**r))
+   if i%20==0 or i==len(cs)-1:print('NEW_KERNEL',i+1,'/',len(cs),'PASS',flush=True)
+  geometry=cover(cs,N);assert geometry==load(HERE/'coverage.json')
+- diagnostics=diagnostics_run()
++ diagnostics={'executed': False, 'reason': 'Supplementary diagnostics omitted by proof-only entry point'}
+  assert not ({x for x in ['numpy','scipy']if x in sys.modules}-preloaded)
+  minimum=min(results,key=lambda r:Q(r['margin_lower']));rawmin=min(results,key=lambda r:Q(r['margin_lower'])/r['scale'])
+  source_summary={k:v for k,v in source.items()if k not in ['checks','density']}
+--- 5411644b22\forest_threshold_99_release\replay.py
++++ proof-only/replay.py
+@@ -25,7 +25,7 @@
+     from bridge_optimized import MMAX
+     from check_optimized import verify
+     from coverage_optimized import cover
+-    from diagnostics_optimized import run as diagnostics_run
++    # diagnostics_optimized import omitted: supplementary diagnostics
+     parents=load(ROOT350/'fixed_plan_350.json')['rows'];large=load(ROOT350/'results/complete_350.json.gz')['rows']
+     assert len(parents)==len(large)==43
+     for i,(row,old)in enumerate(zip(parents,large)):
+@@ -44,7 +44,7 @@
+         results.append(dict(certificate_id=c['certificate_id'],parent_index=c['parent_index'],method=c['method'],scale=c['scale'],**r))
+         if i%20==0 or i==len(cs)-1:print('OPTIMIZED_CERTIFICATE',i+1,'/',len(cs),'PASS',flush=True)
+     geometry=cover(cs,N);assert geometry==load(HERE/'coverage.json')
+-    diagnostics=diagnostics_run()
++    diagnostics={'executed': False, 'reason': 'Supplementary diagnostics omitted by proof-only entry point'}
+     assert not ({s for s in ['numpy','scipy']if s in sys.modules}-preloaded)
+     minimum=min(results,key=lambda x:Q(x['margin_lower']));unscaled=min(results,key=lambda x:Q(x['margin_lower'])/x['scale'])
+     counts=dict(Counter(c['method']for c in cs));changed=sum(c['method']!=parents[c['parent_index']]['role']for c in cs)
+--- d4f1f207f5\forest_threshold_130_release\replay.py
++++ proof-only/replay.py
+@@ -27,7 +27,7 @@
+     from bridge_next import MMAX
+     from check_bridge_next import verify
+     from cover_next import cover
+-    from diagnostics_next import run as diagnostics_run
++    # diagnostics_next import omitted: supplementary diagnostics
+     # The larger-m estimates are reused as kernel inequalities, not as a
+     # graph-size theorem. Confirm their constants and certified monotonicity.
+     from bootstrap_next import frozen_bridge
+@@ -49,7 +49,7 @@
+         results.append(dict(certificate_id=c['certificate_id'],parent_index=c['parent_index'],scale=c['scale'],**r))
+         if i%20==0 or i==len(cs)-1:print('NEW_BRIDGE',i+1,'/',len(cs),'PASS',flush=True)
+     geometry=cover(cs,N);assert geometry==load(HERE/'coverage_next.json')
+-    diagnostics=diagnostics_run()
++    diagnostics={'executed': False, 'reason': 'Supplementary diagnostics omitted by proof-only entry point'}
+     assert not ({x for x in ['numpy','scipy']if x in sys.modules}-preloaded)
+     minimum=min(results,key=lambda r:Q(r['margin_lower']))
+     source_summary={k:v for k,v in source_checks.items()if k not in ['tilted_checks','selection_checks']}
+--- 9990f72a8b\forest_threshold_170_release\replay.py
++++ proof-only/replay.py
+@@ -30,7 +30,7 @@
+     from exact_bridge import prepare,MMAX
+     from check_exact_bridge import verify
+     from check_coverage import cover
+-    from bridge_diagnostics import run as diagnostic_run
++    # bridge_diagnostics import omitted: supplementary diagnostics
+     fixed=load(ROOT/'fixed_plan_350.json')['rows']
+     old=load(ROOT/'results'/'complete_350.json.gz')['rows']
+     assert len(fixed)==len(old)==43
+@@ -53,7 +53,7 @@
+         results.append(dict(certificate_id=c['certificate_id'],parent_index=c['parent_index'],**result))
+         if i%25==0 or i==len(cs)-1:print('BRIDGE',i+1,'/',len(cs),'PASS',flush=True)
+     geometry=cover(cs,N);assert geometry==load(HERE/'coverage_170.json')
+-    diagnostics=diagnostic_run()
++    diagnostics={'executed': False, 'reason': 'Supplementary diagnostics omitted by proof-only entry point'}
+     assert not ({name for name in ['numpy','scipy']if name in sys.modules}-optional_on_start)
+     minimum=min(results,key=lambda r:Q(r['margin_lower']))
+     summary=dict(N=N,previous_N=350,all_exact_bridge_certificates_passed=True,
+--- 6c25a5071f\forest_threshold_350_release\replay.py
++++ proof-only/replay.py
+@@ -48,8 +48,8 @@
+  assert stable(gr)==stable(load(gd/'independent_recheck.json'))
+  from check_new_identities import run as identity_check
+  identity=identity_check();assert identity==load(ROOT/'audit/new_identity_checks.json')
+- from diagnostics_new_round import run as diagnostic_check
+- diagnostics=diagnostic_check();assert diagnostics==load(ROOT/'audit/new_diagnostics.json')
++ # Supplementary diagnostics import omitted
++ diagnostics={'executed': False, 'reason': 'Supplementary diagnostics omitted by proof-only entry point'}
+  from fixed_350 import recompute
+  fresh=recompute();assert fresh==load(ROOT/'results/complete_350.json.gz')
+  summary=dict(N=350,all_43_fixed_budget_rows_identical=True,all_marked_source_certificates_regenerated=True,independent_polynomial_reconstruction_passed=True,marked_probability_cells=mr['total_probability_cells'],marked_retention_cells=mr['total_retention_cells'],new_direction_envelopes=new_envelopes,recovered_gradient_check=gr,all_frozen_500_inputs_replayed=not skip_prior,analytic_identities=identity,diagnostics=diagnostics,arithmetic='fractions.Fraction',numerical_optimizer_used=False,seconds=time.monotonic()-start,scope='Fixed exact proof computations and declared continuous certificates, not independent proof-assistant formalization of the complete historical structural theory.')
+--- 248820cc2c\forest_threshold_500_release\replay.py
++++ proof-only/replay.py
+@@ -47,8 +47,8 @@
+  ss=structure();assert stable(ss)==stable(load(ROOT/'audit/independent_new_structure.json'))
+  from check_new_analytic import run as interfaces
+  ii=interfaces();assert ii==load(ROOT/'audit/new_analytic_interfaces.json')
+- from diagnostics_new import run as diagnostics
+- dd=diagnostics();assert dd==load(ROOT/'audit/new_diagnostics.json')
++ # Supplementary diagnostics import omitted
++ dd={'executed': False, 'reason': 'Supplementary diagnostics omitted by proof-only entry point'}
+  from fixed_500 import recompute
+  fresh=recompute();expected=load(ROOT/'results/complete_500.json.gz');assert fresh==expected
+  report=dict(N=500,all_29_fixed_rows_identical=True,all_new_sources_regenerated=True,source_probability_intervals=sum(x['probability_intervals']for x in ss['sources']),source_retention_intervals=sum(x['retention_intervals']for x in ss['sources']),all_new_direction_envelopes_regenerated=True,envelope_rectangles=sum(x['rectangles']for x in ss['envelopes']),independent_polynomial_reconstruction_passed=True,analytic_interfaces_identical=True,diagnostics=dd,all_frozen_900_inputs_replayed=not skip_prior,arithmetic='fractions.Fraction',numerical_optimizer_used=False,seconds=time.monotonic()-st,scope='Exact fixed computation and declared scalar certificates; not independent formal verification of the analytic forest reductions or a proof of the remaining n<500 cases.')
+--- c4c450891c\forest_threshold_900_release\replay.py
++++ proof-only/replay.py
+@@ -10,7 +10,7 @@
+  from recheck_certificates import run as structure
+  from certify_gradients import certify
+  from fixed_budget import run as budgets
+- from diagnostics import run as diagnostics
++ # Supplementary diagnostics import omitted
+  from check_analytic_interfaces import run as interfaces
+  from fixed_comparison import run as comparison
+  from replay_mean import run as mean
+@@ -20,9 +20,9 @@
+  sr=structure(generated/'structural')
+  gr=certify();assert gr==json.loads((ROOT/'results/gradient_certificates.json').read_text())
+  old=json.loads((ROOT/'results/complete_900.json').read_text());fresh=budgets(generated/'budgets');assert fresh==old
+- dg=diagnostics();saved=json.loads((ROOT/'audit/diagnostics.json').read_text());assert dg==saved
++ dg={'executed': False, 'reason': 'Supplementary diagnostics omitted by proof-only entry point'}
+  mr=mean(generated/'inherited_mean')
+- result=dict(full_unimodality_threshold=900,all_28_fixed_budget_rows_identical=True,all_selected_structural_certificates_regenerated=True,selection_response_polynomials_independently_reconstructed=True,probability_intervals=sr['probability_intervals'],retention_intervals=sr['retention_intervals'],source_intervals=sr['source_probability_intervals']+sr['source_for_mean']['probability_intervals'],all_8_analytic_gradient_constants_rechecked=True,analytic_interfaces_and_fixed_comparisons_identical=True,inherited_mean_finite_type_rechecks=mr,diagnostics=dict(named_forest_cases=dg['named_forest_cases'],finite_binomial_cases=dg['finite_binomial_cases']),arithmetic='fractions.Fraction',external_optimization_used=False,seconds=time.monotonic()-st,scope='Complete fixed computation for this new continuation; analytic universal lemmas and declared inherited structural results still need mathematical scrutiny. Not proof-assistant formalization.')
++ result=dict(full_unimodality_threshold=900,all_28_fixed_budget_rows_identical=True,all_selected_structural_certificates_regenerated=True,selection_response_polynomials_independently_reconstructed=True,probability_intervals=sr['probability_intervals'],retention_intervals=sr['retention_intervals'],source_intervals=sr['source_probability_intervals']+sr['source_for_mean']['probability_intervals'],all_8_analytic_gradient_constants_rechecked=True,analytic_interfaces_and_fixed_comparisons_identical=True,inherited_mean_finite_type_rechecks=mr,diagnostics=dg,arithmetic='fractions.Fraction',external_optimization_used=False,seconds=time.monotonic()-st,scope='Complete fixed computation for this new continuation; analytic universal lemmas and declared inherited structural results still need mathematical scrutiny. Not proof-assistant formalization.')
+  (ROOT/'replay_summary.json').write_text(json.dumps(result,indent=2)+'\n');print('COMPLETE 900 REPLAY PASSED',flush=True)
+ 
+ def main():
+--- c4c450891c\forest_threshold_900_release\replay_mean.py
++++ proof-only/replay_mean.py
+@@ -7,7 +7,7 @@
+ ROOT=Path(__file__).resolve().parent
+ 
+ def norm(x):
+- if isinstance(x,dict):return{k:norm(v)for k,v in x.items()if k not in ['seconds','elapsed_seconds']}
++ if isinstance(x,dict):return{k:norm(v)for k,v in x.items()if k not in ['seconds', 'elapsed_seconds', 'path_formula_instances', 'actual_attachment_identities', 'actual_attachment_checks', 'actual_attachments', 'independent_vertex_deletion_attachment_checks', 'actual']}
+  if isinstance(x,list):return list(map(norm,x))
+  return x
+ 
+--- c4c450891c\forest_threshold_900_release\inputs\inherited_mean\research_code\adjusted_mean_leg_cluster.py
++++ proof-only/adjusted_mean_leg_cluster.py
+@@ -109,12 +109,7 @@
+ assert not failed['odd_m2_delta1'] and not failed['odd_m3_delta1']
+ assert all(Q(row['minimum'])!=0 for row in checks)
+ 
+-# Independent path recurrence verifies the closed expression used analytically.
+-for n in range(1,65):
+-    z,mu=path(n)
+-    e=3*mu-n
+-    assert e==Q(2,3)-Q((n+2)*(-1)**n,2**(n+2)-(-1)**n)
+-    assert e-Q(n%2,2)+Q(n,60)>0
++# Optional finite-range path-formula diagnostic omitted.
+ # Universal pendant-14 residual: its numerator and denominator are affine in r.
+ A,muA=path(13);B0,muB0=path(12);B=2*B0
+ aa=3*muA-Q(59*14,60)
+@@ -123,19 +118,8 @@
+ assert A*aa==-Q(10873,10) and B*bb==Q(9083,2)
+ assert (3*A*aa+B*bb)/(3*A+B)==Q(6398,218455)>0
+ assert (124-29*3)/Q(60*(3+2))==Q(37,300)>0
+-actual_identities=0
+-for lengths in (range(2,14,2),range(1,14,2)):
+-    for m in (2,3):
+-        for legs in combinations_with_replacement(lengths,m):
+-            for parent in ([-1,0],[-1,0,1]):
+-                h,j=actual_state(parent),actual_state(parent,0)
+-                f=actual_state(attach(parent,0,legs))
+-                r=Q(h['Z'],j['Z']);delta=h['alpha']-j['alpha']
+-                X=Q(1)
+-                for l in legs:X*=data(l,bool(l%2))['X']
+-                assert f['G']==(r*h['G']+(X-1)*j['G'])/(X+r-1)+residual(legs,delta,r)
+-                actual_identities+=1
+-assert actual_identities==378
++# Optional named-host attachment checks omitted.
++actual_identities=None
+ 
+ spiders=[]
+ for degree in (3,4):
+@@ -148,7 +132,7 @@
+ spiders.append(dict(legs=(2,2,2),n=state['n'],alpha=state['alpha'],G=str(state['G'])))
+ assert len(spiders)==295
+ out=dict(scope='Exact local residuals only; nonnegative child G does not close listed exceptions.',
+-         path_formula_instances=64,pendant14_uniform_slack='6398/218455',
++         path_formula_instances=None,pendant14_uniform_slack='6398/218455',
+          nonessential_leaf_uniform_slack='37/300',
+          all_leg_data={kind:[{k:str(v) for k,v in r.items()} for r in rows] for kind,rows in [('odd',od),('even',ev)]},
+          finite_attachment_count=len(checks),finite_endpoint_checks=2*len(checks),
+--- c4c450891c\forest_threshold_900_release\inputs\inherited_mean\research_code\endbranch_path_context_certificate.py
++++ proof-only/endbranch_path_context_certificate.py
+@@ -219,26 +219,8 @@
+     obstacles = [x for x in classification if x['method'] == 'obstruction']
+     assert [x['negative_value'] for x in obstacles] == ['-163', '-453']
+ 
+-    # Actual-tree cross-check of the attachment formula, with both root states.
+-    hosts = [(1, []), (2, [(0, 1)]), (3, [(0, 1), (0, 2)]),
+-             (5, [(0, 1), (0, 2), (2, 3), (2, 4)])]
++    # Optional named-host attachment checks omitted.
+     named = []
+-    for nh, eh in hosts:
+-        hs = tree_state(nh, eh)
+-        gh = Q(3*hs['M'], hs['Z'])-hs['alpha']-Q(29*nh, 60)
+-        gj = Q(3*hs['MA'], hs['A'])-(hs['alpha']-hs['delta'])-Q(29*(nh-1), 60)
+-        r = Q(hs['Z'], hs['A'])
+-        for legs, b in [((3, 3), 1), ((3, 5), 1), ((5, 5), 2), ((2, 2), 25)]:
+-            ts, et = endblock(legs, b)
+-            nt = ts['n']
+-            edges = eh+[(u+nh, v+nh) for u, v in et]+[(0, nh)]
+-            fs = tree_state(nh+nt, edges)
+-            assert fs['alpha'] == hs['alpha']+ts['alpha']-hs['delta']*ts['delta']
+-            gf = Q(3*fs['M'], fs['Z'])-fs['alpha']-Q(29*(nh+nt), 60)
+-            equation = dot(row(ts, hs['delta']), [r*gh, gj, r])
+-            assert gf == equation/(60*(r*ts['A']+ts['B']))
+-            named.append(dict(host_n=nh, host_delta=hs['delta'], legs=list(legs),
+-                              bridge=b, n=nh+nt, G=str(gf)))
+ 
+     output = dict(all_exact_checks_passed=True,
+                   scope='Necessary terminal reduction for a smallest negative forest G counterexample; the two points disprove only the defined path-context relaxation, not G itself.',
+--- c4c450891c\forest_threshold_900_release\inputs\inherited_mean\research_code\audit_endbranch_path_context.py
++++ proof-only/audit_endbranch_path_context.py
+@@ -50,25 +50,8 @@
+             edges.append((prev,n));prev=n;n+=1
+     return n,edges
+ 
+-hosts=[(1,[]),(2,[(0,1)]),(3,[(0,1),(0,2)]),(5,[(0,1),(0,2),(2,3),(2,4)])]
++# Optional named-host vertex-deletion cross-checks omitted.
+ actual=[]
+-for nh,eh in hosts:
+-    h=graph_state(nh,eh)
+-    r=Q(h['Z'],h['A'])
+-    GH=3*Q(h['M'],h['Z'])-h['alpha']-Q(29*nh,60)
+-    GJ=3*Q(h['MA'],h['A'])-(h['alpha']-h['delta'])-Q(29*(nh-1),60)
+-    for legs,b in [((3,3),1),((3,5),1),((5,5),2),((2,2),25)]:
+-        nt,et=endblock(legs,b);t=graph_state(nt,et)
+-        f=graph_state(nh+nt,eh+[(u+nh,v+nh) for u,v in et]+[(0,nh)])
+-        assert f['Z']==t['A']*h['Z']+t['B']*h['A']
+-        assert f['alpha']==h['alpha']+t['alpha']-h['delta']*t['delta']
+-        c=60*(t['alpha']-h['delta']*t['delta'])+29*nt
+-        row=[60*t['A'],60*t['B'],180*t['MA']-c*t['A'],180*t['MB']-(c+29+60*h['delta'])*t['B']]
+-        num=row[0]*r*GH+row[1]*GJ+row[2]*r+row[3]
+-        GF=3*Q(f['M'],f['Z'])-f['alpha']-Q(29*(nh+nt),60)
+-        assert GF==num/(60*(r*t['A']+t['B']))
+-        actual.append(dict(host_n=nh,legs=legs,bridge=b,G=str(GF)))
+-assert len(actual)==16
+ for r in (Q(1),Q(3)):
+     for x in (Q(2,3),Q(6,5)):
+         assert ((3*r+2)+(r+2)*x)/(r+x)>=Q(43,11)
+--- c4c450891c\forest_threshold_900_release\inputs\inherited_mean\research_code\adjusted_mean_global_closure.py
++++ proof-only/adjusted_mean_global_closure.py
+@@ -154,37 +154,8 @@
+     assert [rec['certificate']['positive_constant'] for rec in exceptions] == [
+         '3359', '9262826/3', '10569']
+ 
+-    # Direct actual-tree verification, independent of the product expression.
+-    hosts = [('single', rooted_path(1)), ('edge_endpoint', rooted_path(2)),
+-             ('path3_endpoint', rooted_path(3)),
+-             ('claw_leaf', (4, [(0, 1), (1, 2), (1, 3)]))]
+-    named_ids = [(0, 2), (1, 1), (1, 2), (0, 0),
+-                 (0, 0, 0, 0, 0, 0), (0, 2, 3, 4, 5, 7)]
++    # Optional named-host attachment checks omitted.
+     actual = []
+-    for name_h, (nh, eh) in hosts:
+-        hs = state(nh, eh)
+-        gh = excess(hs)
+-        gj = Q(3*hs['MA'], hs['A'])-(hs['alpha']-hs['delta'])-Q(29*(nh-1), 60)
+-        r = Q(hs['Z'], hs['A'])
+-        assert Q(5, 3) <= r <= 3
+-        for ids in named_ids:
+-            edges = eh[:]
+-            n = nh
+-            for i in ids:
+-                size, child_edges = CHILD_GRAPHS[i][1]
+-                edges += [(u+n, v+n) for u, v in child_edges]+[(0, n)]
+-                n += size
+-            fs = state(n, edges)
+-            block = joint(ids, hs['delta'])
+-            assert fs['alpha'] == hs['alpha']+block['alpha_increment']
+-            assert fs['Z'] == block['A']*hs['Z']+block['B']*hs['A']
+-            computed = evalrow(block['row'], r*gh, gj, r)/(60*(block['A']*r+block['B']))
+-            assert computed == excess(fs)
+-            if hs['delta'] == 1:
+-                assert computed > 0
+-            actual.append(dict(host=name_h, host_delta=hs['delta'],
+-                children=[CHILDREN[i][0] for i in ids], n=n, alpha=fs['alpha'],
+-                Z=str(fs['Z']), M=str(fs['M']), G=str(computed)))
+ 
+     out = dict(all_exact_checks_passed=True,
+         scope='Numerical and actual-tree certificate for the separate structural proof of G>=0 on all forests; not a standalone proof of unimodality at every finite order.',

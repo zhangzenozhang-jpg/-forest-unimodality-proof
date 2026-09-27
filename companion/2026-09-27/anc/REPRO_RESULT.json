@@ -1,0 +1,296 @@
+{
+  "format_version": 1,
+  "description": "Fresh complete proof-only exact certificate replay for the accompanying arXiv source.",
+  "all_mathematical_acceptance_checks_passed": true,
+  "full_inherited_chain_replayed": true,
+  "supplementary_diagnostics_executed": false,
+  "original_unmodified_full_entrypoint_used": false,
+  "started_utc": "2026-09-27T08:52:51.432403+00:00",
+  "finished_utc": "2026-09-27T09:28:24.652947+00:00",
+  "elapsed_seconds": 2133.218,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "input_sha256": {
+    "forest_n60_extension_and_n100_gap.zip": "3cbf5c0b32bbbce213e23db79655138aebd9ceb01fc9f55df4ac52a91ed12759",
+    "forest_threshold_59_audited_handoff.zip": "cbe5b28a4c0335ef099435356edaba0d440e650f7fd7398eb3dab8e11d0fa7f1"
+  },
+  "execution_code_sha256": {
+    "proof_reproduce.py": "95dba84ec1accc70ff8eac24d8cf61d197677b6e4b50a8c6cedf724d471be0a4",
+    "proof_runtime.py": "c56207951e9fabd3dd10b28848db74af3940ab8c1ac76a326bbe01e74c0c89c1"
+  },
+  "patch_spec_sha256": "70858e65cda0332a7db5bb80bbb3123cd4de413b17b284399b022d340a18327b",
+  "unique_authenticated_patch_boundaries": 13,
+  "top_level_processes": [
+    {
+      "release": "forest_n60_extension_and_n100_gap",
+      "script": "verify.py",
+      "returncode": 0,
+      "seconds": 23.312999999999988
+    },
+    {
+      "release": "forest_n60_extension_and_n100_gap",
+      "script": "verify_grid.py",
+      "returncode": 0,
+      "seconds": 24.406000000000063
+    },
+    {
+      "release": "forest_n60_extension_and_n100_gap",
+      "script": "verify_countermodels.py",
+      "returncode": 0,
+      "seconds": 4.125
+    },
+    {
+      "release": "forest_threshold_59_release",
+      "script": "check_release.py",
+      "returncode": 0,
+      "seconds": 7.9220000000000255
+    },
+    {
+      "release": "forest_threshold_59_release",
+      "script": "replay.py",
+      "returncode": 0,
+      "seconds": 2072.984
+    }
+  ],
+  "stages": [
+    {
+      "stage": 900,
+      "mathematical_acceptance_passed": true,
+      "supplementary_diagnostics_executed": false,
+      "full_unimodality_threshold": 900,
+      "probability_intervals": 4988,
+      "retention_intervals": 9344,
+      "source_intervals": 1016,
+      "seconds": 76.25,
+      "acceptance_flags": {
+        "all_28_fixed_budget_rows_identical": true,
+        "all_selected_structural_certificates_regenerated": true,
+        "all_8_analytic_gradient_constants_rechecked": true
+      },
+      "fixed_budget_rows": 28
+    },
+    {
+      "stage": 500,
+      "mathematical_acceptance_passed": true,
+      "supplementary_diagnostics_executed": false,
+      "N": 500,
+      "source_probability_intervals": 472,
+      "source_retention_intervals": 472,
+      "envelope_rectangles": 209,
+      "numerical_optimizer_used": false,
+      "seconds": 133.90599999999995,
+      "acceptance_flags": {
+        "all_29_fixed_rows_identical": true,
+        "all_new_sources_regenerated": true,
+        "all_new_direction_envelopes_regenerated": true,
+        "all_frozen_900_inputs_replayed": true
+      },
+      "fixed_budget_rows": 29
+    },
+    {
+      "stage": 350,
+      "mathematical_acceptance_passed": true,
+      "supplementary_diagnostics_executed": false,
+      "N": 350,
+      "marked_probability_cells": 3600,
+      "marked_retention_cells": 10800,
+      "numerical_optimizer_used": false,
+      "seconds": 324.125,
+      "acceptance_flags": {
+        "all_43_fixed_budget_rows_identical": true,
+        "all_marked_source_certificates_regenerated": true,
+        "all_frozen_500_inputs_replayed": true
+      },
+      "fixed_budget_rows": 43
+    },
+    {
+      "stage": 170,
+      "mathematical_acceptance_passed": true,
+      "supplementary_diagnostics_executed": false,
+      "N": 170,
+      "previous_N": 350,
+      "finite_vertex_range": [
+        170,
+        349
+      ],
+      "inherited_vertex_range": [
+        350,
+        "infinity"
+      ],
+      "certificate_count": 558,
+      "q_strata": 130,
+      "parent_intervals": 43,
+      "total_endpoint_integer_state_checks": 70112700,
+      "total_infinite_real_halfline_checks": 781200,
+      "minimum_normalized_margin_lower": "177285776443222660902327469/250000000000000000000000000000",
+      "minimum_margin_certificate": "ext_170_14_0065",
+      "floating_point_acceptance": false,
+      "numerical_optimizer_used": false,
+      "seconds": 476.04700000000014,
+      "acceptance_flags": {
+        "all_exact_bridge_certificates_passed": true,
+        "all_continuous_activity_and_mean_intervals_covered": true,
+        "inherited_larger_m_budgets_match": true,
+        "full_frozen350_chain_replayed": true
+      }
+    },
+    {
+      "stage": 130,
+      "mathematical_acceptance_passed": true,
+      "supplementary_diagnostics_executed": false,
+      "N": 130,
+      "previous_N": 170,
+      "finite_vertex_range": [
+        130,
+        169
+      ],
+      "inherited_vertex_range": [
+        170,
+        "infinity"
+      ],
+      "certificate_count": 243,
+      "q_strata": 148,
+      "parent_intervals": 43,
+      "total_endpoint_integer_state_checks": 7394490,
+      "total_infinite_real_halfline_checks": 165240,
+      "minimum_normalized_margin_lower": "8283392798494017812873959/50000000000000000000000000000",
+      "minimum_margin_certificate": "bridge_130_10_002_0059",
+      "floating_point_acceptance": false,
+      "numerical_optimizer_used": false,
+      "seconds": 770.0620000000001,
+      "acceptance_flags": {
+        "all_new_exact_certificates_passed": true,
+        "all_continuous_activity_and_mean_intervals_covered": true,
+        "all_inherited_larger_m_budgets_match": true,
+        "full_frozen170_chain_replayed": true
+      }
+    },
+    {
+      "stage": 99,
+      "mathematical_acceptance_passed": true,
+      "supplementary_diagnostics_executed": false,
+      "N": 99,
+      "previous_N": 130,
+      "new_finite_vertex_range": [
+        99,
+        129
+      ],
+      "inherited_vertex_range": [
+        130,
+        "infinity"
+      ],
+      "certificate_count": 188,
+      "q_strata": 148,
+      "parent_intervals": 43,
+      "total_endpoint_integer_state_checks": 3397160,
+      "total_infinite_real_halfline_checks": 97760,
+      "minimum_normalized_margin_lower": "397397816903828464065081719/1000000000000000000000000000000",
+      "minimum_margin_certificate": "optimized_99_16_000_0092",
+      "floating_point_acceptance": false,
+      "numerical_optimizer_used": false,
+      "seconds": 1061.547,
+      "acceptance_flags": {
+        "all_new_exact_certificates_passed": true,
+        "all_continuous_q_m_covered": true,
+        "inherited_large_m_thresholds_checked": true,
+        "full_frozen130_chain_replayed": true
+      }
+    },
+    {
+      "stage": 80,
+      "mathematical_acceptance_passed": true,
+      "supplementary_diagnostics_executed": false,
+      "N": 80,
+      "previous_N": 99,
+      "new_finite_vertex_range": [
+        80,
+        98
+      ],
+      "inherited_vertex_range": [
+        99,
+        "infinity"
+      ],
+      "certificate_count": 236,
+      "q_strata": 154,
+      "parent_intervals": 43,
+      "total_finite_kernel_rectangles": 1225,
+      "total_endpoint_integer_state_checks": 2523312,
+      "total_infinite_real_halfline_checks": 93456,
+      "minimum_normalized_margin_lower": "10528115305903683745719661/250000000000000000000000000000",
+      "minimum_margin_certificate": "new_80_09_001_0003",
+      "minimum_margin_scale": 38,
+      "floating_point_acceptance": false,
+      "numerical_optimizer_used": false,
+      "seconds": 1697.109,
+      "acceptance_flags": {
+        "all_new_exact_certificates_passed": true,
+        "all_continuous_q_m_covered": true,
+        "inherited_large_m_thresholds_checked": true,
+        "full_frozen99_chain_replayed": true
+      },
+      "source_counts": {
+        "passed": true,
+        "selector_count": 37,
+        "flow_selector_count": 14,
+        "log_selector_count": 14,
+        "probability_cells": 28692,
+        "retention_cells": 116974,
+        "parent_cases": 403825,
+        "response_regions": 1211475,
+        "workers": 3,
+        "floating_point_acceptance": false
+      }
+    },
+    {
+      "stage": 59,
+      "mathematical_acceptance_passed": true,
+      "supplementary_diagnostics_executed": false,
+      "N": 59,
+      "previous_N": 80,
+      "new_finite_vertex_range": [
+        59,
+        79
+      ],
+      "inherited_vertex_range": [
+        80,
+        "infinity"
+      ],
+      "new_certificate_count": 231,
+      "q_strata": 154,
+      "parent_intervals": 43,
+      "total_finite_kernel_rectangles": 1220,
+      "total_endpoint_integer_state_checks": 1185408,
+      "total_admissible_n_k_pair_checks": 28987,
+      "minimum_normalized_margin_lower": "424830401847072141613691/10000000000000000000000000000",
+      "minimum_margin_certificate": "count_59_11_0012",
+      "minimum_margin_scale": 23,
+      "minimum_margin_kernel_weights": [
+        "0",
+        "17915685937/500000000000",
+        "1982084314063/2000000000000"
+      ],
+      "floating_point_acceptance": false,
+      "numerical_optimizer_used": false,
+      "seconds": 2068.5,
+      "acceptance_flags": {
+        "all_new_exact_certificates_passed": true,
+        "all_continuous_q_m_covered": true,
+        "all_discrete_n_k_cases_covered": true,
+        "all_new_variance_profiles_recomputed_at_declared_N": true,
+        "full_frozen80_chain_replayed": true
+      },
+      "source_counts": {
+        "passed": true,
+        "new_combined_source_count": 4,
+        "probability_cells": 1363,
+        "retention_cells": 8435,
+        "parent_cases": 37026,
+        "real_response_region_checks": 111078,
+        "all_source_polynomials_independently_reconstructed": true
+      }
+    }
+  ],
+  "proof_assistant_formalization": false,
+  "scope": "Exact arithmetic certificates together with the written universal reductions; no forest counterexample search.",
+  "auxiliary_relaxation_check": "verify_countermodels.py authenticates fixed rational relaxation points; these are not forest counterexamples and are not premises of the main theorem.",
+  "timing_note": "Stage seconds for inherited stages include their prior chain; do not add them."
+}

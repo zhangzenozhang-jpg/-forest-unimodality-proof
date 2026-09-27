@@ -1,0 +1,119 @@
+\section{Proof data and reproduction}\label{app:repro}
+
+The ancillary directory \nolinkurl{anc/} contains the accepting programs,
+fixed certificate data and a single entry point. It is not needed to
+typeset the paper. The computational checks use only Python's standard
+library and have been run with Python 3.12.14. From the submission
+root, use a new or empty work directory outside \nolinkurl{anc/}:
+\begin{quote}\small\ttfamily
+python -S anc/proof\_reproduce.py --work /path/to/empty-work
+\end{quote}
+Assertions must remain enabled: do not use Python's \texttt{-O} or
+\texttt{-OO} options. The optional argument \texttt{--workers 1} reduces
+parallel memory use. On Windows, a short work path is convenient; the
+included runtime handles the inherited nested-release launch paths.
+The checks take tens of minutes and write their results only to the
+chosen work directory.
+
+\subsection{Fixed inputs and source locations}
+The directory \nolinkurl{anc/repro/inputs/} contains precisely two frozen
+input archives, with the following SHA-256 identifiers:
+\begin{quote}\small
+\nolinkurl{forest_n60_extension_and_n100_gap.zip}\\
+\texttt{3cbf5c0b32bbbce213e23db79655138aebd}\\
+\texttt{9ceb01fc9f55df4ac52a91ed12759}\\[4pt]
+\nolinkurl{forest_threshold_59_audited_handoff.zip}\\
+\texttt{cbe5b28a4c0335ef099435356edaba0d440}\\
+\texttt{e650f7fd7398eb3dab8e11d0fa7f1}
+\end{quote}
+Each displayed digest is the concatenation of its two lines. The first
+archive contains the finite-order row generators and certificates. The
+second recursively contains every release from stage 59 through stage
+900, including the inherited activity-two mean data. No separate copy
+of an inherited archive is needed at the submission root.
+
+All filenames in the proof sections refer to files inside the
+corresponding released stage. For example, the mean files are in
+\nolinkurl{inputs/inherited_mean/research_code/} inside the stage-900
+release; they are not scripts placed next to the historical readable
+documents. The machine-readable index
+\nolinkurl{anc/repro/source_index.json} gives the complete nested-archive
+route and digest of each of the 32 historical proof documents. They can
+be extracted without executing any release code by
+\begin{quote}\small\ttfamily
+python -S anc/repro/extract\_sources.py --output /path/to/empty-docs
+\end{quote}
+The English arguments required for the theorem are included in this
+paper; those historical documents provide provenance. Historical notes,
+diagnostic examples and earlier thresholds inside the fixed inputs are
+not additional hypotheses of the theorem.
+
+\subsection{Acceptance and full coverage}
+The entry point authenticates both input archives before extraction,
+rejects unsafe or duplicate archive paths, and runs the finite-order
+checkers and the full chain
+\[
+ 900\longrightarrow500\longrightarrow350\longrightarrow170
+ \longrightarrow130\longrightarrow99\longrightarrow80
+ \longrightarrow59.
+\]
+At each stage it retains the original integrity checks, source
+reconstruction, exact budget and kernel acceptance, comparison of the
+mathematical fields with the frozen data, complete parameter coverage,
+and the analytic tail interface. An inherited stage is not replaced by
+the presence of a previously successful log.
+
+There are three kinds of finite proof obligation. Integer counting rows
+and rational separating identities are accepted by exact arithmetic.
+Continuous scalar inequalities are accepted on a complete interval
+partition, using outward rational bounds or the explicit polynomial
+identities described in the preceding sections. Discrete kernel
+domains are reconstructed from their integer bounds or exact
+combinatorial support. In every case the mathematical reduction supplies
+the domain: a fixed precision or a finite list of test forests cannot
+supply that domain.
+
+The entry point also checks the consistency of historical rational
+relaxation examples stored in the finite archive. These objects are not
+forests and are not premises of Theorem~\ref{thm:all}. They impose no
+additional case split in the proof.
+
+On success, \nolinkurl{proof_reproduction_summary.json} in the work
+directory records
+\nolinkurl{all_mathematical_acceptance_checks_passed: true}, the input
+and execution-code digests, all eight stage summaries and the fresh
+return codes. Full logs and omission records remain in that directory.
+A failed subprocess, a missing stage, a source mismatch or an incomplete
+omission record causes failure of the entry point. The accompanying
+\nolinkurl{anc/README.txt} specifies the output fields and commands.
+
+\subsection{Supplementary diagnostics and mathematical revisions}
+The historical releases also include graph-instance diagnostics. The
+supplied entry point omits their imports and calls, and omits named-host
+attachment and optional finite path-sampling checks in the inherited
+mean scripts. The complete symbolic short-leg domain, spider induction
+bases, terminal-block identities, two-level closure identities and all
+continuous and discrete certificate coverage remain active.
+
+The complete omissions are recorded in
+\nolinkurl{anc/repro/patches.json} and
+\nolinkurl{anc/repro/diagnostic_omissions.diff}. Each of the thirteen
+affected source files is authenticated before a uniquely matching
+replacement is applied in memory; the resulting source is also checked
+against its declared digest. The archives and extracted source files
+are unchanged. Diagnostic fields are omitted from comparisons with
+historical summaries; all mathematical fields are still compared.
+Thus this is an explicitly documented proof-only execution of the
+released acceptance code.
+
+The density induction in Section~\ref{app:finite-kernels} states two
+conditions that were checked by the original code but absent from the
+displayed condition list in the historical stage-80 prose:
+$h>0$ and $g_4\le\mu(P_4)-4r$. In particular, the sign of $h$ is needed
+when transferring $rn+h$ to a finite-order density. No certificate
+constant is altered by making these conditions explicit.
+
+The accepting programs do not formalize the written structural and
+analytic reductions in a proof assistant. Their conclusion is exact
+acceptance of the specified certificates; the mathematical proof also
+uses the reductions and domain arguments given in the paper.

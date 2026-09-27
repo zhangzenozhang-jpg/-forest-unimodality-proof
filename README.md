@@ -1,3 +1,19 @@
+# Current manuscript companion materials — 27 September 2026
+
+The current manuscript is **Unimodality of Forest Independence Polynomials**,
+by **Tong Zhang and Wei Li**. Its versioned computational supplement is in
+[companion/2026-09-27](companion/2026-09-27/README.md): exact verification
+programs, frozen certificate data, detailed proof reference, checksums,
+and a complete reproduction guide. This entry point performs the proof
+obligations without graph-instance enumeration. The successful complete
+replay record and authenticated diagnostic omissions are documented there.
+
+The materials below and in the other top-level directories retain the
+earlier submission's provenance and instructions. Use the versioned
+companion's entry point for the current manuscript.
+
+---
+
 # Forest independence polynomial unimodality — Tong Zhang
 
 **Submitted for mathematical review:** [official PR #4551](https://github.com/TheJustinSunPrize/awards/pull/4551). Status at receipt: open, not accepted or merged. See `submission/PUBLICATION_STATUS.md` for the exact proof commit and receipts.

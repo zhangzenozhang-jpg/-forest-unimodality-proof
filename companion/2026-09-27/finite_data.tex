@@ -1,0 +1,49 @@
+\section{Finite proof data and an explicit certificate}\label{app:finite-data}
+The data contain $2\,577$ stored triples: $670$ comparison parameters
+and $1\,907$ linear certificates.  The latter contain $142\,017$
+nonzero row-weight terms.  There are at most $610$ variables $t_{j,m}$
+for any parameter pair in this domain; their values are not enumerated.
+The largest common denominator used by the principal arithmetic check
+has $68$ decimal digits.  The minimum verified normalized linear
+margin is
+\[
+ \frac{953977}{42042000000}>0,
+\]
+attained at $(n,a,k)=(34,19,10)$.  This is a certificate upper-bound
+margin after normalization, not a lower bound for an unnormalized
+coefficient curvature.
+
+The exact data file \texttt{certificates.json} is identified by the
+SHA-256 digest
+\begin{center}\small\ttfamily
+a77f4fc43aec1b8eecab91c4418b6990\allowbreak
+f72dee69d802129c78efd67d2e1bcc5a.
+\end{center}
+The archived proof data and checker source are mathematical supplements
+to the finite theorem; the execution logs alone are not substitutes for
+them.
+
+\subsection{An explicit affine comparison at the final parameter gap}
+\label{f60:subsec-example}
+
+For $(n,a,k)=(60,33,19)$ the data include a certificate with $193$
+nonzero row multipliers, including one assumption row.  Its denominator
+is $D_c=10^7$ and its equality-weight numerator is $1395$.
+Retaining the assumption row algebraically on the left, rather than
+declaring it true, gives the unconditional affine comparison
+\begin{equation}
+ \Delta_{20}\le\frac{96885639}{100000000}\Delta_{19}
+ -\frac{4010142596414187852788421881}{28302876966000000000}.
+ \label{f60:eq-example-exact}
+\end{equation}
+Since the last positive fraction is strictly greater than $141686748$,
+\begin{equation}
+ \Delta_{20}\le\frac{96885639}{100000000}\Delta_{19}-141686748.
+ \label{f60:eq-example-rounded}
+\end{equation}
+The complete weights are in \texttt{example\_60\_33\_19.json}, which
+agrees exactly with the corresponding entry of the master data file.
+The comparison has been checked by recomputing both normalization
+scales and the rational residual bound.  It applies simultaneously to
+all forests with $(n,a)=(60,33)$, rather than to a selected graph.
+

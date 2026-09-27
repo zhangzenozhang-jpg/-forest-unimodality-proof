@@ -1,0 +1,77 @@
+{
+  "version": "2026-09-27",
+  "files": {
+    "anc/MATHEMATICAL_EDITS.md": {
+      "bytes": 2089,
+      "sha256": "5fd2ed5c6efba28d434688d419fdc66951fd9f67394fd3c0465e5ec0213a1bc9"
+    },
+    "anc/PROOF_MAP.md": {
+      "bytes": 3203,
+      "sha256": "b996e7eebd8617a07e05f215a41479df6cd63230091f63120d9faaec94b8a5ba"
+    },
+    "anc/proof_reproduce.py": {
+      "bytes": 7698,
+      "sha256": "95dba84ec1accc70ff8eac24d8cf61d197677b6e4b50a8c6cedf724d471be0a4"
+    },
+    "anc/README.txt": {
+      "bytes": 5655,
+      "sha256": "0b03f23d529f662be4aa218b61a4ed12865fa283e3d7bc80af725963be121fdc"
+    },
+    "anc/repro/diagnostic_omissions.diff": {
+      "bytes": 22078,
+      "sha256": "302c352d5ec1ce2ae5e6d6b3bf3840494e2ab1090c7fcbf1a02334565a042e86"
+    },
+    "anc/repro/extract_sources.py": {
+      "bytes": 1546,
+      "sha256": "f98e3992eae7922b1ae3b3ba1cfd4aa6377e64f601c7f4f3ad8b1e5e8569ec94"
+    },
+    "anc/repro/input_sha256.json": {
+      "bytes": 231,
+      "sha256": "bf417a93ae615c06a670808523c6e2514f3df03cada182e4c3b5ec9a9267350f"
+    },
+    "anc/repro/inputs/forest_n60_extension_and_n100_gap.zip": {
+      "bytes": 902244,
+      "sha256": "3cbf5c0b32bbbce213e23db79655138aebd9ceb01fc9f55df4ac52a91ed12759"
+    },
+    "anc/repro/inputs/forest_threshold_59_audited_handoff.zip": {
+      "bytes": 33800444,
+      "sha256": "cbe5b28a4c0335ef099435356edaba0d440e650f7fd7398eb3dab8e11d0fa7f1"
+    },
+    "anc/repro/patches.json": {
+      "bytes": 15542,
+      "sha256": "70858e65cda0332a7db5bb80bbb3123cd4de413b17b284399b022d340a18327b"
+    },
+    "anc/repro/proof_runtime.py": {
+      "bytes": 5704,
+      "sha256": "c56207951e9fabd3dd10b28848db74af3940ab8c1ac76a326bbe01e74c0c89c1"
+    },
+    "anc/repro/source_index.json": {
+      "bytes": 21605,
+      "sha256": "0bc366d687a4a9733dee6b383cb6c9aae497a7361eecfea980ad4a49f74f9f75"
+    },
+    "anc/REPRO_RESULT.json": {
+      "bytes": 10495,
+      "sha256": "e2099c58e79e2c19a29aa3a55fa0aec77ef01b0f65c35064bd22a655544d8966"
+    },
+    "detailed-proof-reference.pdf": {
+      "bytes": 737124,
+      "sha256": "8209270afe853d0bc75a03cb5dcd775c5306001dd732a11d3436eaa801e138f4"
+    },
+    "finite_data.tex": {
+      "bytes": 2244,
+      "sha256": "2439be60b994b12ec22cafabc5eec23421b27c9c41c48dd79e528926fb4cdd8c"
+    },
+    "finite_rows.tex": {
+      "bytes": 2908,
+      "sha256": "16311e289804728cf835840f0062831365c324876b1f512fc5a5bf38a13780c7"
+    },
+    "README.md": {
+      "bytes": 10700,
+      "sha256": "3b705e1567a47f29d3c02109fd4af9711d2b42c8cc742f4eeceb04f92c83e905"
+    },
+    "reproducibility.tex": {
+      "bytes": 6401,
+      "sha256": "7c5ef4f93e37c50d0ec905ed175189a1ae7686e0c7774944da6b108260959715"
+    }
+  }
+}

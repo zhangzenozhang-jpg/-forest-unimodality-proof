@@ -1,0 +1,100 @@
+\section{Integer rows for the finite-order certificates}
+\label{f60:subsec-row-specification}
+
+For clarity and reproducibility, the following specifies every row
+family used by the finite linear certificates.  A row labelled $\rho$
+means $\sum_{j,m}a^\rho_{j,m}t_{j,m}\le b^\rho$; unspecified
+coefficients vanish.  All indices satisfy $1\le j\le v$ and
+$0\le m\le a-j$.  The symbols in the rows are defined above, and
+$r,h,l$ are integers.
+
+\begin{description}
+\item[\texttt{count}$(r)$.]
+For $2\le r\le v$, use
+$a_{j,m}=\mathbf{1}_{j=r}$ and $b=\binom vr$.
+
+\item[\texttt{path}$(r)$.]
+For $2\le r\le a$, use
+$a_{j,m}=-\binom m{r-j}$ and
+$b=\binom ar-\binom{n-r+1}{r}$.
+
+\item[\texttt{private}$(r,h)$.]
+For $2\le r\le v$ and $0\le h<a$, set
+\[
+ a_{j,m}=\mathbf{1}_{j=r}\bigl((r-1)m+a-r+1-rh\bigr)_+
+ -(v-r+1)\mathbf{1}_{j=r-1}(m-h)_+,
+ \qquad b=0.
+\]
+
+\item[\texttt{hall}$(r,l)$.]
+Take $0\le l\le a$, $0\le r<\min(v,a-l)$, and
+$c=v-r-\max(0,l-\delta)\ge0$.  Set
+\[
+ a_{j,m}=\bigl((r+1)\mathbf{1}_{j=r+1}-c\mathbf{1}_{j=r}\bigr)
+                 \binom ml,\qquad
+ b=\begin{cases}c\binom al,&r=0,\\0,&r>0.\end{cases}
+\]
+The implemented domain with $l=0$ uses $1\le r<v$; the omitted
+$(r,l)=(0,0)$ case is the already imposed first-layer equality.
+
+\item[\texttt{tail}$(r,h)$.]
+For $2\le r\le v$ and $0\le h\le a-r+1$, set
+\[
+ a_{j,m}=\mathbf{1}_{j=r}b_{r,h}(m)
+ -(v-r+1)\mathbf{1}_{j=r-1}\mathbf{1}_{m\ge h},\qquad b=0.
+\]
+
+\item[\texttt{release\_upper}$(r,h)$.]
+On the same range, set
+\[
+ a_{j,m}=s_r\mathbf{1}_{j=r-1}(m-h)_+
+            -\mathbf{1}_{j=r}U_{r,h}(m),\qquad b=0.
+\]
+
+\item[\texttt{tail\_upper}$(r,h)$.]
+On the same range, set
+\[
+ a_{j,m}=s_r\mathbf{1}_{j=r-1}\mathbf{1}_{m\ge h}
+            -\mathbf{1}_{j=r}V_{r,h}(m),\qquad b=0.
+\]
+
+\item[\texttt{mean}$(r)$.]
+For $2\le r\le v$, set
+\[
+ a_{j,m}=-m\mathbf{1}_{j=r}-\beta_r\mathbf{1}_{j=2},\qquad
+ b=-C_r^0-\beta_r\binom v2.
+\]
+
+\item[\texttt{union}$(r)$.]
+For $2\le r\le v$, set
+\[
+ a_{j,m}=(a-m)\left(\mathbf{1}_{j=r}
+                -\binom{v-1}{r-1}\mathbf{1}_{j=1}\right),\qquad b=0.
+\]
+
+\item[\texttt{edge\_lower}$(r)$.]
+For $2\le r\le v$, set
+\[
+ a_{j,m}=-\mathbf{1}_{j=r}+\binom{v-2}{r-2}\mathbf{1}_{j=2},\qquad
+ b=-\binom vr+\binom{v-2}{r-2}\binom v2.
+\]
+
+\item[\texttt{edge\_upper}$(r)$.]
+For $2\le r\le v$ and $D_0>0$, set
+\[
+ a_{j,m}=D_0\mathbf{1}_{j=r}-G_r\mathbf{1}_{j=2},\qquad
+ b=D_0\binom vr-G_r\binom v2.
+\]
+For $D_0=0$, use the \texttt{count}$(r)$ row instead.
+
+\item[\texttt{assumption}$(k)$.]
+Only in a \texttt{conditional} certificate at the same index $k$, use
+\[
+ a_{j,m}=B_{m,j}(k),\qquad b=-B_{a,0}(k).
+\]
+\end{description}
+
+These formulas specify a relaxation containing the counts of every
+forest after the prescribed choice of $I$.  They do not assert that
+every point in the relaxation is realizable by a forest.
+
