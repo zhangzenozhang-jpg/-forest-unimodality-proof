@@ -44,3 +44,8 @@ The second scoped review and independent small-forest structural checks are in
 Author: **Tong Zhang**. Manuscript email: ZhangZenoZhang@gmail.com.
 Prepared: 26 September 2026. AI assistance and review limits are disclosed in the
 manuscript. Retain attribution and original third-party license information.
+
+## Certificate data license
+
+The finite-order certificate dataset is licensed under CC BY 4.0;
+see [DATA_LICENSE.md](DATA_LICENSE.md) for its exact scope and provenance.
